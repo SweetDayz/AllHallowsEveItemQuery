@@ -18,7 +18,7 @@
         }
         .container {
             width: 100%;
-            max-width: 600px; /* 稍微加寬以容納新內容 */
+            max-width: 600px;
             margin: 0 auto;
             background: #fff;
             padding: 2rem;
@@ -52,23 +52,19 @@
             background-position: right 1rem center;
             background-size: 0.65em auto;
         }
-
-        /* 隱藏/顯示查詢區塊 */
         .query-section {
-            display: none; /* 預設全部隱藏 */
+            display: none;
             border-top: 1px dashed #ccc;
             margin-top: 1.5rem;
             padding-top: 1.5rem;
         }
-
-        /* 詳情顯示區域 */
         #detailsContainer {
             margin-top: 2rem;
             padding: 1.5rem;
             background-color: #f9f9f9;
             border-radius: 6px;
             border: 1px solid #eee;
-            display: none; /* 預設隱藏 */
+            display: none;
             line-height: 1.6;
             word-wrap: break-word;
         }
@@ -77,7 +73,6 @@
             margin-bottom: 1rem;
             color: #0056b3;
         }
-        /* 英文/次要標題 */
         #detailsContainer .sub-name {
             font-family: monospace;
             font-size: 0.9em;
@@ -90,15 +85,30 @@
         }
         #detailsContainer p strong {
             color: #333;
-            min-width: 65px; /* 確保對齊 */
+            min-width: 65px;
             display: inline-block;
         }
-        /* 敘述文字 (支援換行) */
+        /* [已更新] 敘述文字的樣式 */
         .description-text {
-            white-space: pre-wrap;
+            white-space: pre-wrap; /* 支援換行符號 */
             margin-top: 1rem;
             padding-top: 1rem;
             border-top: 1px solid #eee;
+        }
+        /* [新增] 任務獎勵敘述的樣式 */
+        .reward-description {
+            background-color: #e6f7ff;
+            border: 1px solid #b3e0ff;
+            border-radius: 4px;
+            padding: 0.8rem 1.2rem;
+            margin-top: 1rem;
+        }
+        .reward-description p {
+            margin: 0.2rem 0;
+            font-size: 0.95em;
+        }
+        .reward-description strong {
+            color: #0056b3;
         }
     </style>
 </head>
@@ -151,18 +161,10 @@
     </div>
 
     <script>
-        // 4. [已更新] 您的所有資料庫
+        // 4. [主要資料庫]
         const database = {
             "shops": {
-                // 商店主分類
-                "categories": {
-                    "shop-skeleton": "骷髏頓的商店",
-                    "shop-market": "鬼燈市集",
-                    "shop-restaurant": "餐館",
-                    "shop-bobblehead": "搖頭娃娃商店",
-                    "shop-curio": "詭異珍品"
-                },
-                // 商店物品
+                "categories": { "shop-skeleton": "骷髏頓的商店", "shop-market": "鬼燈市集", "shop-restaurant": "餐館", "shop-bobblehead": "搖頭娃娃商店", "shop-curio": "詭異珍品" },
                 "items": {
                     "shop-skeleton": [
                         { "id": "skel-001", "name": "蝙蝠鏢 Daggers", "category": "武器裝備", "stock": "大量", "cost": "20 個 5 CCP", "price": 5 },
@@ -374,13 +376,7 @@
                 }
             },
             "tasks": {
-                // 任務主分類
-                "categories": {
-                    "task-bounty": "鬼燈市集：達卡的懸賞告示牌",
-                    "task-contest": "餐館：貝拉的飲食競賽",
-                    "task-games": "詭異珍品：雜耍遊戲"
-                },
-                // 任務項目
+                "categories": { "task-bounty": "鬼燈市集：達卡的懸賞告示牌", "task-contest": "餐館：貝拉的飲食競賽", "task-games": "詭異珍品：雜耍遊戲" },
                 "items": {
                     "task-bounty": [
                         { "id": "bounty-001", "name_zh": "屍體化", "name_en": "Corpsified", "reward_str": "500 CCP", "reward_val": 500, "desc_zh": "讓亞當異形怪的最後一擊由屍體工廠的陷阱造成。", "desc_en": "Have the final blow on Adam the Abomination be dealt by one of the corpse factories traps" },
@@ -407,7 +403,7 @@
                         { "id": "contest-001", "name_zh": "硫磺餅乾", "name_en": "Brimstone Biscuit", "cost_str": "30 CCP", "cost_val": 30, "reward_zh": "易燃紙", "reward_en": "Fickle Flame", "desc_zh": "盛在一塊鐵板上，硫磺餅乾看起來像一大塊煤，其外殼上有發紅光的脈絡，不斷散發出熱氣。食物有 12 HP 和 16 AC。在它的回合，食物自動擊中玩家，造成 1D8 火焰傷害，因為它灼燒玩家。", "desc_en": "Served on a slab of iron, the brimstone biscuit looks like a large lump of coal with glowing red veins coursing through its shell that constantly emanates a haze of heat. The food has 12 HP and 16 AC. On its turn the food automatically hits the player with 1D8 Fire Damage as it burns the player." },
                         { "id": "contest-002", "name_zh": "末日蘑菇", "name_en": "Doom Shroom", "cost_str": "40 CCP", "cost_val": 40, "reward_zh": "蓬蓬炸彈", "reward_en": "Puff Bomb", "desc_zh": "一個 2 英尺 x 2 英尺大的、看起來像皮革的蘑菇帽，盛在新鮮採摘的龍葵床上。我的意思是它看起來完全無害可食用。食物有 50 HP 和 3 AC。在它的回合，食物釋放孢子。當食物釋放孢子時，進食的玩家必須進行 DC13 的體質豁免，失敗則受到 1D10 毒素傷害，成功則傷害減半。即使你豁免成功，也不會獲得對此效果的免疫。", "desc_en": "A large 2 foot by 2 foot leathery looking mushroom cap served on bed of freshly picked nightshade. I mean it looks perfectly harmless to eat. The food has 50 HP and 3 AC. On its turn the food releases spores. When the food releases spores, the eating player must make a DC13 Constitution saving throw or be dealt 1D10 Poison Damage on a failed save or half as much on a successful save. You do not gain immunity to this effect if you succeed." },
                         { "id": "contest-003", "name_zh": "淤泥啤酒", "name_en": "Ooze Booze", "cost_str": "20 CCP", "cost_val": 20, "reward_zh": "脊骨啤酒杯", "reward_en": "Spine Stein", "desc_zh": "一杯豐盛的半加侖大杯，滿溢著黏稠的綠色液體，偶爾發出低沉的咕嚕聲。當你從桌子上拿起它時，你注意到溢出的液體會自己拉回杯子裡。食物有 15 HP 和 18 AC。在它的回合，食物用偽足自動擊中玩家，造成 1D8 鈍擊傷害。", "desc_en": "A hearty sized ½ gallon mug overflowing with a viscous green liquid that occasionally makes a low gurgling sound. As you pick it up from the table you take note that the overflowing fluid pulls itself back into the mug. The food has 15 HP and 18 AC. On its turn the food automatically hits the player with a pseudopod for 1D8 Bludgeoning damage." },
-                        { "id": "contest-004", "name_zh": "尖刺苔蘚沙拉", "name_en": "Spike Moss Salad", "cost_str": "15 CCP", "cost_val": 15, "reward_zh": "不死之勺", "reward_en": "Undead Spoon", "desc_zh": "一團 seemingly harmless green moss that is plated up with a balsamic drizzle. Too bad that it instantly turns into a ball of spikes when you touch it. The food has 30 HP and 5 AC. On its turn the food automatically hits the player with 1D6 Piercing Damage as it spikes the player.", "desc_en": "A messy clump of seemingly harmless green moss that is plated up with a balsamic drizzle. Too bad that it instantly turns into a ball of spikes when you touch it. The food has 30 HP and 5 AC. On its turn the food automatically hits the player with 1D6 Piercing Damage as it spikes the player." },
+                        { "id": "contest-004", "name_zh": "尖刺苔蘚沙拉", "name_en": "Spike Moss Salad", "cost_str": "15 CCP", "cost_val": 15, "reward_zh": "不死之勺", "reward_en": "Undead Spoon", "desc_zh": "一團看似無害的綠色苔蘚，盤子上淋著香醋。可惜的是，當你觸摸它時，它立刻變成了一個尖刺球。食物有 30 HP 和 5 AC。在它的回合，食物自動擊中玩家，造成 1D6 穿刺傷害，因為它刺傷玩家。", "desc_en": "A messy clump of seemingly harmless green moss that is plated up with a balsamic drizzle. Too bad that it instantly turns into a ball of spikes when you touch it. The food has 30 HP and 5 AC. On its turn the food automatically hits the player with 1D6 Piercing Damage as it spikes the player." },
                         { "id": "contest-005", "name_zh": "扼殺魷魚", "name_en": "The Strangler Squid", "cost_str": "25 CCP", "cost_val": 25, "reward_zh": "惡魔之鹽", "reward_en": "Demon Salt", "desc_zh": "一根粗壯的、四英尺長的烤觸手，聞起來有黃油和海鹽的味道。如果觸手沒有在盤子上移動，它可能是一頓豐盛的大餐。食物有 25 HP 和 12 AC。在它的回合，食物自動擊中玩家，造成 1D10 鈍擊傷害，因為它扼殺玩家。", "desc_en": "A single thick, four foot long roasted tentacle that smells of butter and sea salt. It probably would be a hearty feast if the tentacle wasn’t moving around on the plate. The food has 25 HP and 12 AC. On its turn the food automatically hits the player with 1D10 Bludgeoning Damage as it strangles the player." },
                         { "id": "contest-006", "name_zh": "吸血鬼水蛭", "name_en": "The Vampire Leech", "cost_str": "50 CCP", "cost_val": 50, "reward_zh": "黏稠袋", "reward_en": "Glutinous Bag", "desc_zh": "一條宴會尺寸的油炸水蛭，嘴裡長滿了鋒利的吸血鬼牙齒。吸血鬼水蛭會試圖在你把它吃到死之前把你吸乾。食物有 30 HP 和 10 AC。在它的回合，食物自動擊中玩家，造成 1D6 穿刺傷害，並恢復那麼多生命值，因為它從玩家身上吸取生命。", "desc_en": "A full banquet sized deep fried leech that has a mouth full of razor sharp vampire teeth. The vampire leech is going to try and suck you dry before you can eat it to death. The food has 30 HP and 10 AC. On its turn the food automatically hits the player with 1D6 Piercing Damage and regains that many Hit Points as it sucks the life from the player." },
                         { "id": "contest-007", "name_zh": "帝王蜘蛛蟹宴（4-5名玩家）", "name_en": "King Spider Crab Banquet", "cost_str": "120 CCP", "cost_val": 120, "reward_zh": "蜘蛛蟹護符", "reward_en": "Spider Crab Charm", "desc_zh": "一個供整個隊伍嘗試生存的特殊飲食競賽。一隻桌子大小的清蒸蜘蛛蟹，絕對還活著，並且不想成為你的餐點。享用吧！對於這個挑戰，根據正常情況為每個玩家單獨擲先攻。食物有 80 HP 和 15 AC。在它的回合，食物用它的蜘蛛蟹爪自動擊中每個玩家，造成 1D8 揮砍和 1D8 穿刺傷害。", "desc_en": "A special eating competition for a whole party to try and survive. A small table sized steamed spider crab that is most definitely still alive and doesn’t want to be you meal. Enjoy! For this challenge roll initiative for each player separately as per normal. The food has 80 HP and 15 AC. On its turn the food automatically hits each player with its spider crab claws for 1D8 Slashing and 1D8 Piercing damage." }
@@ -416,34 +412,45 @@
                         { "id": "game-001", "name_zh": "膀胱爆破", "name_en": "Bladder Pop", "cost_str": "10 CCP", "cost_val": 10, "desc_zh": "玩家獲得 3 支骨鏢，投向一面充滿膨脹膀胱的牆。對於每支飛鏢，玩家必須對膀胱的 8 AC 進行一次遠程攻擊檢定。成功命中則一個膀胱被戳破。對於每個被戳破的膀胱，玩家必須擲 1D10 並將結果相加來計算玩家的分數。", "desc_en": "The player is given 3 bone darts to throw at a wall of inflated bladders. For each dart players must make a ranged attack roll against the 8 AC of the bladders. A bladder is popped on a successful hit. For each bladder popped the player must roll 1D10 and add the results together to calculate the players score." },
                         { "id": "game-002", "name_zh": "肋骨投擲", "name_en": "Rib Toss", "cost_str": "10 CCP", "cost_val": 10, "desc_zh": "向玩家提供 6 根彎曲的肋骨，嘗試將其套在幾根脊椎骨中的一根上。對於每根投出的肋骨，玩家進行一次臨時遠程武器攻擊。玩家將根據每次攻擊檢定的成功程度得分。10 或更高得 1 分，14 或更高得 3 分，17 或更高得 5 分。將它們全部相加得到獎品。", "desc_en": "The player is provided with 6 curved ribs to attempt at tossing around one of several spines. For each rib tossed the player makes an improvised ranged weapon attack. The player will score depending on how successful each attack roll is. 10 or higher is 1 point, 14 or higher is 3 points and 17 or higher is 5 points. Add them all together for the prize." },
                         { "id": "game-003", "name_zh": "腦力深潛", "name_en": "Brain Bobbing", "cost_str": "5 CCP", "cost_val": 5, "desc_zh": "玩家必須頭朝下潛入一個黏糊糊的、你不想知道裡面是什麼的桶裡，並用他們的嘴或等效器官抓住一個大腦。玩家必須首先成功通過 DC13 的體質豁免，否則會因厭惡而退縮並失敗遊戲。如果成功，玩家必須用他們的嘴對大腦的 10 AC 進行一次臨時近戰攻擊。如果玩家沒有溺水或把頭縮回來，他們可以進行多次嘗試來獲取一個大腦。一旦檢回一個大腦，玩家擲 3D8，這將代表他們的分數和大腦大小。", "desc_en": "Players must plunge headfirst into a slimy barrel of you don’t want to know what and grab a brain with their mouth or equivalent orifice. The player must first succeed on a DC13 Constitution saving throw or reel back in disgust and fail the game. If they are successful, the player must make an improvised melee attack with their mouth against the brains 10 AC. The player may make multiple attempts to get a brain if they don’t drown or pull their head out. Once a brain is retrieved the player rolls 3D8 which will represent their points and the brain size." },
-                        { "id": "game-004", "name_zh": "噩夢釣魚", "name_en": "Nightmare Fishing", "cost_str": "15 CCP", "cost_val": 15, "desc_zh": "玩家必須將他們的整個手臂或等效附肢放入一池漆黑黏稠的液體中。一旦低於水面，他們就無法再看到手臂，但能感覺到有東西撞擊它、觸摸和輕咬他們。玩家必須根據下表從最簡單的 DC 開始，成功通過越來越困難的感知豁免，以克服恐懼並將手臂保持在液體中。他們堅持的時間越長，水下有生物附著在他們手臂上的感覺就會變得越強烈。根據下表，將根據他們能將手臂保持在液體中的時間長短來授予分數。如果玩家豁免失敗，他們還會在相當於他們試圖通過的 DC 的分鐘數內陷入恐慌狀態。此外，成功通過 DC20 的玩家還將因其勇氣獲得一個額外獎品，名為「海洋靈魂」的物品。\n\nWIS DC | Points\n---|---\n- | 0\nDC8 | 5\nDC10 | 10\nDC12 | 15\nDC14 | 20\nDC16 | 25\nDC18 | 30\nDC20 | 31+", "desc_en": "The player must lower their entire arm or equivalent appendage into a pitch black pool of viscous liquid. Once below the water’s surface they can no longer see the arm, but can feel things bumping into it, touching and nibbling at them. The player must succeed on increasingly difficult Wisdom saving throws tarting with the easiest DC on the table below in order to overcome their fear and keep their arm in the liquid. The longer they last the greater the sensations of creatures latching onto their arm beneath the surface will become. Points will be awarded based on how long they can keep their arm in the liquid as per the below table. If a player fails a saving throw they will also become Frightened for a number of minutes equal to the DC they were attempting to pass. Additionally players who succeed DC20 will also be given an additional prize in the form of an item called a Sea Soul for their bravery.\n\nWIS DC | Points\n---|---\n- | 0\nDC8 | 5\nDC10 | 10\nDC12 | 15\nDC14 | 20\nDC16 | 25\nDC18 | 30\nDC20 | 31+" }
+                        { "id": "game-004", "name_zh": "噩夢釣魚", "name_en": "Nightmare Fishing", "cost_str": "15 CCP", "cost_val": 15, "desc_zh": "玩家必須將他們的整個手臂或等效附肢放入一池漆黑黏稠的液體中。一旦低於水面，他們就無法再看到手臂，但能感覺到有東西撞擊它、觸摸和輕咬他們。玩家必須根據下表從最簡單的 DC 開始，成功通過越來越困難的感知豁免，以克服恐懼並將手臂保持在液體中。他們堅持的時間越長，水下有生物附著在他們手臂上的感覺就會變得越強烈。根據下表，將根據他們能將手臂保持在 liquid 中的時間長短來授予分數。如果玩家豁免失敗，他們還會在相當於他們試圖通過的 DC 的分鐘數內陷入恐慌狀態。此外，成功通過 DC20 的玩家還將因其勇氣獲得一個額外獎品，名為「海洋靈魂」的物品。\n\nWIS DC | Points\n---|---\n- | 0\nDC8 | 5\nDC10 | 10\nDC12 | 15\nDC14 | 20\nDC16 | 25\nDC18 | 30\nDC20 | 31+", "desc_en": "The player must lower their entire arm or equivalent appendage into a pitch black pool of viscous liquid. Once below the water’s surface they can no longer see the arm, but can feel things bumping into it, touching and nibbling at them. The player must succeed on increasingly difficult Wisdom saving throws tarting with the easiest DC on the table below in order to overcome their fear and keep their arm in the liquid. The longer they last the greater the sensations of creatures latching onto their arm beneath the surface will become. Points will be awarded based on how long they can keep their arm in the liquid as per the below table. If a player fails a saving throw they will also become Frightened for a number of minutes equal to the DC they were attempting to pass. Additionally players who succeed DC20 will also be given an additional prize in the form of an item called a Sea Soul for their bravery.\n\nWIS DC | Points\n---|---\n- | 0\nDC8 | 5\nDC10 | 10\nDC12 | 15\nDC14 | 20\nDC16 | 25\nDC18 | 30\nDC20 | 31+" }
                     ]
                 }
             }
         };
 
-        // 5. 獲取 HTML 元素
+        // 5. [新增] 獨立的敘述資料庫
+        // (您只需要在這裡填寫內容，key 必須完全符合 database 中的 "name" 或 "reward_zh")
+        const descriptions = {
+            /* 範例:
+            "蝙蝠鏢 Daggers": {
+                "zh": "這是一段蝙蝠鏢的中文敘述。\n它支援換行。",
+                "en": "This is the English description for Daggers."
+            },
+            "易燃紙": {
+                "zh": "餐館飲食競賽的獎品「易燃紙」的中文敘述。",
+                "en": "Description for the 'Fickle Flame' reward."
+            },
+            */
+        };
+
+
+        // 6. 獲取 HTML 元素
         const queryTypeSelect = document.getElementById('queryTypeSelect');
         const shopsSection = document.getElementById('shopsSection');
         const tasksSection = document.getElementById('tasksSection');
-        
         const shopSelect = document.getElementById('shopSelect');
         const shopItemSelect = document.getElementById('shopItemSelect');
-        
         const taskSelect = document.getElementById('taskSelect');
         const taskItemSelect = document.getElementById('taskItemSelect');
-
         const detailsContainer = document.getElementById('detailsContainer');
 
-        // 6. [頁面載入時] 載入主分類
+        // 7. [頁面載入時] 載入主分類
         function loadPrimaryCategories() {
-            // 載入商店
             for (const categoryId in database.shops.categories) {
                 const categoryName = database.shops.categories[categoryId];
-                const option = new Option(categoryName, categoryId); // (text, value)
+                const option = new Option(categoryName, categoryId);
                 shopSelect.appendChild(option);
             }
-            // 載入任務
             for (const categoryId in database.tasks.categories) {
                 const categoryName = database.tasks.categories[categoryId];
                 const option = new Option(categoryName, categoryId);
@@ -451,21 +458,17 @@
             }
         }
 
-        // 7. [主選單] 監聽查詢類型變更
+        // 8. [主選單] 監聽查詢類型變更
         queryTypeSelect.addEventListener('change', () => {
             const selectedType = queryTypeSelect.value;
-            
-            // 隱藏所有區塊和詳情
             shopsSection.style.display = 'none';
             tasksSection.style.display = 'none';
             detailsContainer.style.display = 'none';
-            
-            // 重置所有次級選單
             shopSelect.value = '';
-            shopItemSelect.value = '';
+            shopItemSelect.innerHTML = '<option value="">— 請先選擇商店 —</option>';
             shopItemSelect.disabled = true;
             taskSelect.value = '';
-            taskItemSelect.value = '';
+            taskItemSelect.innerHTML = '<option value="">— 請先選擇任務類別 —</option>';
             taskItemSelect.disabled = true;
 
             if (selectedType === 'shops') {
@@ -475,7 +478,7 @@
             }
         });
 
-        // 8. [商店] 監聽商店選單變更
+        // 9. [商店] 監聽商店選單變更
         shopSelect.addEventListener('change', () => {
             const selectedShopId = shopSelect.value;
             shopItemSelect.innerHTML = '<option value="">— 請選擇物品 —</option>';
@@ -484,7 +487,6 @@
             if (selectedShopId) {
                 shopItemSelect.disabled = false;
                 const items = database.shops.items[selectedShopId] || [];
-                
                 if (items.length > 0) {
                     items.forEach(item => {
                         const option = new Option(item.name, item.id);
@@ -500,7 +502,7 @@
             }
         });
 
-        // 9. [商店] 監聽物品選單變更 (顯示詳情)
+        // 10. [商店] 監聽物品選單變更 (顯示詳情) - [已更新]
         shopItemSelect.addEventListener('change', () => {
             const selectedItemId = shopItemSelect.value;
             const selectedShopId = shopSelect.value;
@@ -514,15 +516,23 @@
             const item = items.find(i => i.id === selectedItemId);
 
             if (item) {
-                // [核心] 建立商店物品詳情
                 let html = `<h3>${item.name}</h3>`;
                 html += `<p><strong>分類：</strong> <span>${item.category}</span></p>`;
                 html += `<p><strong>庫存：</strong> <span>${item.stock}</span></p>`;
                 html += `<p><strong>花費：</strong> <span>${item.cost}</span></p>`;
-
-                // [特殊欄位] 僅當 'buyback_price' 存在時才顯示
                 if (item.buyback_price) {
                     html += `<p><strong>收購價：</strong> <span>${item.buyback_price}</span></p>`;
+                }
+
+                // [新增] 查找並附加物品敘述
+                const desc = descriptions[item.name]; // 使用物品全名作為 Key
+                if (desc) {
+                    if (desc.zh) {
+                        html += `<div class="description-text">${desc.zh}</div>`;
+                    }
+                    if (desc.en) {
+                        html += `<div class="description-text">${desc.en}</div>`;
+                    }
                 }
                 
                 detailsContainer.innerHTML = html;
@@ -530,7 +540,7 @@
             }
         });
 
-        // 10. [任務] 監聽任務類別變更
+        // 11. [任務] 監聽任務類別變更
         taskSelect.addEventListener('change', () => {
             const selectedTaskId = taskSelect.value;
             taskItemSelect.innerHTML = '<option value="">— 請選擇任務 —</option>';
@@ -539,10 +549,8 @@
             if (selectedTaskId) {
                 taskItemSelect.disabled = false;
                 const items = database.tasks.items[selectedTaskId] || [];
-                
                 if (items.length > 0) {
                     items.forEach(item => {
-                        // 任務選單顯示中文名
                         const option = new Option(item.name_zh, item.id);
                         taskItemSelect.appendChild(option);
                     });
@@ -556,7 +564,7 @@
             }
         });
 
-        // 11. [任務] 監聽任務項目變更 (顯示詳情)
+        // 12. [任務] 監聽任務項目變更 (顯示詳情) - [已更新]
         taskItemSelect.addEventListener('change', () => {
             const selectedItemId = taskItemSelect.value;
             const selectedTaskId = taskSelect.value;
@@ -570,11 +578,11 @@
             const item = items.find(i => i.id === selectedItemId);
 
             if (item) {
-                // [核心] 建立任務詳情
                 let html = `<h3>${item.name_zh}</h3>`;
                 html += `<p class="sub-name">${item.name_en || ''}</p>`;
+                
+                let rewardDescHtml = ''; // 準備一個變數來存放獎勵的敘述
 
-                // [動態欄位] 根據任務類型顯示不同資訊
                 if (item.reward_str) {
                     html += `<p><strong>賞金：</strong> <span>${item.reward_str}</span></p>`;
                 }
@@ -583,26 +591,39 @@
                 }
                 if (item.reward_zh) {
                     html += `<p><strong>獎品：</strong> <span>${item.reward_zh} (${item.reward_en})</span></p>`;
+
+                    // [新增] 查找並附加獎勵物品的敘述
+                    const desc = descriptions[item.reward_zh]; // 使用獎品中文名作為 Key
+                    if (desc) {
+                        rewardDescHtml = `<div class="reward-description">`;
+                        rewardDescHtml += `<p><strong>獎品「${item.reward_zh}」詳情：</strong></p>`;
+                        if (desc.zh) {
+                            rewardDescHtml += `<p>${desc.zh}</p>`;
+                        }
+                        if (desc.en) {
+                            rewardDescHtml += `<p style="margin-top: 5px; font-style: italic;">${desc.en}</p>`;
+                        }
+                        rewardDescHtml += `</div>`;
+                    }
                 }
 
-                // 顯示敘述 (支援換行)
-                html += `<div class="description-text">
-                            <p>${item.desc_zh || ''}</p>
-                         </div>`;
-                
-                // 顯示英文敘述 (如果存在)
-                if (item.desc_en) {
-                    html += `<div class="description-text">
-                                <p>${item.desc_en}</p>
-                             </div>`;
+                // 顯示任務本身的敘述
+                if (item.desc_zh) {
+                    html += `<div class="description-text">${item.desc_zh}</div>`;
                 }
+                if (item.desc_en) {
+                    html += `<div class="description-text">${item.desc_en}</div>`;
+                }
+
+                // [新增] 在所有內容的最後，附加獎勵的敘述
+                html += rewardDescHtml;
                 
                 detailsContainer.innerHTML = html;
                 detailsContainer.style.display = 'block';
             }
         });
 
-        // 12. [頁面啟動]
+        // 13. [頁面啟動]
         loadPrimaryCategories();
 
     </script>
