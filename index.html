@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>商店物品查詢</title>
+    <title>靜態查詢資料庫</title>
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -18,7 +18,7 @@
         }
         .container {
             width: 100%;
-            max-width: 500px;
+            max-width: 600px; /* 稍微加寬以容納新內容 */
             margin: 0 auto;
             background: #fff;
             padding: 2rem;
@@ -40,11 +40,10 @@
         }
         select {
             width: 100%;
-            padding: 10px;
+            padding: 10px 12px;
             font-size: 16px;
             border-radius: 6px;
             border: 1px solid #ddd;
-            /* 讓 Safari 和 Chrome 看起來一致 */
             -webkit-appearance: none;
             appearance: none;
             background-color: #fff;
@@ -53,156 +52,558 @@
             background-position: right 1rem center;
             background-size: 0.65em auto;
         }
+
+        /* 隱藏/顯示查詢區塊 */
+        .query-section {
+            display: none; /* 預設全部隱藏 */
+            border-top: 1px dashed #ccc;
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+        }
+
+        /* 詳情顯示區域 */
         #detailsContainer {
             margin-top: 2rem;
-            padding: 1rem;
+            padding: 1.5rem;
             background-color: #f9f9f9;
             border-radius: 6px;
             border: 1px solid #eee;
-            /* 預設隱藏，有內容時才顯示 */
-            display: none; 
+            display: none; /* 預設隱藏 */
+            line-height: 1.6;
+            word-wrap: break-word;
         }
         #detailsContainer h3 {
             margin-top: 0;
+            margin-bottom: 1rem;
             color: #0056b3;
+        }
+        /* 英文/次要標題 */
+        #detailsContainer .sub-name {
+            font-family: monospace;
+            font-size: 0.9em;
+            color: #666;
+            margin-top: -0.8rem;
+            margin-bottom: 1rem;
+        }
+        #detailsContainer p {
+            margin: 0.5rem 0;
+        }
+        #detailsContainer p strong {
+            color: #333;
+            min-width: 65px; /* 確保對齊 */
+            display: inline-block;
+        }
+        /* 敘述文字 (支援換行) */
+        .description-text {
+            white-space: pre-wrap;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid #eee;
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <h1>商店物品查詢</h1>
+        <h1>查詢資料庫</h1>
         
         <div class="form-group">
-            <label for="shopSelect">步驟一：選擇商店</label>
-            <select id="shopSelect">
-                <option value="">— 請選擇商店 —</option>
-                </select>
-        </div>
-
-        <div class="form-group">
-            <label for="itemSelect">步驟二：選擇物品</label>
-            <select id="itemSelect" disabled>
-                <option value="">— 請先選擇商店 —</option>
+            <label for="queryTypeSelect">步驟一：選擇查詢類別</label>
+            <select id="queryTypeSelect">
+                <option value="">— 請選擇 —</option>
+                <option value="shops">商店物品</option>
+                <option value="tasks">任務列表</option>
             </select>
         </div>
 
-        <div id="detailsContainer">
-            <h3 id="detailName"></h3>
-            <p id="detailDesc"></p>
-            <p id="detailPrice"></p>
+        <div id="shopsSection" class="query-section">
+            <div class="form-group">
+                <label for="shopSelect">步驟二：選擇商店</label>
+                <select id="shopSelect">
+                    <option value="">— 請選擇商店 —</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="shopItemSelect">步驟三：選擇物品</label>
+                <select id="shopItemSelect" disabled>
+                    <option value="">— 請先選擇商店 —</option>
+                </select>
+            </div>
         </div>
+
+        <div id="tasksSection" class="query-section">
+            <div class="form-group">
+                <label for="taskSelect">步驟二：選擇任務類別</label>
+                <select id="taskSelect">
+                    <option value="">— 請選擇任務類別 —</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="taskItemSelect">步驟三：選擇任務</label>
+                <select id="taskItemSelect" disabled>
+                    <option value="">— 請先選擇任務類別 —</option>
+                </select>
+            </div>
+        </div>
+
+        <div id="detailsContainer">
+            </div>
     </div>
 
     <script>
-        // 4. 您的所有資料庫 (靜態)
-        // 結構：商店ID -> 物品ID -> 物品詳情
+        // 4. [已更新] 您的所有資料庫
         const database = {
             "shops": {
-                "shop-a": "阿嬤的柑仔店",
-                "shop-b": "黑科技中心",
-                "shop-c": "魔法道具屋"
+                // 商店主分類
+                "categories": {
+                    "shop-skeleton": "骷髏頓的商店",
+                    "shop-market": "鬼燈市集",
+                    "shop-restaurant": "餐館",
+                    "shop-bobblehead": "搖頭娃娃商店",
+                    "shop-curio": "詭異珍品"
+                },
+                // 商店物品
+                "items": {
+                    "shop-skeleton": [
+                        { "id": "skel-001", "name": "蝙蝠鏢 Daggers", "category": "武器裝備", "stock": "大量", "cost": "20 個 5 CCP", "price": 5 },
+                        { "id": "skel-002", "name": "發條箭 Clockwork Arrows", "category": "武器裝備", "stock": "限量", "cost": "5 支 200 CCP", "price": 200 },
+                        { "id": "skel-003", "name": "發條盾 Clockwork Shaft", "category": "武器裝備", "stock": "限量", "cost": "100 CCP", "price": 100 },
+                        { "id": "skel-004", "name": "鱷魚箭 Crocarrows", "category": "武器裝備", "stock": "限量", "cost": "5 支 100 CCP", "price": 100 },
+                        { "id": "skel-005", "name": "聖化戰斧 Hallowed Axe", "category": "武器裝備", "stock": "限量", "cost": "50 CCP", "price": 50 },
+                        { "id": "skel-006", "name": "聖化短弓 Hallowed Bow", "category": "武器裝備", "stock": "限量", "cost": "50 CCP", "price": 50 },
+                        { "id": "skel-007", "name": "聖化匕首 Hallowed Dagger", "category": "武器裝備", "stock": "限量", "cost": "50 CCP", "price": 50 },
+                        { "id": "skel-008", "name": "聖化盾牌 Hallowed Shield", "category": "武器裝備", "stock": "限量", "cost": "50 CCP", "price": 50 },
+                        { "id": "skel-009", "name": "聖化短劍 Hallowed Sword", "category": "武器裝備", "stock": "限量", "cost": "50 CCP", "price": 50 },
+                        { "id": "skel-010", "name": "提燈盾 Lantern Shield", "category": "武器裝備", "stock": "限量", "cost": "100 CCP", "price": 100 },
+                        { "id": "skel-011", "name": "閃電棒 Lightning Rod", "category": "武器裝備", "stock": "限量", "cost": "150 CCP", "price": 150 },
+                        { "id": "skel-012", "name": "南瓜炸彈 Pumpkin Bomb", "category": "武器裝備", "stock": "大量", "cost": "50 CCP", "price": 50 },
+                        { "id": "skel-013", "name": "尖嘯箭矢 Screaming Arrows", "category": "武器裝備", "stock": "大量", "cost": "20 支 100 CCP", "price": 100 },
+                        { "id": "skel-014", "name": "鍍銀柯爾特子彈 Silvered Colt Rounds", "category": "武器裝備", "stock": "稀缺", "cost": "500 CCP", "price": 500 },
+                        { "id": "skel-015", "name": "狼皮手套 Wolf Gloves", "category": "武器裝備", "stock": "限量", "cost": "50 CCP", "price": 50 },
+                        { "id": "skel-016", "name": "木樁 Wooden Stake", "category": "武器裝備", "stock": "限量", "cost": "25 CCP", "price": 25 },
+                        { "id": "skel-017", "name": "蝙蝠乾肉 Bat Jerky", "category": "消耗品", "stock": "大量", "cost": "5 CCP", "price": 5 },
+                        { "id": "skel-018", "name": "血酒瓶 Blood Flask", "category": "消耗品", "stock": "限量", "cost": "125 CCP", "price": 125 },
+                        { "id": "skel-019", "name": "血酒 Blood Wine", "category": "消耗品", "stock": "限量", "cost": "50 CCP", "price": 50 },
+                        { "id": "skel-020", "name": "大釜水 Cauldron Water", "category": "消耗品", "stock": "大量", "cost": "15 CCP", "price": 15 },
+                        { "id": "skel-021", "name": "死亡棒 Death Sticks", "category": "消耗品", "stock": "限量", "cost": "10 CCP", "price": 10 },
+                        { "id": "skel-022", "name": "新鮮南瓜 Fresh Pumpkin", "category": "消耗品", "stock": "大量", "cost": "5 CCP", "price": 5 },
+                        { "id": "skel-023", "name": "漏斗網蛋糕 Funnel-Web Cake", "category": "消耗品", "stock": "大量", "cost": "15 CCP", "price": 15 },
+                        { "id": "skel-024", "name": "傑克南瓜燈種子 Jack-o-Lantern Seeds", "category": "消耗品", "stock": "大量", "cost": "10 CCP", "price": 10 },
+                        { "id": "skel-025", "name": "南瓜潘趣酒 Pumpkin Punch", "category": "消耗品", "stock": "大量", "cost": "15 CCP", "price": 15 },
+                        { "id": "skel-026", "name": "甜膩糖果 Sickly Sweet Candy", "category": "消耗品", "stock": "大量", "cost": "15 CCP", "price": 15 },
+                        { "id": "skel-027", "name": "史萊姆汁液 Slime Juice", "category": "消耗品", "stock": "大量", "cost": "25 CCP", "price": 25 },
+                        { "id": "skel-028", "name": "蜘蛛毒液蘋果酒 Spider Venom Cider", "category": "消耗品", "stock": "大量", "cost": "15 CCP", "price": 15 },
+                        { "id": "skel-029", "name": "死亡花束 Deathly Bouquet", "category": "新奇物品", "stock": "大量", "cost": "15 CCP", "price": 15 },
+                        { "id": "skel-030", "name": "假牙 False Teeth", "category": "新奇物品", "stock": "大量", "cost": "35 CCP", "price": 35 },
+                        { "id": "skel-031", "name": "高級神秘南瓜盒 Greater Mystery Pumpkin Box", "category": "新奇物品", "stock": "大量", "cost": "每個 50 CCP 或 5 個 200 CCP", "price": 50 },
+                        { "id": "skel-032", "name": "無頭騎士搖頭娃娃（藍色） Headless Horseman Bobblehead (Blue)", "category": "新奇物品", "stock": "售罄", "cost": "25 CCP", "price": 25 },
+                        { "id": "skel-033", "name": "無頭騎士搖頭娃娃（綠色） Headless Horseman Bobblehead (Green)", "category": "新奇物品", "stock": "售罄", "cost": "25 CCP", "price": 25 },
+                        { "id": "skel-034", "name": "無頭騎士搖頭娃娃（粉色） Headless Horseman Bobblehead (Pink)", "category": "新奇物品", "stock": "售罄", "cost": "25 CCP", "price": 25 },
+                        { "id": "skel-035", "name": "無頭騎士搖頭娃娃（紫色） Headless Horseman Bobblehead (Purple)", "category": "新奇物品", "stock": "售罄", "cost": "25 CCP", "price": 25 },
+                        { "id": "skel-036", "name": "無頭騎士搖頭娃娃（紅色） Headless Horseman Bobblehead (Red)", "category": "新奇物品", "stock": "限量", "cost": "25 CCP", "price": 25 },
+                        { "id": "skel-037", "name": "無頭騎士搖頭娃娃（黃色） Headless Horseman Bobblehead (Yellow)", "category": "新奇物品", "stock": "售罄", "cost": "25 CCP", "price": 25 },
+                        { "id": "skel-038", "name": "彈出式稻草人 Pop-Up Scarecrow", "category": "新奇物品", "stock": "限量", "cost": "100 CCP", "price": 100 },
+                        { "id": "skel-039", "name": "神秘南瓜盒 Mystery Pumpkin Box", "category": "新奇物品", "stock": "大量", "cost": "每個 25 CCP 或 5 個 100 CCP", "price": 25 },
+                        { "id": "skel-040", "name": "神秘骷髏 Mystery Skull", "category": "新奇物品", "stock": "大量", "cost": "每個 75 CCP 或 5 個 300 CCP", "price": 75 },
+                        { "id": "skel-041", "name": "南瓜撲克牌 Pumpkin Playing Cards", "category": "新奇物品", "stock": "大量", "cost": "10 CCP", "price": 10 },
+                        { "id": "skel-042", "name": "殭屍皮 Zombie Skin", "category": "新奇物品", "stock": "限量", "cost": "50 CCP", "price": 50 },
+                        { "id": "skel-043", "name": "血咒 Blood Curse", "category": "附魔", "stock": "限量", "cost": "200 CCP", "price": 200 },
+                        { "id": "skel-044", "name": "骨刃改造 Bone Blade Modification", "category": "附魔", "stock": "限量", "cost": "300 CCP", "price": 300 },
+                        { "id": "skel-045", "name": "奇美拉詛咒 Chimera Curse", "category": "附魔", "stock": "限量", "cost": "200 CCP", "price": 200 },
+                        { "id": "skel-046", "name": "邪能詛咒 Fel Curse", "category": "附魔", "stock": "限量", "cost": "200 CCP", "price": 200 },
+                        { "id": "skel-047", "name": "鬼魅詛咒 Ghostly Curse", "category": "附魔", "stock": "限量", "cost": "200 CCP", "price": 200 },
+                        { "id": "skel-048", "name": "利維坦詛咒 Leviathan Curse", "category": "附魔", "stock": "限量", "cost": "200 CCP", "price": 200 },
+                        { "id": "skel-049", "name": "機械融合 Machine Bonding", "category": "附魔", "stock": "限量", "cost": "300 CCP", "price": 300 },
+                        { "id": "skel-050", "name": "心靈詛咒 Mind Curse", "category": "附魔", "stock": "限量", "cost": "200 CCP", "price": 200 },
+                        { "id": "skel-051", "name": "不死詛咒 Undead Curse", "category": "附魔", "stock": "限量", "cost": "200 CCP", "price": 200 },
+                        { "id": "skel-052", "name": "虛空詛咒 Void Curse", "category": "附魔", "stock": "限量", "cost": "200 CCP", "price": 200 },
+                        { "id": "skel-053", "name": "衰弱詛咒 Weakening Curse", "category": "附魔", "stock": "限量", "cost": "300 CCP", "price": 300 },
+                        { "id": "skel-054", "name": "防腐血清 Anti-Decay Serum", "category": "通用", "stock": "限量", "cost": "100 CCP", "price": 100 },
+                        { "id": "skel-055", "name": "空白墓碑 Blank Tombtone", "category": "通用", "stock": "大量", "cost": "20 CCP", "price": 20 },
+                        { "id": "skel-056", "name": "雕刻工具 Carving Tools", "category": "通用", "stock": "大量", "cost": "25 CCP", "price": 25 },
+                        { "id": "skel-057", "name": "鏈提燈 Chain-O-Lantern", "category": "通用", "stock": "限量", "cost": "250 CCP", "price": 250 },
+                        { "id": "skel-058", "name": "腐蝕之血 Corrosive Black", "category": "通用", "stock": "限量", "cost": "100 CCP", "price": 100 },
+                        { "id": "skel-059", "name": "機械之血 Machine Blood", "category": "通用", "stock": "限量", "cost": "100 CCP", "price": 100 },
+                        { "id": "skel-060", "name": "惡夢燃料 Nightmare Fuel", "category": "通用", "stock": "限量", "cost": "50 CCP", "price": 50 },
+                        { "id": "skel-061", "name": "毒藥壺 Pitcher of Poisons", "category": "通用", "stock": "限量", "cost": "150 CCP", "price": 150 },
+                        { "id": "skel-062", "name": "劇毒生態瓶 Poisonous Terrarium Portable", "category": "通用", "stock": "限量", "cost": "500 CCP", "price": 500 },
+                        { "id": "skel-063", "name": "便攜棺材 Portable Coffin", "category": "通用", "stock": "限量", "cost": "100 CCP", "price": 100 },
+                        { "id": "skel-064", "name": "骷髏鑰匙 Skeleton Key", "category": "通用", "stock": "限量", "cost": "350 CCP", "price": 350 },
+                        { "id": "skel-065", "name": "狡詐之袋 Sly Bat", "category": "通用", "stock": "稀缺", "cost": "350 CCP", "price": 350 },
+                        { "id": "skel-066", "name": "折磨之釘 Tormenting Nails", "category": "通用", "stock": "大量", "cost": "每個 15 CCP 或 5 個 50 CCP", "price": 15 },
+                        { "id": "skel-067", "name": "柳枝蠟燭 Wicker Candle", "category": "通用", "stock": "大量", "cost": "5 CCP", "price": 5 },
+                        { "id": "skel-068", "name": "折磨鎖鏈 Chains of Torment", "category": "獨特物品", "stock": "稀缺", "cost": "500 CCP", "price": 500 },
+                        { "id": "skel-069", "name": "隱形床單 Torment Invisible Sheet", "category": "獨特物品", "stock": "稀缺", "cost": "300 CCP", "price": 300 },
+                        { "id": "skel-070", "name": "糖果袋 Treat Bag", "category": "獨特物品", "stock": "稀缺", "cost": "500 CCP", "price": 500 },
+                        { "id": "skel-071", "name": "威廉的密文齒輪 William’s Cipher", "category": "獨特物品", "stock": "獨特", "cost": "100 CCP", "price": 100 }
+                    ],
+                    "shop-market": [
+                        { "id": "mark-001", "name": "牛革鞭 Bounties Bullwhip", "category": "武器裝備", "stock": "限量", "cost": "300 CCP", "price": 300 },
+                        { "id": "mark-002", "name": "獨眼巨人眼 Cyclops Eye", "category": "武器裝備", "stock": "限量", "cost": "300 CCP", "price": 300 },
+                        { "id": "mark-003", "name": "地獄火箭矢 Hellfire Arrows", "category": "武器裝備", "stock": "限量", "cost": "5 支 400 CCP", "price": 400 },
+                        { "id": "mark-004", "name": "巫妖腸線 Lich’s Gut String", "category": "武器裝備", "stock": "限量", "cost": "350 CCP", "price": 350 },
+                        { "id": "mark-005", "name": "鬼響鞭 Rattle Whip", "category": "武器裝備", "stock": "限量", "cost": "200 CCP", "price": 200 },
+                        { "id": "mark-006", "name": "蠍尾鞭 Scorpions Tail", "category": "武器裝備", "stock": "限量", "cost": "200 CCP", "price": 200 },
+                        { "id": "mark-007", "name": "骷髏胸甲 Skeletal Breastplate", "category": "武器裝備", "stock": "稀缺", "cost": "500 CCP", "price": 500 },
+                        { "id": "mark-008", "name": "脊骨巨劍 Spinal Blade", "category": "武器裝備", "stock": "限量", "cost": "250 CCP", "price": 250 },
+                        { "id": "mark-009", "name": "人頭杖 Staff of Hungry Heads", "category": "武器裝備", "stock": "限量", "cost": "400 CCP", "price": 400 },
+                        { "id": "mark-010", "name": "吸血鬼之淚 Vampire Tears", "category": "消耗品", "stock": "限量", "cost": "100 CCP", "price": 100 },
+                        { "id": "mark-011", "name": "吸血鬼之牙 Vampiric Tooth", "category": "消耗品", "stock": "限量", "cost": "200 CCP", "price": 200 },
+                        { "id": "mark-012", "name": "液態金屬 Liquid Metal", "category": "詛咒", "stock": "限量", "cost": "1000 CCP", "price": 1000 },
+                        { "id": "mark-013", "name": "南瓜血 Pumpkin Blood", "category": "詛咒", "stock": "限量", "cost": "1000 CCP", "price": 1000 },
+                        { "id": "mark-014", "name": "稻草人之血 Scarecrow Blood", "category": "詛咒", "stock": "限量", "cost": "1000 CCP", "price": 1000 },
+                        { "id": "mark-015", "name": "蛇血 Snakes Blood", "category": "詛咒", "stock": "限量", "cost": "1000 CCP", "price": 1000 },
+                        { "id": "mark-016", "name": "獨角獸之血 Unicorn Blood", "category": "詛咒", "stock": "限量", "cost": "1000 CCP", "price": 1000 },
+                        { "id": "mark-017", "name": "吸血鬼之血 Vampires Blood", "category": "詛咒", "stock": "限量", "cost": "1000 CCP", "price": 1000 },
+                        { "id": "mark-018", "name": "狼人之血 Werewolves Blood", "category": "詛咒", "stock": "限量", "cost": "1000 CCP", "price": 1000 },
+                        { "id": "mark-019", "name": "石像鬼粉 Ground Gargoyle", "category": "通用", "stock": "限量", "cost": "500 CCP", "price": 500 },
+                        { "id": "mark-020", "name": "妖精翅膀粉 Ground Pixie Wings", "category": "通用", "stock": "限量", "cost": "500 CCP", "price": 500 },
+                        { "id": "mark-021", "name": "肉鑰 Meat Key", "category": "通用", "stock": "獨特", "cost": "1000 CCP", "price": 1000 },
+                        { "id": "mark-022", "name": "骷髏馬雕像 Skeleton Horse Idol", "category": "通用", "stock": "稀缺", "cost": "1250 CCP", "price": 1250 },
+                        { "id": "mark-023", "name": "泰拉毒液 Terra Poison", "category": "通用", "stock": "限量", "cost": "500 CCP", "price": 500 },
+                        { "id": "mark-024", "name": "拷問工具 Torturers Tools", "category": "通用", "stock": "限量", "cost": "100 CCP", "price": 100 },
+                        { "id": "mark-025", "name": "邪惡之水 Unholy Water", "category": "通用", "stock": "限量", "cost": "100 CCP", "price": 100 },
+                        { "id": "mark-026", "name": "牛環 Bull Ring", "category": "獨特物品", "stock": "稀缺", "cost": "500 CCP", "price": 500 },
+                        { "id": "mark-027", "name": "火藥鼠 Gunpowder Rat", "category": "獨特物品", "stock": "稀缺", "cost": "1000 CCP", "price": 1000 },
+                        { "id": "mark-028", "name": "盒中瘟疫 Pox in a Box", "category": "獨特物品", "stock": "稀缺", "cost": "500 CCP", "price": 500 },
+                        { "id": "mark-029", "name": "黯淡戒指 Tarnished Ring", "category": "獨特物品", "stock": "稀缺", "cost": "300 CCP", "price": 300 }
+                    ],
+                    "shop-restaurant": [
+                        { "id": "rest-001", "name": "100% 火蜥蜴汁 100% Juice of Fire Newt", "category": "飲品Drinks", "stock": "大量", "cost": "5 CCP", "price": 5 },
+                        { "id": "rest-002", "name": "大釜潘趣酒 Cauldron Punch", "category": "飲品Drinks", "stock": "大量", "cost": "5 CCP", "price": 5 },
+                        { "id": "rest-003", "name": "黑烏鴉乾燥腳 Dried Fees of Black Crow", "category": "飲品Drinks", "stock": "大量", "cost": "5 CCP", "price": 5 },
+                        { "id": "rest-004", "name": "未過濾毒藥 Unfiltered Poison", "category": "飲品Drinks", "stock": "大量", "cost": "5 CCP", "price": 5 },
+                        { "id": "rest-005", "name": "女巫藥水 Witches Potion", "category": "飲品Drinks", "stock": "大量", "cost": "5 CCP", "price": 5 },
+                        { "id": "rest-006", "name": "災難餅乾 Catastrophic Cookies", "category": "零食Snacks", "stock": "大量", "cost": "5 塊 10 CCP", "price": 10 },
+                        { "id": "rest-007", "name": "傷亡玉米 Casualty Corn", "category": "零食Snacks", "stock": "大量", "cost": "每包 5 CCP", "price": 5 },
+                        { "id": "rest-008", "name": "食屍鬼椒鹽捲餅 Ghoul Pretzels", "category": "零食Snacks", "stock": "大量", "cost": "5 CCP", "price": 5 },
+                        { "id": "rest-009", "name": "綠色油脂玉米 Green Grizzle Corn", "category": "零食Snacks", "stock": "大量", "cost": "每包 5 CCP", "price": 5 },
+                        { "id": "rest-010", "name": "風味糖果玉米 Flavored Candy Corn", "category": "零食Snacks", "stock": "大量", "cost": "5 CCP", "price": 5 },
+                        { "id": "rest-011", "name": "果凍南瓜 Jelly Pumpkins", "category": "零食Snacks", "stock": "大量", "cost": "10 CCP", "price": 10 },
+                        { "id": "rest-012", "name": "仙塵 Pixie Dust", "category": "零食Snacks", "stock": "大量", "cost": "10 CCP", "price": 10 },
+                        { "id": "rest-013", "name": "死神薯片 Reaper Chips", "category": "零食Snacks", "stock": "大量", "cost": "15 CCP", "price": 15 },
+                        { "id": "rest-014", "name": "蝙蝠翅膀 Batty Bat Wings", "category": "正餐Meals", "stock": "大量", "cost": "25 CCP", "price": 25 },
+                        { "id": "rest-015", "name": "定罪麵包盅 Condemned Cob Loaf", "category": "正餐Meals", "stock": "大量", "cost": "30 CCP", "price": 30 },
+                        { "id": "rest-016", "name": "怪物肉丸 Monster Meat Balls", "category": "正餐Meals", "stock": "大量", "cost": "30 CCP", "price": 30 },
+                        { "id": "rest-017", "name": "蟒蛇薯塊 Python Potato’s", "category": "正餐Meals", "stock": "大量", "cost": "20 CCP", "price": 20 },
+                        { "id": "rest-018", "name": "煙燻牛頭怪 Smoked Minotaur", "category": "正餐Meals", "stock": "大量", "cost": "40 CCP", "price": 40 },
+                        { "id": "rest-019", "name": "肋排 Spare Ribs", "category": "正餐Meals", "stock": "大量", "cost": "5 根肋骨 40 CCP", "price": 40 },
+                        { "id": "rest-020", "name": "辣脊椎 Spicy Spines", "category": "正餐Meals", "stock": "大量", "cost": "25 CCP", "price": 25 },
+                        { "id": "rest-021", "name": "怪趣拼盤 Spookuterie Board", "category": "正餐Meals", "stock": "大量", "cost": "每玩家 30 CCP (最少 3 人)", "price": 30 },
+                        { "id": "rest-022", "name": "有毒通心粉 Toxic Mac", "category": "正餐Meals", "stock": "大量", "cost": "25 CCP", "price": 25 },
+                        { "id": "rest-023", "name": "黑天鵝絨紙杯蛋糕 Black velvet Cupcakes", "category": "甜點Desserts", "stock": "大量", "cost": "10 CCP", "price": 10 },
+                        { "id": "rest-024", "name": "血腥天鵝絨紙杯蛋糕 Bloody Velvet Cupcakes", "category": "甜點Desserts", "stock": "大量", "cost": "10 CCP", "price": 10 },
+                        { "id": "rest-025", "name": "腐蝕性紙杯蛋糕 Caustic Cupcakes", "category": "甜點Desserts", "stock": "大量", "cost": "10 CCP", "price": 10 },
+                        { "id": "rest-026", "name": "被詛咒的紙杯蛋糕 Cursed Cupcakes", "category": "甜點Desserts", "stock": "大量", "cost": "10 CCP", "price": 10 },
+                        { "id": "rest-027", "name": "毒蘋果 Poisoned Apples", "category": "甜點Desserts", "stock": "大量", "cost": "15 CCP", "price": 15 },
+                        { "id": "rest-028", "name": "尖叫芝士布朗尼 Scream-Cheese Brownie", "category": "甜點Desserts", "stock": "大量", "cost": "10 CCP", "price": 10 },
+                        { "id": "rest-029", "name": "蛇咬切片 Snakebite Slice", "category": "甜點Desserts", "stock": "大量", "cost": "10 CCP", "price": 10 }
+                    ],
+                    "shop-bobblehead": [
+                        { "id": "bobb-001", "name": "蝙蝠 Bat", "category": "普通款Generic", "stock": "大量", "cost": "20 CCP", "price": 20, "buyback_price": "5 CCP" },
+                        { "id": "bobb-002", "name": "幽靈 Ghost", "category": "普通款Generic", "stock": "大量", "cost": "20 CCP", "price": 20, "buyback_price": "10 CCP" },
+                        { "id": "bobb-003", "name": "希德搖頭娃娃 Sid’s Bobblehead", "category": "普通款Generic", "stock": "無", "cost": "5 CCP", "price": 5, "buyback_price": "不值錢" },
+                        { "id": "bobb-004", "name": "骷髏 Skeen", "category": "普通款Generic", "stock": "大量", "cost": "20 CCP", "price": 20, "buyback_price": "5 CCP" },
+                        { "id": "bobb-005", "name": "蜘蛛 Spider", "category": "普通款Generic", "stock": "大量", "cost": "20 CCP", "price": 20, "buyback_price": "10 CCP" },
+                        { "id": "bobb-006", "name": "魅魔 Succubus", "category": "普通款Generic", "stock": "大量", "cost": "20 CCP", "price": 20, "buyback_price": "15 CCP" },
+                        { "id": "bobb-007", "name": "殭屍 Zombie", "category": "普通款Generic", "stock": "大量", "cost": "20 CCP", "price": 20, "buyback_price": "10 CCP" },
+                        { "id": "bobb-008", "name": "無頭騎士搖頭娃娃（藍色） Headless Horseman Bobblehead (Blue)", "category": "季節款Seasonal", "stock": "售罄", "cost": "-", "price": null, "buyback_price": "100 CCP" },
+                        { "id": "bobb-009", "name": "無頭騎士搖頭娃娃（綠色） Headless Horseman Bobblehead (Green)", "category": "季節款Seasonal", "stock": "售罄", "cost": "-", "price": null, "buyback_price": "125 CCP" },
+                        { "id": "bobb-010", "name": "無頭騎士搖頭娃娃（粉色） Headless Horseman Bobblehead (Pink)", "category": "季節款Seasonal", "stock": "售罄", "cost": "-", "price": null, "buyback_price": "75 CCP" },
+                        { "id": "bobb-011", "name": "無頭騎士搖頭娃娃（紫色） Headless Horseman Bobblehead (Purple)", "category": "季節款Seasonal", "stock": "售罄", "cost": "-", "price": null, "buyback_price": "100 CCP" },
+                        { "id": "bobb-012", "name": "無頭騎士搖頭娃娃（紅色） Headless Horseman Bobblehead (Red)", "category": "季節款Seasonal", "stock": "限量", "cost": "25 CCP", "price": 25, "buyback_price": "15 CCP" },
+                        { "id": "bobb-013", "name": "無頭騎士搖頭娃娃（黃色） Headless Horseman Bobblehead (Yellow)", "category": "季節款Seasonal", "stock": "售罄", "cost": "-", "price": null, "buyback_price": "75 CCP" },
+                        { "id": "bobb-014", "name": "亞當 Adam", "category": "特別款Special", "stock": "限量", "cost": "50 CCP", "price": 50, "buyback_price": "30 CCP" },
+                        { "id": "bobb-015", "name": "阿嘉莎 Agatha", "category": "特別款Special", "stock": "限量", "cost": "50 CCP", "price": 50, "buyback_price": "20 CCP" },
+                        { "id": "bobb-016", "name": "傲霜女巫姊妹三人組 Alabaster Witch Sisters Trio", "category": "特別款Special", "stock": "限量", "cost": "120 CCP", "price": 120, "buyback_price": "55 CCP" },
+                        { "id": "bobb-017", "name": "阿納巨蟒 Anaconda", "category": "特別款Special", "stock": "限量", "cost": "50 CCP", "price": 50, "buyback_price": "15 CCP" },
+                        { "id": "bobb-018", "name": "阿斯特洛斯之樹 Asteroth’s Tree", "category": "特別款Special", "stock": "限量", "cost": "50 CCP", "price": 50, "buyback_price": "10 CCP" },
+                        { "id": "bobb-019", "name": "弗萊徹 Fletcher", "category": "特別款Special", "stock": "限量", "cost": "50 CCP", "price": 50, "buyback_price": "5 CCP" },
+                        { "id": "bobb-020", "name": "拉西安娜 Laciana", "category": "特別款Special", "stock": "限量", "cost": "50 CCP", "price": 50, "buyback_price": "25 CCP" },
+                        { "id": "bobb-021", "name": "雷恩 Laine", "category": "特別款Special", "stock": "限量", "cost": "50 CCP", "price": 50, "buyback_price": "35 CCP" },
+                        { "id": "bobb-022", "name": "拉米娜 Lamina", "category": "特別款Special", "stock": "限量", "cost": "50 CCP", "price": 50, "buyback_price": "15 CCP" },
+                        { "id": "bobb-023", "name": "拉札拉克 Lazarak", "category": "特別款Special", "stock": "限量", "cost": "50 CCP", "price": 50, "buyback_price": "15 CCP" },
+                        { "id": "bobb-024", "name": "L.E.A.D. 南瓜終結者 L.E.A.D. Pumpkinator", "category": "特別款Special", "stock": "限量", "cost": "50 CCP", "price": 50, "buyback_price": "50 CCP" },
+                        { "id": "bobb-025", "name": "莉絲貝 Lisbeth", "category": "特別款Special", "stock": "限量", "cost": "50 CCP", "price": 50, "buyback_price": "35 CCP" },
+                        { "id": "bobb-026", "name": "里希登斯坦領主 Lord Lichtenstein", "category": "特別款Special", "stock": "限量", "cost": "50 CCP", "price": 50, "buyback_price": "20 CCP" },
+                        { "id": "bobb-027", "name": "洛恩 Lorne", "category": "特別款Special", "stock": "限量", "cost": "50 CCP", "price": 50, "buyback_price": "10 CCP" },
+                        { "id": "bobb-028", "name": "離途沼澤 Lostfoot’s Bog", "category": "特別款Special", "stock": "限量", "cost": "50 CCP", "price": 50, "buyback_price": "5 CCP" },
+                        { "id": "bobb-029", "name": "盧卡斯 Lucas", "category": "特別款Special", "stock": "限量", "cost": "50 CCP", "price": 50, "buyback_price": "20 CCP" },
+                        { "id": "bobb-030", "name": "奧列格 Oleg", "category": "特別款Special", "stock": "限量", "cost": "50 CCP", "price": 50, "buyback_price": "5 CCP" },
+                        { "id": "bobb-031", "name": "奧菲莉婭 Ophelia", "category": "特別款Special", "stock": "限量", "cost": "50 CCP", "price": 50, "buyback_price": "40 CCP" },
+                        { "id": "bobb-032", "name": "奧瑞莎 Orisa", "category": "特別款Special", "stock": "限量", "cost": "50 CCP", "price": 50, "buyback_price": "30 CCP" },
+                        { "id": "bobb-033", "name": "奧瑞克 Orrick", "category": "特別款Special", "stock": "限量", "cost": "50 CCP", "price": 50, "buyback_price": "20 CCP" },
+                        { "id": "bobb-034", "name": "奧斯瓦多 Osvaldo", "category": "特別款Special", "stock": "限量", "cost": "50 CCP", "price": 50, "buyback_price": "5 CCP" },
+                        { "id": "bobb-035", "name": "威廉 William", "category": "特別款Special", "stock": "限量", "cost": "50 CCP", "price": 50, "buyback_price": "20 CCP" },
+                        { "id": "bobb-036", "name": "搖頭娃娃靈魂分離器", "category": "工具", "stock": "獨特", "cost": "5000 CCP", "price": 5000, "buyback_price": "-" },
+                        { "id": "bobb-037", "name": "保護盒", "category": "工具", "stock": "大量", "cost": "10 CCP", "price": 10, "buyback_price": "-" }
+                    ],
+                    "shop-curio": [
+                        { "id": "curio-001", "name": "骨鏢 Bone Darts", "category": "武器裝備", "stock": "大量", "cost": "20 支 5 CCP", "price": 5 },
+                        { "id": "curio-002", "name": "小丑錘 Clown Hammer", "category": "武器裝備", "stock": "限量", "cost": "50 CCP", "price": 50 },
+                        { "id": "curio-003", "name": "假花 Fake Flower", "category": "武器裝備", "stock": "限量", "cost": "60 CCP", "price": 60 },
+                        { "id": "curio-004", "name": "滴血餅乾 Bleeding Biscuit", "category": "消耗品", "stock": "大量", "cost": "8 CCP", "price": 8 },
+                        { "id": "curio-005", "name": "棉花糖蘋果酒 Cotton Candy Cider", "category": "消耗品", "stock": "大量", "cost": "5 CCP", "price": 5 },
+                        { "id": "curio-006", "name": "棉花糖玉米 Cotton Candy Corn", "category": "消耗品", "stock": "大量", "cost": "10 CCP", "price": 10 },
+                        { "id": "curio-007", "name": "眼球棒 Eyeball On A Stick", "category": "消耗品", "stock": "大量", "cost": "3 CCP", "price": 3 },
+                        { "id": "curio-008", "name": "炸手指 Fried Fingers", "category": "消耗品", "stock": "大量", "cost": "8 CCP", "price": 8 },
+                        { "id": "curio-009", "name": "腎結石玉米糖 Kidney Corn", "category": "消耗品", "stock": "大量", "cost": "15 CCP", "price": 15 },
+                        { "id": "curio-010", "name": "瘟疫花生 Pestilent Peanuts", "category": "消耗品", "stock": "大量", "cost": "10 CCP", "price": 10 },
+                        { "id": "curio-011", "name": "驚嚎冰棒 Screamsicle", "category": "消耗品", "stock": "大量", "cost": "8 CCP", "price": 8 },
+                        { "id": "curio-012", "name": "尖叫汽水 Soda Scream", "category": "消耗品", "stock": "大量", "cost": "5 CCP", "price": 5 },
+                        { "id": "curio-013", "name": "電擊太妃糖 Zappy Taffy", "category": "消耗品", "stock": "大量", "cost": "5 根 5 CCP", "price": 5 },
+                        { "id": "curio-014", "name": "殭屍玉米 Zombie Corn", "category": "消耗品", "stock": "大量", "cost": "15 CCP", "price": 15 },
+                        { "id": "curio-015", "name": "女妖毛絨玩偶 Banshee Plushie", "category": "新奇物品", "stock": "限量", "cost": "80 CCP", "price": 80 },
+                        { "id": "curio-016", "name": "骨製煙花 Bonework", "category": "新奇物品", "stock": "大量", "cost": "每個 5 CCP 或 10 個 25 CCP", "price": 5 },
+                        { "id": "curio-017", "name": "烏鴉毛絨玩偶 Crow Plushie", "category": "新奇物品", "stock": "限量", "cost": "5 CCP", "price": 5 },
+                        { "id": "curio-018", "name": "幽靈毛絨玩偶 Ghost Plushie", "category": "新奇物品", "stock": "限量", "cost": "80 CCP", "price": 80 },
+                        { "id": "curio-019", "name": "食屍鬼毛絨玩偶 Ghoul Plushie", "category": "新奇物品", "stock": "限量", "cost": "20 CCP", "price": 20 },
+                        { "id": "curio-020", "name": "老鼠毛絨玩偶 Rat Plushie", "category": "新奇物品", "stock": "限量", "cost": "5 CCP", "price": 5 },
+                        { "id": "curio-021", "name": "骷髏毛絨玩偶 Skeleton Plushie", "category": "新奇物品", "stock": "限量", "cost": "10 CCP", "price": 10 },
+                        { "id": "curio-022", "name": "希德搖頭娃娃 Sid’s Bobblehead", "category": "新奇物品", "stock": "大量", "cost": "50 CCP", "price": 50 },
+                        { "id": "curio-023", "name": "蜘蛛毛絨玩偶 Spider Plushie", "category": "新奇物品", "stock": "限量", "cost": "5 CCP", "price": 5 },
+                        { "id": "curio-024", "name": "可疑的紅氣球 Suspiciously Red Balloon", "category": "新奇物品", "stock": "大量", "cost": "10 CCP", "price": 10 },
+                        { "id": "curio-025", "name": "蟾蜍氣球 Toad Balloon", "category": "新奇物品", "stock": "大量", "cost": "10 CCP", "price": 10 },
+                        { "id": "curio-026", "name": "屍妖毛絨玩偶 Wight Plushie", "category": "新奇物品", "stock": "限量", "cost": "60 CCP", "price": 60 },
+                        { "id": "curio-027", "name": "殭屍毛絨玩偶 Zombie Plushie", "category": "新奇物品", "stock": "限量", "cost": "10 CCP", "price": 10 },
+                        { "id": "curio-028", "name": "驚喜袋（小號） Show Bag (small)", "category": "驚喜袋", "stock": "大量", "cost": "25 CCP", "price": 25 },
+                        { "id": "curio-029", "name": "驚喜袋（中號） Show Bag (medium)", "category": "驚喜袋", "stock": "大量", "cost": "45 CCP", "price": 45 },
+                        { "id": "curio-030", "name": "驚喜袋（大號） Show Bag (large)", "category": "驚喜袋", "stock": "大量", "cost": "60 CCP", "price": 60 },
+                        { "id": "curio-031", "name": "驚喜袋（特大號） Show Bag (extra-large)", "category": "驚喜袋", "stock": "大量", "cost": "75 CCP", "price": 75 }
+                    ]
+                }
             },
-            "items": {
-                // 阿嬤的柑仔店 的物品
-                "shop-a": [
-                    { "id": "a-001", "name": "彈珠汽水", "desc": "懷舊的玻璃瓶裝汽水。", "price": 25 },
-                    { "id": "a-002", "name": "抽抽樂", "desc": "有機會抽到大獎。", "price": 10 }
-                ],
-                // 黑科技中心 的物品
-                "shop-b": [
-                    { "id": "b-001", "name": "懸浮滑板", "desc": "依靠反重力推進，時速 30 公里。", "price": 80000 },
-                    { "id": "b-002", "name": "翻譯耳機", "desc": "即時翻譯 40 種語言。", "price": 4500 }
-                ],
-                // 魔法道具屋 的物品
-                "shop-c": [
-                    { "id": "c-001", "name": "初級回復藥水", "desc": "恢復少量生命值。", "price": 50 },
-                    { "id": "c-002", "name": "隱形斗篷 (瑕疵品)", "desc": "只能維持隱形 3 分鐘。", "price": 1200 }
-                ]
+            "tasks": {
+                // 任務主分類
+                "categories": {
+                    "task-bounty": "鬼燈市集：達卡的懸賞告示牌",
+                    "task-contest": "餐館：貝拉的飲食競賽",
+                    "task-games": "詭異珍品：雜耍遊戲"
+                },
+                // 任務項目
+                "items": {
+                    "task-bounty": [
+                        { "id": "bounty-001", "name_zh": "屍體化", "name_en": "Corpsified", "reward_str": "500 CCP", "reward_val": 500, "desc_zh": "讓亞當異形怪的最後一擊由屍體工廠的陷阱造成。", "desc_en": "Have the final blow on Adam the Abomination be dealt by one of the corpse factories traps" },
+                        { "id": "bounty-002", "name_zh": "懦弱領主", "name_en": "Cowardly Lord", "reward_str": "1000 CCP", "reward_val": 1000, "desc_zh": "偷走里希登斯坦領主的煉金藥水，並在徹底擊敗他之前將里希登斯坦變成一隻雞。真是個膽小鬼。", "desc_en": "Steal Lord Lichtenstein’s alchemical potions and turn Lichtenstein into a chicken before defeating him outright. What a chicken." },
+                        { "id": "bounty-003", "name_zh": "顏色調換", "name_en": "Color Swapping", "reward_str": "1500 CCP", "reward_val": 1500, "desc_zh": "在同一場戰鬥遭遇中，僅使用冰凍傷害擊敗安柏傲霜女巫，僅使用火焰傷害擊敗紫晶傲霜女巫，並僅使用閃電傷害擊敗安漷傲霜女巫。", "desc_en": "Defeat Amber Alabaster using only cold damage, defeat Amethyst Alabaster using only fire damage and defeat Aqua Alabaster using only lightning damage during the same combat encounter." },
+                        { "id": "bounty-004", "name_zh": "匕首匕首", "name_en": "Dagger Dagger", "reward_str": "1000 CCP", "reward_val": 1000, "desc_zh": "僅使用匕首或匕首類型武器造成的傷害擊敗刀鋒兄弟艾歷克斯和阿克塞爾。盜賊們，我說得對吧。", "desc_en": "Defeat Alex and Axel, the Blade Brothers using only damage dealt by daggers or weapons with the dagger type. Rogues am I right." },
+                        { "id": "bounty-005", "name_zh": "自掘墳墓", "name_en": "Digging Your Own Grave", "reward_str": "1000 CCP", "reward_val": 1000, "desc_zh": "在掘墓者奧瑞克挖掘或至少在地下時，對他造成致命一擊。高效的埋葬。", "desc_en": "Get the killing blow on Orrick the Gravedigger while he is burrowed or at least under the ground. Efficient Burials." },
+                        { "id": "bounty-006", "name_zh": "火，火！", "name_en": "Fire, Fire!", "reward_str": "500 CCP", "reward_val": 500, "desc_zh": "僅使用造成火焰傷害的攻擊擊敗亞當異形怪。燒焦了。", "desc_en": "Defeat Adam the Abomination using only attacks that deal Fire Damage. Burned." },
+                        { "id": "bounty-007", "name_zh": "滾出我的地盤，洛恩！", "name_en": "Get Off My Lorne", "reward_str": "1500 CCP", "reward_val": 1500, "desc_zh": "僅使用徒手打擊擊敗墓穴的洛恩。就像真正的武僧一樣。", "desc_en": "Defeat Lorne of the Tomb using only Unarmed Strikes. Just like a real monk." },
+                        { "id": "bounty-008", "name_zh": "斬首", "name_en": "Headless", "reward_str": "1000000 CCP", "reward_val": 1000000, "desc_zh": "砍下無頭騎士的頭。", "desc_en": "Cut off the Horseman’s head." },
+                        { "id": "bounty-009", "name_zh": "縫合完畢", "name_en": "Left in Stiches", "reward_str": "500 CCP", "reward_val": 500, "desc_zh": "僅在奧斯瓦多縫屍匠從他的「縫合完畢」能力中獲得所有五種增強後，才擊敗他。更可能是痛苦的發作。", "desc_en": "Defeat Osvaldo the Stitcher only after he has obtained all five augments from his Stitched Up ability. Fits of pain more likely." },
+                        { "id": "bounty-010", "name_zh": "南瓜爆炸", "name_en": "Punk-Splosion", "reward_str": "500 CCP", "reward_val": 500, "desc_zh": "使用一個點燃的南瓜炸彈對南瓜之王拉札拉克造成致命一擊。", "desc_en": "Get the killing blow on Lazarak the Pumpkin King using a lit Pumpkin Bomb." },
+                        { "id": "bounty-011", "name_zh": "重新充能", "name_en": "Recharged", "reward_str": "1000 CCP", "reward_val": 1000, "desc_zh": "將 L.E.A.D. 南瓜終結者的生命值降至其起始總生命值的一半以下，然後僅使用火焰傷害將其治療回滿生命值，然後再徹底擊敗它。火焰吸收太棒了。", "desc_en": "Drop the L.E.A.D. Pumpkinator to below half of its starting total HP and then use only Fire damage to heal it back up to full health before defeating it outright. Fire Absorption is great." },
+                        { "id": "bounty-012", "name_zh": "劈砍木屑", "name_en": "Rip Rip Woodchip", "reward_str": "500 CCP", "reward_val": 500, "desc_zh": "僅使用造成揮砍傷害的攻擊擊敗阿斯特洛斯之樹。砍砍。", "desc_en": "Defeat Asteroth’s Tree by using only attacks that inflict Slashing Damage. Chop chop" },
+                        { "id": "bounty-013", "name_zh": "銀器殺手", "name_en": "Silver Slayer", "reward_str": "500 CCP", "reward_val": 500, "desc_zh": "僅使用鍍銀武器的攻擊擊敗虧月之人盧卡斯。", "desc_en": "Defeat Lucas of the Waning Moon using only attacks from silvered weapons." },
+                        { "id": "bounty-014", "name_zh": "沉沒感", "name_en": "Sinking Feeling", "reward_str": "500 CCP", "reward_val": 500, "desc_zh": "在沉洞水面下游泳時，對沉洞阿納巨蟒造成最後一擊。", "desc_en": "Land the final blow on the Anaconda of the Sinkhole while swimming beneath the surface in the same sinkhole." },
+                        { "id": "bounty-015", "name_zh": "濺射傷害", "name_en": "Splash Damage", "reward_str": "1500 CCP", "reward_val": 1500, "desc_zh": "在受到莉絲貝誘惑魔女的「誘惑打擊」能力影響時擊敗她。", "desc_en": "Defeat Lisbeth the Temptress while under the effects of her Seductive Strike ability." },
+                        { "id": "bounty-016", "name_zh": "那是我的血", "name_en": "That’s My Blood", "reward_str": "1500 CCP", "reward_val": 1500, "desc_zh": "在被奧瑞莎凝血者擊倒並成功成為其「生命吸取」能力目標後，對她造成致命一擊。", "desc_en": "Get the killing blow on Orisa the Blood Curdler after being downed and successfully targeted by her Life Sucker ability." },
+                        { "id": "bounty-017", "name_zh": "網上戰士", "name_en": "Web Warrior", "reward_str": "500 CCP", "reward_val": 500, "desc_zh": "在被蜘蛛女王拉西安娜的網束縛時，對她造成致命一擊。", "desc_en": "Land the killing blow on Laciana the Spider Queen while restrained by her webs." },
+                        { "id": "bounty-018", "name_zh": "你不是我", "name_en": "You’re Not Me", "reward_str": "1500 CCP", "reward_val": 1500, "desc_zh": "在受到雷恩完美主義者的「記憶竊取」和「完美鏡像」能力影響後，對她造成致命一擊。有兩個？", "desc_en": "Get the Killing blow on Laine the Perfectionist after you have been affected by her Memory Tap and Perfect Mirror Abilities. There’s two?" },
+                        { "id": "bounty-019", "name_zh": "你太自戀了", "name_en": "You’re So Vain", "reward_str": "500 CCP", "reward_val": 500, "desc_zh": "戰鬥中沒有獵人可以對瘋狂少女阿嘉莎造成傷害。僅通過在她的巢穴中揭露鏡子來擊敗她。", "desc_en": "No hunter may deal damage to Agatha the Mad Maiden during the battle. Defeat her only by uncovering mirrors in her lair." }
+                    ],
+                    "task-contest": [
+                        { "id": "contest-001", "name_zh": "硫磺餅乾", "name_en": "Brimstone Biscuit", "cost_str": "30 CCP", "cost_val": 30, "reward_zh": "易燃紙", "reward_en": "Fickle Flame", "desc_zh": "盛在一塊鐵板上，硫磺餅乾看起來像一大塊煤，其外殼上有發紅光的脈絡，不斷散發出熱氣。食物有 12 HP 和 16 AC。在它的回合，食物自動擊中玩家，造成 1D8 火焰傷害，因為它灼燒玩家。", "desc_en": "Served on a slab of iron, the brimstone biscuit looks like a large lump of coal with glowing red veins coursing through its shell that constantly emanates a haze of heat. The food has 12 HP and 16 AC. On its turn the food automatically hits the player with 1D8 Fire Damage as it burns the player." },
+                        { "id": "contest-002", "name_zh": "末日蘑菇", "name_en": "Doom Shroom", "cost_str": "40 CCP", "cost_val": 40, "reward_zh": "蓬蓬炸彈", "reward_en": "Puff Bomb", "desc_zh": "一個 2 英尺 x 2 英尺大的、看起來像皮革的蘑菇帽，盛在新鮮採摘的龍葵床上。我的意思是它看起來完全無害可食用。食物有 50 HP 和 3 AC。在它的回合，食物釋放孢子。當食物釋放孢子時，進食的玩家必須進行 DC13 的體質豁免，失敗則受到 1D10 毒素傷害，成功則傷害減半。即使你豁免成功，也不會獲得對此效果的免疫。", "desc_en": "A large 2 foot by 2 foot leathery looking mushroom cap served on bed of freshly picked nightshade. I mean it looks perfectly harmless to eat. The food has 50 HP and 3 AC. On its turn the food releases spores. When the food releases spores, the eating player must make a DC13 Constitution saving throw or be dealt 1D10 Poison Damage on a failed save or half as much on a successful save. You do not gain immunity to this effect if you succeed." },
+                        { "id": "contest-003", "name_zh": "淤泥啤酒", "name_en": "Ooze Booze", "cost_str": "20 CCP", "cost_val": 20, "reward_zh": "脊骨啤酒杯", "reward_en": "Spine Stein", "desc_zh": "一杯豐盛的半加侖大杯，滿溢著黏稠的綠色液體，偶爾發出低沉的咕嚕聲。當你從桌子上拿起它時，你注意到溢出的液體會自己拉回杯子裡。食物有 15 HP 和 18 AC。在它的回合，食物用偽足自動擊中玩家，造成 1D8 鈍擊傷害。", "desc_en": "A hearty sized ½ gallon mug overflowing with a viscous green liquid that occasionally makes a low gurgling sound. As you pick it up from the table you take note that the overflowing fluid pulls itself back into the mug. The food has 15 HP and 18 AC. On its turn the food automatically hits the player with a pseudopod for 1D8 Bludgeoning damage." },
+                        { "id": "contest-004", "name_zh": "尖刺苔蘚沙拉", "name_en": "Spike Moss Salad", "cost_str": "15 CCP", "cost_val": 15, "reward_zh": "不死之勺", "reward_en": "Undead Spoon", "desc_zh": "一團 seemingly harmless green moss that is plated up with a balsamic drizzle. Too bad that it instantly turns into a ball of spikes when you touch it. The food has 30 HP and 5 AC. On its turn the food automatically hits the player with 1D6 Piercing Damage as it spikes the player.", "desc_en": "A messy clump of seemingly harmless green moss that is plated up with a balsamic drizzle. Too bad that it instantly turns into a ball of spikes when you touch it. The food has 30 HP and 5 AC. On its turn the food automatically hits the player with 1D6 Piercing Damage as it spikes the player." },
+                        { "id": "contest-005", "name_zh": "扼殺魷魚", "name_en": "The Strangler Squid", "cost_str": "25 CCP", "cost_val": 25, "reward_zh": "惡魔之鹽", "reward_en": "Demon Salt", "desc_zh": "一根粗壯的、四英尺長的烤觸手，聞起來有黃油和海鹽的味道。如果觸手沒有在盤子上移動，它可能是一頓豐盛的大餐。食物有 25 HP 和 12 AC。在它的回合，食物自動擊中玩家，造成 1D10 鈍擊傷害，因為它扼殺玩家。", "desc_en": "A single thick, four foot long roasted tentacle that smells of butter and sea salt. It probably would be a hearty feast if the tentacle wasn’t moving around on the plate. The food has 25 HP and 12 AC. On its turn the food automatically hits the player with 1D10 Bludgeoning Damage as it strangles the player." },
+                        { "id": "contest-006", "name_zh": "吸血鬼水蛭", "name_en": "The Vampire Leech", "cost_str": "50 CCP", "cost_val": 50, "reward_zh": "黏稠袋", "reward_en": "Glutinous Bag", "desc_zh": "一條宴會尺寸的油炸水蛭，嘴裡長滿了鋒利的吸血鬼牙齒。吸血鬼水蛭會試圖在你把它吃到死之前把你吸乾。食物有 30 HP 和 10 AC。在它的回合，食物自動擊中玩家，造成 1D6 穿刺傷害，並恢復那麼多生命值，因為它從玩家身上吸取生命。", "desc_en": "A full banquet sized deep fried leech that has a mouth full of razor sharp vampire teeth. The vampire leech is going to try and suck you dry before you can eat it to death. The food has 30 HP and 10 AC. On its turn the food automatically hits the player with 1D6 Piercing Damage and regains that many Hit Points as it sucks the life from the player." },
+                        { "id": "contest-007", "name_zh": "帝王蜘蛛蟹宴（4-5名玩家）", "name_en": "King Spider Crab Banquet", "cost_str": "120 CCP", "cost_val": 120, "reward_zh": "蜘蛛蟹護符", "reward_en": "Spider Crab Charm", "desc_zh": "一個供整個隊伍嘗試生存的特殊飲食競賽。一隻桌子大小的清蒸蜘蛛蟹，絕對還活著，並且不想成為你的餐點。享用吧！對於這個挑戰，根據正常情況為每個玩家單獨擲先攻。食物有 80 HP 和 15 AC。在它的回合，食物用它的蜘蛛蟹爪自動擊中每個玩家，造成 1D8 揮砍和 1D8 穿刺傷害。", "desc_en": "A special eating competition for a whole party to try and survive. A small table sized steamed spider crab that is most definitely still alive and doesn’t want to be you meal. Enjoy! For this challenge roll initiative for each player separately as per normal. The food has 80 HP and 15 AC. On its turn the food automatically hits each player with its spider crab claws for 1D8 Slashing and 1D8 Piercing damage." }
+                    ],
+                    "task-games": [
+                        { "id": "game-001", "name_zh": "膀胱爆破", "name_en": "Bladder Pop", "cost_str": "10 CCP", "cost_val": 10, "desc_zh": "玩家獲得 3 支骨鏢，投向一面充滿膨脹膀胱的牆。對於每支飛鏢，玩家必須對膀胱的 8 AC 進行一次遠程攻擊檢定。成功命中則一個膀胱被戳破。對於每個被戳破的膀胱，玩家必須擲 1D10 並將結果相加來計算玩家的分數。", "desc_en": "The player is given 3 bone darts to throw at a wall of inflated bladders. For each dart players must make a ranged attack roll against the 8 AC of the bladders. A bladder is popped on a successful hit. For each bladder popped the player must roll 1D10 and add the results together to calculate the players score." },
+                        { "id": "game-002", "name_zh": "肋骨投擲", "name_en": "Rib Toss", "cost_str": "10 CCP", "cost_val": 10, "desc_zh": "向玩家提供 6 根彎曲的肋骨，嘗試將其套在幾根脊椎骨中的一根上。對於每根投出的肋骨，玩家進行一次臨時遠程武器攻擊。玩家將根據每次攻擊檢定的成功程度得分。10 或更高得 1 分，14 或更高得 3 分，17 或更高得 5 分。將它們全部相加得到獎品。", "desc_en": "The player is provided with 6 curved ribs to attempt at tossing around one of several spines. For each rib tossed the player makes an improvised ranged weapon attack. The player will score depending on how successful each attack roll is. 10 or higher is 1 point, 14 or higher is 3 points and 17 or higher is 5 points. Add them all together for the prize." },
+                        { "id": "game-003", "name_zh": "腦力深潛", "name_en": "Brain Bobbing", "cost_str": "5 CCP", "cost_val": 5, "desc_zh": "玩家必須頭朝下潛入一個黏糊糊的、你不想知道裡面是什麼的桶裡，並用他們的嘴或等效器官抓住一個大腦。玩家必須首先成功通過 DC13 的體質豁免，否則會因厭惡而退縮並失敗遊戲。如果成功，玩家必須用他們的嘴對大腦的 10 AC 進行一次臨時近戰攻擊。如果玩家沒有溺水或把頭縮回來，他們可以進行多次嘗試來獲取一個大腦。一旦檢回一個大腦，玩家擲 3D8，這將代表他們的分數和大腦大小。", "desc_en": "Players must plunge headfirst into a slimy barrel of you don’t want to know what and grab a brain with their mouth or equivalent orifice. The player must first succeed on a DC13 Constitution saving throw or reel back in disgust and fail the game. If they are successful, the player must make an improvised melee attack with their mouth against the brains 10 AC. The player may make multiple attempts to get a brain if they don’t drown or pull their head out. Once a brain is retrieved the player rolls 3D8 which will represent their points and the brain size." },
+                        { "id": "game-004", "name_zh": "噩夢釣魚", "name_en": "Nightmare Fishing", "cost_str": "15 CCP", "cost_val": 15, "desc_zh": "玩家必須將他們的整個手臂或等效附肢放入一池漆黑黏稠的液體中。一旦低於水面，他們就無法再看到手臂，但能感覺到有東西撞擊它、觸摸和輕咬他們。玩家必須根據下表從最簡單的 DC 開始，成功通過越來越困難的感知豁免，以克服恐懼並將手臂保持在液體中。他們堅持的時間越長，水下有生物附著在他們手臂上的感覺就會變得越強烈。根據下表，將根據他們能將手臂保持在液體中的時間長短來授予分數。如果玩家豁免失敗，他們還會在相當於他們試圖通過的 DC 的分鐘數內陷入恐慌狀態。此外，成功通過 DC20 的玩家還將因其勇氣獲得一個額外獎品，名為「海洋靈魂」的物品。\n\nWIS DC | Points\n---|---\n- | 0\nDC8 | 5\nDC10 | 10\nDC12 | 15\nDC14 | 20\nDC16 | 25\nDC18 | 30\nDC20 | 31+", "desc_en": "The player must lower their entire arm or equivalent appendage into a pitch black pool of viscous liquid. Once below the water’s surface they can no longer see the arm, but can feel things bumping into it, touching and nibbling at them. The player must succeed on increasingly difficult Wisdom saving throws tarting with the easiest DC on the table below in order to overcome their fear and keep their arm in the liquid. The longer they last the greater the sensations of creatures latching onto their arm beneath the surface will become. Points will be awarded based on how long they can keep their arm in the liquid as per the below table. If a player fails a saving throw they will also become Frightened for a number of minutes equal to the DC they were attempting to pass. Additionally players who succeed DC20 will also be given an additional prize in the form of an item called a Sea Soul for their bravery.\n\nWIS DC | Points\n---|---\n- | 0\nDC8 | 5\nDC10 | 10\nDC12 | 15\nDC14 | 20\nDC16 | 25\nDC18 | 30\nDC20 | 31+" }
+                    ]
+                }
             }
         };
 
         // 5. 獲取 HTML 元素
+        const queryTypeSelect = document.getElementById('queryTypeSelect');
+        const shopsSection = document.getElementById('shopsSection');
+        const tasksSection = document.getElementById('tasksSection');
+        
         const shopSelect = document.getElementById('shopSelect');
-        const itemSelect = document.getElementById('itemSelect');
-        const detailsContainer = document.getElementById('detailsContainer');
-        const detailName = document.getElementById('detailName');
-        const detailDesc = document.getElementById('detailDesc');
-        const detailPrice = document.getElementById('detailPrice');
+        const shopItemSelect = document.getElementById('shopItemSelect');
+        
+        const taskSelect = document.getElementById('taskSelect');
+        const taskItemSelect = document.getElementById('taskItemSelect');
 
-        // 6. [頁面載入時] 載入商店列表 (選單1)
-        function loadShops() {
-            // "database.shops" 是一個物件，我們需要遍歷它
-            for (const shopId in database.shops) {
-                const shopName = database.shops[shopId];
-                
-                const option = document.createElement('option');
-                option.value = shopId; // e.g., "shop-a"
-                option.textContent = shopName; // e.g., "阿嬤的柑仔店"
-                
+        const detailsContainer = document.getElementById('detailsContainer');
+
+        // 6. [頁面載入時] 載入主分類
+        function loadPrimaryCategories() {
+            // 載入商店
+            for (const categoryId in database.shops.categories) {
+                const categoryName = database.shops.categories[categoryId];
+                const option = new Option(categoryName, categoryId); // (text, value)
                 shopSelect.appendChild(option);
+            }
+            // 載入任務
+            for (const categoryId in database.tasks.categories) {
+                const categoryName = database.tasks.categories[categoryId];
+                const option = new Option(categoryName, categoryId);
+                taskSelect.appendChild(option);
             }
         }
 
-        // 7. [當商店改變時] 載入物品列表 (選單2)
+        // 7. [主選單] 監聽查詢類型變更
+        queryTypeSelect.addEventListener('change', () => {
+            const selectedType = queryTypeSelect.value;
+            
+            // 隱藏所有區塊和詳情
+            shopsSection.style.display = 'none';
+            tasksSection.style.display = 'none';
+            detailsContainer.style.display = 'none';
+            
+            // 重置所有次級選單
+            shopSelect.value = '';
+            shopItemSelect.value = '';
+            shopItemSelect.disabled = true;
+            taskSelect.value = '';
+            taskItemSelect.value = '';
+            taskItemSelect.disabled = true;
+
+            if (selectedType === 'shops') {
+                shopsSection.style.display = 'block';
+            } else if (selectedType === 'tasks') {
+                tasksSection.style.display = 'block';
+            }
+        });
+
+        // 8. [商店] 監聽商店選單變更
         shopSelect.addEventListener('change', () => {
             const selectedShopId = shopSelect.value;
-            
-            // (a) 清空舊的物品列表和詳情
-            itemSelect.innerHTML = '<option value="">— 請選擇物品 —</option>';
-            detailsContainer.style.display = 'none'; // 隱藏詳情
+            shopItemSelect.innerHTML = '<option value="">— 請選擇物品 —</option>';
+            detailsContainer.style.display = 'none';
 
             if (selectedShopId) {
-                // (b) 如果選了一個商店
-                itemSelect.disabled = false; // 啟用物品選單
-
-                const itemsForShop = database.items[selectedShopId];
+                shopItemSelect.disabled = false;
+                const items = database.shops.items[selectedShopId] || [];
                 
-                itemsForShop.forEach(item => {
-                    const option = document.createElement('option');
-                    option.value = item.id; // e.g., "a-001"
-                    option.textContent = item.name; // e.g., "彈珠汽水"
-                    itemSelect.appendChild(option);
-                });
-
+                if (items.length > 0) {
+                    items.forEach(item => {
+                        const option = new Option(item.name, item.id);
+                        shopItemSelect.appendChild(option);
+                    });
+                } else {
+                    shopItemSelect.innerHTML = '<option value="">— 此商店無存貨 —</option>';
+                    shopItemSelect.disabled = true;
+                }
             } else {
-                // (c) 如果選回「請選擇商店」
-                itemSelect.innerHTML = '<option value="">— 請先選擇商店 —</option>';
-                itemSelect.disabled = true; // 禁用物品選單
+                shopItemSelect.innerHTML = '<option value="">— 請先選擇商店 —</option>';
+                shopItemSelect.disabled = true;
             }
         });
 
-        // 8. [當物品改變時] 顯示詳情
-        itemSelect.addEventListener('change', () => {
-            const selectedItemId = itemSelect.value;
+        // 9. [商店] 監聽物品選單變更 (顯示詳情)
+        shopItemSelect.addEventListener('change', () => {
+            const selectedItemId = shopItemSelect.value;
             const selectedShopId = shopSelect.value;
 
-            if (selectedItemId) {
-                // (a) 如果選了一個物品
-                
-                // 從資料庫中找到這個物品
-                // 1. 找到這家店的所有物品
-                const itemsForShop = database.items[selectedShopId];
-                // 2. 在這些物品中，找到 ID 相符的那一個
-                const selectedItem = itemsForShop.find(item => item.id === selectedItemId);
+            if (!selectedItemId) {
+                detailsContainer.style.display = 'none';
+                return;
+            }
 
-                // (b) 把物品詳情填入 HTML
-                detailName.textContent = selectedItem.name;
-                detailDesc.textContent = selectedItem.desc;
-                detailPrice.textContent = `價格：${selectedItem.price} 元`;
+            const items = database.shops.items[selectedShopId] || [];
+            const item = items.find(i => i.id === selectedItemId);
+
+            if (item) {
+                // [核心] 建立商店物品詳情
+                let html = `<h3>${item.name}</h3>`;
+                html += `<p><strong>分類：</strong> <span>${item.category}</span></p>`;
+                html += `<p><strong>庫存：</strong> <span>${item.stock}</span></p>`;
+                html += `<p><strong>花費：</strong> <span>${item.cost}</span></p>`;
+
+                // [特殊欄位] 僅當 'buyback_price' 存在時才顯示
+                if (item.buyback_price) {
+                    html += `<p><strong>收購價：</strong> <span>${item.buyback_price}</span></p>`;
+                }
                 
-                // (c) 顯示詳情區塊
+                detailsContainer.innerHTML = html;
                 detailsContainer.style.display = 'block';
-            
-            } else {
-                // (b) 如果選回「請選擇物品」
-                detailsContainer.style.display = 'none'; // 隱藏詳情
             }
         });
 
-        // 9. [頁面啟動]
-        // 頁面一載入，就立刻執行 loadShops() 來填滿第一個選單
-        loadShops();
+        // 10. [任務] 監聽任務類別變更
+        taskSelect.addEventListener('change', () => {
+            const selectedTaskId = taskSelect.value;
+            taskItemSelect.innerHTML = '<option value="">— 請選擇任務 —</option>';
+            detailsContainer.style.display = 'none';
+
+            if (selectedTaskId) {
+                taskItemSelect.disabled = false;
+                const items = database.tasks.items[selectedTaskId] || [];
+                
+                if (items.length > 0) {
+                    items.forEach(item => {
+                        // 任務選單顯示中文名
+                        const option = new Option(item.name_zh, item.id);
+                        taskItemSelect.appendChild(option);
+                    });
+                } else {
+                    taskItemSelect.innerHTML = '<option value="">— 此類別無任務 —</option>';
+                    taskItemSelect.disabled = true;
+                }
+            } else {
+                taskItemSelect.innerHTML = '<option value="">— 請先選擇任務類別 —</option>';
+                taskItemSelect.disabled = true;
+            }
+        });
+
+        // 11. [任務] 監聽任務項目變更 (顯示詳情)
+        taskItemSelect.addEventListener('change', () => {
+            const selectedItemId = taskItemSelect.value;
+            const selectedTaskId = taskSelect.value;
+
+            if (!selectedItemId) {
+                detailsContainer.style.display = 'none';
+                return;
+            }
+
+            const items = database.tasks.items[selectedTaskId] || [];
+            const item = items.find(i => i.id === selectedItemId);
+
+            if (item) {
+                // [核心] 建立任務詳情
+                let html = `<h3>${item.name_zh}</h3>`;
+                html += `<p class="sub-name">${item.name_en || ''}</p>`;
+
+                // [動態欄位] 根據任務類型顯示不同資訊
+                if (item.reward_str) {
+                    html += `<p><strong>賞金：</strong> <span>${item.reward_str}</span></p>`;
+                }
+                if (item.cost_str) {
+                    html += `<p><strong>花費：</strong> <span>${item.cost_str}</span></p>`;
+                }
+                if (item.reward_zh) {
+                    html += `<p><strong>獎品：</strong> <span>${item.reward_zh} (${item.reward_en})</span></p>`;
+                }
+
+                // 顯示敘述 (支援換行)
+                html += `<div class="description-text">
+                            <p>${item.desc_zh || ''}</p>
+                         </div>`;
+                
+                // 顯示英文敘述 (如果存在)
+                if (item.desc_en) {
+                    html += `<div class="description-text">
+                                <p>${item.desc_en}</p>
+                             </div>`;
+                }
+                
+                detailsContainer.innerHTML = html;
+                detailsContainer.style.display = 'block';
+            }
+        });
+
+        // 12. [頁面啟動]
+        loadPrimaryCategories();
 
     </script>
 </body>
