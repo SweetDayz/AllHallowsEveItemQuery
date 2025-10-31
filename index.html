@@ -1,10 +1,209 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-TW">
 <head>
-    <title>我的查詢網站</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商店物品查詢</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            margin: 0;
+            padding: 2rem;
+            background-color: #f4f7f6;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+        }
+        .container {
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+        h1 {
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+        select {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 6px;
+            border: 1px solid #ddd;
+            /* 讓 Safari 和 Chrome 看起來一致 */
+            -webkit-appearance: none;
+            appearance: none;
+            background-color: #fff;
+            background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007AFF%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E');
+            background-repeat: no-repeat;
+            background-position: right 1rem center;
+            background-size: 0.65em auto;
+        }
+        #detailsContainer {
+            margin-top: 2rem;
+            padding: 1rem;
+            background-color: #f9f9f9;
+            border-radius: 6px;
+            border: 1px solid #eee;
+            /* 預設隱藏，有內容時才顯示 */
+            display: none; 
+        }
+        #detailsContainer h3 {
+            margin-top: 0;
+            color: #0056b3;
+        }
+    </style>
 </head>
 <body>
-    <h1>網站架設成功！</h1>
-    <p>我的靜態查詢網站將會放在這裡。</p>
+
+    <div class="container">
+        <h1>商店物品查詢</h1>
+        
+        <div class="form-group">
+            <label for="shopSelect">步驟一：選擇商店</label>
+            <select id="shopSelect">
+                <option value="">— 請選擇商店 —</option>
+                </select>
+        </div>
+
+        <div class="form-group">
+            <label for="itemSelect">步驟二：選擇物品</label>
+            <select id="itemSelect" disabled>
+                <option value="">— 請先選擇商店 —</option>
+            </select>
+        </div>
+
+        <div id="detailsContainer">
+            <h3 id="detailName"></h3>
+            <p id="detailDesc"></p>
+            <p id="detailPrice"></p>
+        </div>
+    </div>
+
+    <script>
+        // 4. 您的所有資料庫 (靜態)
+        // 結構：商店ID -> 物品ID -> 物品詳情
+        const database = {
+            "shops": {
+                "shop-a": "阿嬤的柑仔店",
+                "shop-b": "黑科技中心",
+                "shop-c": "魔法道具屋"
+            },
+            "items": {
+                // 阿嬤的柑仔店 的物品
+                "shop-a": [
+                    { "id": "a-001", "name": "彈珠汽水", "desc": "懷舊的玻璃瓶裝汽水。", "price": 25 },
+                    { "id": "a-002", "name": "抽抽樂", "desc": "有機會抽到大獎。", "price": 10 }
+                ],
+                // 黑科技中心 的物品
+                "shop-b": [
+                    { "id": "b-001", "name": "懸浮滑板", "desc": "依靠反重力推進，時速 30 公里。", "price": 80000 },
+                    { "id": "b-002", "name": "翻譯耳機", "desc": "即時翻譯 40 種語言。", "price": 4500 }
+                ],
+                // 魔法道具屋 的物品
+                "shop-c": [
+                    { "id": "c-001", "name": "初級回復藥水", "desc": "恢復少量生命值。", "price": 50 },
+                    { "id": "c-002", "name": "隱形斗篷 (瑕疵品)", "desc": "只能維持隱形 3 分鐘。", "price": 1200 }
+                ]
+            }
+        };
+
+        // 5. 獲取 HTML 元素
+        const shopSelect = document.getElementById('shopSelect');
+        const itemSelect = document.getElementById('itemSelect');
+        const detailsContainer = document.getElementById('detailsContainer');
+        const detailName = document.getElementById('detailName');
+        const detailDesc = document.getElementById('detailDesc');
+        const detailPrice = document.getElementById('detailPrice');
+
+        // 6. [頁面載入時] 載入商店列表 (選單1)
+        function loadShops() {
+            // "database.shops" 是一個物件，我們需要遍歷它
+            for (const shopId in database.shops) {
+                const shopName = database.shops[shopId];
+                
+                const option = document.createElement('option');
+                option.value = shopId; // e.g., "shop-a"
+                option.textContent = shopName; // e.g., "阿嬤的柑仔店"
+                
+                shopSelect.appendChild(option);
+            }
+        }
+
+        // 7. [當商店改變時] 載入物品列表 (選單2)
+        shopSelect.addEventListener('change', () => {
+            const selectedShopId = shopSelect.value;
+            
+            // (a) 清空舊的物品列表和詳情
+            itemSelect.innerHTML = '<option value="">— 請選擇物品 —</option>';
+            detailsContainer.style.display = 'none'; // 隱藏詳情
+
+            if (selectedShopId) {
+                // (b) 如果選了一個商店
+                itemSelect.disabled = false; // 啟用物品選單
+
+                const itemsForShop = database.items[selectedShopId];
+                
+                itemsForShop.forEach(item => {
+                    const option = document.createElement('option');
+                    option.value = item.id; // e.g., "a-001"
+                    option.textContent = item.name; // e.g., "彈珠汽水"
+                    itemSelect.appendChild(option);
+                });
+
+            } else {
+                // (c) 如果選回「請選擇商店」
+                itemSelect.innerHTML = '<option value="">— 請先選擇商店 —</option>';
+                itemSelect.disabled = true; // 禁用物品選單
+            }
+        });
+
+        // 8. [當物品改變時] 顯示詳情
+        itemSelect.addEventListener('change', () => {
+            const selectedItemId = itemSelect.value;
+            const selectedShopId = shopSelect.value;
+
+            if (selectedItemId) {
+                // (a) 如果選了一個物品
+                
+                // 從資料庫中找到這個物品
+                // 1. 找到這家店的所有物品
+                const itemsForShop = database.items[selectedShopId];
+                // 2. 在這些物品中，找到 ID 相符的那一個
+                const selectedItem = itemsForShop.find(item => item.id === selectedItemId);
+
+                // (b) 把物品詳情填入 HTML
+                detailName.textContent = selectedItem.name;
+                detailDesc.textContent = selectedItem.desc;
+                detailPrice.textContent = `價格：${selectedItem.price} 元`;
+                
+                // (c) 顯示詳情區塊
+                detailsContainer.style.display = 'block';
+            
+            } else {
+                // (b) 如果選回「請選擇物品」
+                detailsContainer.style.display = 'none'; // 隱藏詳情
+            }
+        });
+
+        // 9. [頁面啟動]
+        // 頁面一載入，就立刻執行 loadShops() 來填滿第一個選單
+        loadShops();
+
+    </script>
 </body>
 </html>
