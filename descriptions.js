@@ -2086,5 +2086,87 @@ const allDescriptions = [
     "category_en": "Normal Item (Collectible), Special",
     "desc_zh": "",
     "desc_en": ""
+  },
+  {
+    "id": "女妖毛絨玩偶 BANSHEE PLUSHIE",
+    "name_zh": "女妖毛絨玩偶",
+    "name_en": "BANSHEE PLUSHIE",
+    "category_zh": "奇物（收藏品），常見",
+    "category_en": "Wondrous Item (Collectible), Common",
+    "desc_zh": "在年輕的邪惡存在和一些特殊的恐怖存在中很受歡迎，這些恐怖毛絨玩具是整個領域中可以找到的最柔軟、最可愛的東西。有各種各樣的款式可供選擇，從殭屍到蝙蝠到女妖等等。它們通常可以購買或通過屍體嘉年華的雜耍遊戲贏得。儘管它們具有完全可擠壓的特點，但每個毛絨玩偶也是一次性的召喚物品。通過閱讀產品標籤上的魔法詞語，毛絨玩具會變成它所代表的怪物的真實版本，只不過它對召喚它的人完全友好。例如，一個殭屍毛絨玩偶會變成一個真正的殭屍！召喚的生物最多持續一個小時，並在你的先攻順序下行動，會遵循基本的命令。一小時後，該生物會化為灰燼。甚至連毛絨玩偶也不會留下。",
+    "desc_en": "Popular among young evils and some special horrors, these horror plush toys are the softest and cutest thing that can be found in all of the realm. There is an assortment available from zombies to bats to banshees and more. They can usually be purchased or won through sideshow games at the Corpse Carnival. Despite their totally squishable features each plushie is also a single use summoning item. By reading the magic words on the product tag the plush toy will turn into a real version of the monster it represents, except it will be totally friendly to the person that summoned it. For example a zombie plushie will become a real zombie! The summoned creature lasts up to an hour and operates on your initiative and will follow basic commands. Once the hour is up the creature will turn to ash. Not even the plushie will remain."
+  },
+  {
+    "id": "烏鴉毛絨玩偶 CROW PLUSHIE",
+    "name_zh": "烏鴉毛絨玩偶",
+    "name_en": "CROW PLUSHIE",
+    "category_zh": "奇物（收藏品），常見",
+    "category_en": "Wondrous Item (Collectible), Common",
+    "desc_zh": "在年輕的邪惡存在和一些特殊的恐怖存在中很受歡迎，這些恐怖毛絨玩具是整個領域中可以找到的最柔軟、最可愛的東西。有各種各樣的款式可供選擇，從殭屍到蝙蝠到女妖等等。它們通常可以購買或通過屍體嘉年華的雜耍遊戲贏得。儘管它們具有完全可擠壓的特點，但每個毛絨玩偶也是一次性的召喚物品。通過閱讀產品標籤上的魔法詞語，毛絨玩具會變成它所代表的怪物的真實版本，只不過它對召喚它的人完全友好。例如，一個殭屍毛絨玩偶會變成一個真正的殭屍！召喚的生物最多持續一個小時，並在你的先攻順序下行動，會遵循基本的命令。一小時後，該生物會化為灰燼。甚至連毛絨玩偶也不會留下。",
+    "desc_en": "Popular among young evils and some special horrors, these horror plush toys are the softest and cutest thing that can be found in all of the realm. There is an assortment available from zombies to bats to banshees and more. They can usually be purchased or won through sideshow games at the Corpse Carnival. Despite their totally squishable features each plushie is also a single use summoning item. By reading the magic words on the product tag the plush toy will turn into a real version of the monster it represents, except it will be totally friendly to the person that summoned it. For example a zombie plushie will become a real zombie! The summoned creature lasts up to an hour and operates on your initiative and will follow basic commands. Once the hour is up the creature will turn to ash. Not even the plushie will remain."
+  },
+  {
+    "id": "幽靈毛絨玩偶 GHOST PLUSHIE",
+    "name_zh": "幽靈毛絨玩偶",
+    "name_en": "GHOST PLUSHIE",
+    "category_zh": "奇物（收藏品），常見",
+    "category_en": "Wondrous Item (Collectible), Common",
+    "desc_zh": "在年輕的邪惡存在和一些特殊的恐怖存在中很受歡迎，這些恐怖毛絨玩具是整個領域中可以找到的最柔軟、最可愛的東西。有各種各樣的款式可供選擇，從殭屍到蝙蝠到女妖等等。它們通常可以購買或通過屍體嘉年華的雜耍遊戲贏得。儘管它們具有完全可擠壓的特點，但每個毛絨玩偶也是一次性的召喚物品。通過閱讀產品標籤上的魔法詞語，毛絨玩具會變成它所代表的怪物的真實版本，只不過它對召喚它的人完全友好。例如，一個殭屍毛絨玩偶會變成一個真正的殭屍！召喚的生物最多持續一個小時，並在你的先攻順序下行動，會遵循基本的命令。一小時後，該生物會化為灰燼。甚至連毛絨玩偶也不會留下。",
+    "desc_en": "Popular among young evils and some special horrors, these horror plush toys are the softest and cutest thing that can be found in all of the realm. There is an assortment available from zombies to bats to banshees and more. They can usually be purchased or won through sideshow games at the Corpse Carnival. Despite their totally squishable features each plushie is also a single use summoning item. By reading the magic words on the product tag the plush toy will turn into a real version of the monster it represents, except it will be totally friendly to the person that summoned it. For example a zombie plushie will become a real zombie! The summoned creature lasts up to an hour and operates on your initiative and will follow basic commands. Once the hour is up the creature will turn to ash. Not even the plushie will remain."
+  },
+  {
+    "id": "食屍鬼毛絨玩偶 GHOUL PLUSHIE",
+    "name_zh": "食屍鬼毛絨玩偶",
+    "name_en": "GHOUL PLUSHIE",
+    "category_zh": "奇物（收藏品），常見",
+    "category_en": "Wondrous Item (Collectible), Common",
+    "desc_zh": "在年輕的邪惡存在和一些特殊的恐怖存在中很受歡迎，這些恐怖毛絨玩具是整個領域中可以找到的最柔軟、最可愛的東西。有各種各樣的款式可供選擇，從殭屍到蝙蝠到女妖等等。它們通常可以購買或通過屍體嘉年華的雜耍遊戲贏得。儘管它們具有完全可擠壓的特點，但每個毛絨玩偶也是一次性的召喚物品。通過閱讀產品標籤上的魔法詞語，毛絨玩具會變成它所代表的怪物的真實版本，只不過它對召喚它的人完全友好。例如，一個殭屍毛絨玩偶會變成一個真正的殭屍！召喚的生物最多持續一個小時，並在你的先攻順序下行動，會遵循基本的命令。一小時後，該生物會化為灰燼。甚至連毛絨玩偶也不會留下。",
+    "desc_en": "Popular among young evils and some special horrors, these horror plush toys are the softest and cutest thing that can be found in all of the realm. There is an assortment available from zombies to bats to banshees and more. They can usually be purchased or won through sideshow games at the Corpse Carnival. Despite their totally squishable features each plushie is also a single use summoning item. By reading the magic words on the product tag the plush toy will turn into a real version of the monster it represents, except it will be totally friendly to the person that summoned it. For example a zombie plushie will become a real zombie! The summoned creature lasts up to an hour and operates on your initiative and will follow basic commands. Once the hour is up the creature will turn to ash. Not even the plushie will remain."
+  },
+  {
+    "id": "老鼠毛絨玩偶 RAT PLUSHIE",
+    "name_zh": "老鼠毛絨玩偶",
+    "name_en": "RAT PLUSHIE",
+    "category_zh": "奇物（收藏品），常見",
+    "category_en": "Wondrous Item (Collectible), Common",
+    "desc_zh": "在年輕的邪惡存在和一些特殊的恐怖存在中很受歡迎，這些恐怖毛絨玩具是整個領域中可以找到的最柔軟、最可愛的東西。有各種各樣的款式可供選擇，從殭屍到蝙蝠到女妖等等。它們通常可以購買或通過屍體嘉年華的雜耍遊戲贏得。儘管它們具有完全可擠壓的特點，但每個毛絨玩偶也是一次性的召喚物品。通過閱讀產品標籤上的魔法詞語，毛絨玩具會變成它所代表的怪物的真實版本，只不過它對召喚它的人完全友好。例如，一個殭屍毛絨玩偶會變成一個真正的殭屍！召喚的生物最多持續一個小時，並在你的先攻順序下行動，會遵循基本的命令。一小時後，該生物會化為灰燼。甚至連毛絨玩偶也不會留下。",
+    "desc_en": "Popular among young evils and some special horrors, these horror plush toys are the softest and cutest thing that can be found in all of the realm. There is an assortment available from zombies to bats to banshees and more. They can usually be purchased or won through sideshow games at the Corpse Carnival. Despite their totally squishable features each plushie is also a single use summoning item. By reading the magic words on the product tag the plush toy will turn into a real version of the monster it represents, except it will be totally friendly to the person that summoned it. For example a zombie plushie will become a real zombie! The summoned creature lasts up to an hour and operates on your initiative and will follow basic commands. Once the hour is up the creature will turn to ash. Not even the plushie will remain."
+  },
+  {
+    "id": "骷髏毛絨玩偶 SKELETON PLUSHIE",
+    "name_zh": "骷髏毛絨玩偶",
+    "name_en": "SKELETON PLUSHIE",
+    "category_zh": "奇物（收藏品），常見",
+    "category_en": "Wondrous Item (Collectible), Common",
+    "desc_zh": "在年輕的邪惡存在和一些特殊的恐怖存在中很受歡迎，這些恐怖毛絨玩具是整個領域中可以找到的最柔軟、最可愛的東西。有各種各樣的款式可供選擇，從殭屍到蝙蝠到女妖等等。它們通常可以購買或通過屍體嘉年華的雜耍遊戲贏得。儘管它們具有完全可擠壓的特點，但每個毛絨玩偶也是一次性的召喚物品。通過閱讀產品標籤上的魔法詞語，毛絨玩具會變成它所代表的怪物的真實版本，只不過它對召喚它的人完全友好。例如，一個殭屍毛絨玩偶會變成一個真正的殭屍！召喚的生物最多持續一個小時，並在你的先攻順序下行動，會遵循基本的命令。一小時後，該生物會化為灰燼。甚至連毛絨玩偶也不會留下。",
+    "desc_en": "Popular among young evils and some special horrors, these horror plush toys are the softest and cutest thing that can be found in all of the realm. There is an assortment available from zombies to bats to banshees and more. They can usually be purchased or won through sideshow games at the Corpse Carnival. Despite their totally squishable features each plushie is also a single use summoning item. By reading the magic words on the product tag the plush toy will turn into a real version of the monster it represents, except it will be totally friendly to the person that summoned it. For example a zombie plushie will become a real zombie! The summoned creature lasts up to an hour and operates on your initiative and will follow basic commands. Once the hour is up the creature will turn to ash. Not even the plushie will remain."
+  },
+  {
+    "id": "蜘蛛毛絨玩偶 SPIDER PLUSHIE",
+    "name_zh": "蜘蛛毛絨玩偶",
+    "name_en": "SPIDER PLUSHIE",
+    "category_zh": "奇物（收藏品），常見",
+    "category_en": "Wondrous Item (Collectible), Common",
+    "desc_zh": "在年輕的邪惡存在和一些特殊的恐怖存在中很受歡迎，這些恐怖毛絨玩具是整個領域中可以找到的最柔軟、最可愛的東西。有各種各樣的款式可供選擇，從殭屍到蝙蝠到女妖等等。它們通常可以購買或通過屍體嘉年華的雜耍遊戲贏得。儘管它們具有完全可擠壓的特點，但每個毛絨玩偶也是一次性的召喚物品。通過閱讀產品標籤上的魔法詞語，毛絨玩具會變成它所代表的怪物的真實版本，只不過它對召喚它的人完全友好。例如，一個殭屍毛絨玩偶會變成一個真正的殭屍！召喚的生物最多持續一個小時，並在你的先攻順序下行動，會遵循基本的命令。一小時後，該生物會化為灰燼。甚至連毛絨玩偶也不會留下。",
+    "desc_en": "Popular among young evils and some special horrors, these horror plush toys are the softest and cutest thing that can be found in all of the realm. There is an assortment available from zombies to bats to banshees and more. They can usually be purchased or won through sideshow games at the Corpse Carnival. Despite their totally squishable features each plushie is also a single use summoning item. By reading the magic words on the product tag the plush toy will turn into a real version of the monster it represents, except it will be totally friendly to the person that summoned it. For example a zombie plushie will become a real zombie! The summoned creature lasts up to an hour and operates on your initiative and will follow basic commands. Once the hour is up the creature will turn to ash. Not even the plushie will remain."
+  },
+  {
+    "id": "屍妖毛絨玩偶 WIGHT PLUSHIE",
+    "name_zh": "屍妖毛絨玩偶",
+    "name_en": "WIGHT PLUSHIE",
+    "category_zh": "奇物（收藏品），常見",
+    "category_en": "Wondrous Item (Collectible), Common",
+    "desc_zh": "在年輕的邪惡存在和一些特殊的恐怖存在中很受歡迎，這些恐怖毛絨玩具是整個領域中可以找到的最柔軟、最可愛的東西。有各種各樣的款式可供選擇，從殭屍到蝙蝠到女妖等等。它們通常可以購買或通過屍體嘉年華的雜耍遊戲贏得。儘管它們具有完全可擠壓的特點，但每個毛絨玩偶也是一次性的召喚物品。通過閱讀產品標籤上的魔法詞語，毛絨玩具會變成它所代表的怪物的真實版本，只不過它對召喚它的人完全友好。例如，一個殭屍毛絨玩偶會變成一個真正的殭屍！召喚的生物最多持續一個小時，並在你的先攻順序下行動，會遵循基本的命令。一小時後，該生物會化為灰燼。甚至連毛絨玩偶也不會留下。",
+    "desc_en": "Popular among young evils and some special horrors, these horror plush toys are the softest and cutest thing that can be found in all of the realm. There is an assortment available from zombies to bats to banshees and more. They can usually be purchased or won through sideshow games at the Corpse Carnival. Despite their totally squishable features each plushie is also a single use summoning item. By reading the magic words on the product tag the plush toy will turn into a real version of the monster it represents, except it will be totally friendly to the person that summoned it. For example a zombie plushie will become a real zombie! The summoned creature lasts up to an hour and operates on your initiative and will follow basic commands. Once the hour is up the creature will turn to ash. Not even the plushie will remain."
+  },
+  {
+    "id": "殭屍毛絨玩偶 ZOMBIE PLUSHIE",
+    "name_zh": "殭屍毛絨玩偶",
+    "name_en": "ZOMBIE PLUSHIE",
+    "category_zh": "奇物（收藏品），常見",
+    "category_en": "Wondrous Item (Collectible), Common",
+    "desc_zh": "在年輕的邪惡存在和一些特殊的恐怖存在中很受歡迎，這些恐怖毛絨玩具是整個領域中可以找到的最柔軟、最可愛的東西。有各種各樣的款式可供選擇，從殭屍到蝙蝠到女妖等等。它們通常可以購買或通過屍體嘉年華的雜耍遊戲贏得。儘管它們具有完全可擠壓的特點，但每個毛絨玩偶也是一次性的召喚物品。通過閱讀產品標籤上的魔法詞語，毛絨玩具會變成它所代表的怪物的真實版本，只不過它對召喚它的人完全友好。例如，一個殭屍毛絨玩偶會變成一個真正的殭屍！召喚的生物最多持續一個小時，並在你的先攻順序下行動，會遵循基本的命令。一小時後，該生物會化為灰燼。甚至連毛絨玩偶也不會留下。",
+    "desc_en": "Popular among young evils and some special horrors, these horror plush toys are the softest and cutest thing that can be found in all of the realm. There is an assortment available from zombies to bats to banshees and more. They can usually be purchased or won through sideshow games at the Corpse Carnival. Despite their totally squishable features each plushie is also a single use summoning item. By reading the magic words on the product tag the plush toy will turn into a real version of the monster it represents, except it will be totally friendly to the person that summoned it. For example a zombie plushie will become a real zombie! The summoned creature lasts up to an hour and operates on your initiative and will follow basic commands. Once the hour is up the creature will turn to ash. Not even the plushie will remain."
   }
+]
 ];
