@@ -1,4 +1,4 @@
-[
+const allDescriptions = [
   {
     "id": "深淵護符 ABYSSAL AMULET",
     "name_zh": "深淵護符",
@@ -1853,4 +1853,4 @@
     "desc_zh": "殭屍皮是一件 aptly named 的破舊旅行外套，由老舊殭屍的斑駁腐爛皮膚製成。這件骯髒的外套養著幾隻蒼蠅和蛆蟲在接縫處爬行，清楚地表明皮膚沒有經過適當清潔或鞣製。除了作為萬聖節服裝的極其逼真的絕佳補充外，殭屍皮允許穿戴者近乎完美地與真正的殭屍融為一體。穿著這件外套時，殭屍無法將你與另一個殭屍區分開來（是因為氣味）。你可以和平地在它們中間移動而不會引起它們的攻擊性。但如果你脫掉它，那你就完蛋了。",
     "desc_en": "The Zombie Skin is an aptly named shabby travellers coat made from the mottled rotting skin of aged zombies. The filthy coat supports a few flies and maggots crawling around the seams, clearly aware that the skin has not been cleaned nor tanned properly. Aside from making a great addition to a freakishly realistic Halloween costume, the Zombie Skin allows the wearer to near perfectly blend in with actual zombies. While wearing this coat zombies are unable to differentiate you from another zombie (it’s the smell). You can peacefully move among them without them becoming aggressive. But if you take it off then you are done for."
   }
-]
+];
