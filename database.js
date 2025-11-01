@@ -112,7 +112,7 @@ const allDatabase = {
         { "item_id": "盒中瘟疫 POX IN A BOX", "category": "獨特物品", "stock": "稀缺", "cost": "500 CCP" },
         { "item_id": "黯淡戒指 TARNISHED RING", "category": "獨特物品", "stock": "稀缺", "cost": "300 CCP" }
       ],
-      "shop-restaurant": [
+    "shop-restaurant": [
         { "item_id": "100% 火蜥蜴汁 100% JUICE OF FIRE NEWT", "category": "飲品Drinks", "stock": "大量", "cost": "5 CCP" },
         { "item_id": "大釜潘趣酒 CAULDRON PUNCH", "category": "飲品Drinks", "stock": "大量", "cost": "5 CCP" },
         { "item_id": "黑烏鴉乾燥腳 DRIED FEES OF BLACK CROW", "category": "飲品Drinks", "stock": "大量", "cost": "5 CCP" },
@@ -124,7 +124,7 @@ const allDatabase = {
         { "item_id": "綠色油脂玉米 GREEN GRIZZLE CORN", "category": "零食Snacks", "stock": "大量", "cost": "每包 5 CCP" },
         { "item_id": "風味糖果玉米 FLAVORED CANDY CORN", "category": "零食Snacks", "stock": "大量", "cost": "5 CCP" },
         { "item_id": "果凍南瓜 JELLY PUMPKINS", "category": "零食Snacks", "stock": "大量", "cost": "10 CCP" },
-        { "item_id": "仙塵棒 PIXIE STIX", "category": "零食Snacks", "stock": "大量", "cost": "10 CCP" },
+        { "item_id": "仙塵 PIXIE DUST", "category": "零食Snacks", "stock": "大量", "cost": "10 CCP" },
         { "item_id": "死神薯片 REAPER CHIPS", "category": "零食Snacks", "stock": "大量", "cost": "15 CCP" },
         { "item_id": "蝙蝠翅膀 BATTY BAT WINGS", "category": "正餐Meals", "stock": "大量", "cost": "25 CCP" },
         { "item_id": "定罪麵包盅 CONDEMNED COB LOAF", "category": "正餐Meals", "stock": "大量", "cost": "30 CCP" },
