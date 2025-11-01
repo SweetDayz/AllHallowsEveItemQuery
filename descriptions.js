@@ -2438,5 +2438,4 @@ const allDescriptions = [
     "desc_zh": "",
     "desc_en": ""
   }
-]
 ];
