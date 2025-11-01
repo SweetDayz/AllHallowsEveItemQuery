@@ -413,7 +413,7 @@ function startApp(database, descriptions) {
     // --- [ 啟動 ] ---
     try {
         if (typeof allDatabase === 'undefined' || typeof allDescriptions === 'undefined') {
-            throw new Error("database.js 或 descriptions.js 檔案遺失或載入失敗。請檢查 <head> 中的 <script src=...></script> 標籤。");
+            throw new Error("database.js 或 descriptions.js 檔案遺失或載入失敗。請檢查script標籤。");
         }
         
         initializeApp();
