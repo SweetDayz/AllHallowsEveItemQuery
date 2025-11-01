@@ -1852,5 +1852,203 @@ const allDescriptions = [
     "category_en": "",
     "desc_zh": "殭屍皮是一件 aptly named 的破舊旅行外套，由老舊殭屍的斑駁腐爛皮膚製成。這件骯髒的外套養著幾隻蒼蠅和蛆蟲在接縫處爬行，清楚地表明皮膚沒有經過適當清潔或鞣製。除了作為萬聖節服裝的極其逼真的絕佳補充外，殭屍皮允許穿戴者近乎完美地與真正的殭屍融為一體。穿著這件外套時，殭屍無法將你與另一個殭屍區分開來（是因為氣味）。你可以和平地在它們中間移動而不會引起它們的攻擊性。但如果你脫掉它，那你就完蛋了。",
     "desc_en": "The Zombie Skin is an aptly named shabby travellers coat made from the mottled rotting skin of aged zombies. The filthy coat supports a few flies and maggots crawling around the seams, clearly aware that the skin has not been cleaned nor tanned properly. Aside from making a great addition to a freakishly realistic Halloween costume, the Zombie Skin allows the wearer to near perfectly blend in with actual zombies. While wearing this coat zombies are unable to differentiate you from another zombie (it’s the smell). You can peacefully move among them without them becoming aggressive. But if you take it off then you are done for."
+  },
+  {
+    "id": "亞當 ADAM",
+    "name_zh": "亞當",
+    "name_en": "ADAM",
+    "category_zh": "普通物品（收藏品），特殊",
+    "category_en": "Normal Item (Collectible), Special",
+    "desc_zh": "",
+    "desc_en": ""
+  },
+  {
+    "id": "阿嘉莎 AGATHA",
+    "name_zh": "阿嘉莎",
+    "name_en": "AGATHA",
+    "category_zh": "普通物品（收藏品），特殊",
+    "category_en": "Normal Item (Collectible), Special",
+    "desc_zh": "",
+    "desc_en": ""
+  },
+  {
+    "id": "傲霜女巫姊妹三人組 ALABASTER WITCH SISTERS TRIO",
+    "name_zh": "傲霜女巫姊妹三人組",
+    "name_en": "ALABASTER WITCH SISTERS TRIO",
+    "category_zh": "普通物品（收藏品），特殊",
+    "category_en": "Normal Item (Collectible), Special",
+    "desc_zh": "",
+    "desc_en": ""
+  },
+  {
+    "id": "阿納巨蟒 ANACONDA",
+    "name_zh": "阿納巨蟒",
+    "name_en": "ANACONDA",
+    "category_zh": "普通物品（收藏品），特殊",
+    "category_en": "Normal Item (Collectible), Special",
+    "desc_zh": "",
+    "desc_en": ""
+  },
+  {
+    "id": "阿斯特洛斯之樹 ASTEROTH’S TREE",
+    "name_zh": "阿斯特洛斯之樹",
+    "name_en": "ASTEROTH’S TREE",
+    "category_zh": "普通物品（收藏品），特殊",
+    "category_en": "Normal Item (Collectible), Special",
+    "desc_zh": "",
+    "desc_en": ""
+  },
+  {
+    "id": "弗萊徹 FLETCHER",
+    "name_zh": "弗萊徹",
+    "name_en": "FLETCHER",
+    "category_zh": "普通物品（收藏品），特殊",
+    "category_en": "Normal Item (Collectible), Special",
+    "desc_zh": "",
+    "desc_en": ""
+  },
+  {
+    "id": "拉西安娜 LACIANA",
+    "name_zh": "拉西安娜",
+    "name_en": "LACIANA",
+    "category_zh": "普通物品（收藏品），特殊",
+    "category_en": "Normal Item (Collectible), Special",
+    "desc_zh": "",
+    "desc_en": ""
+  },
+  {
+    "id": "雷恩 LAINE",
+    "name_zh": "雷恩",
+    "name_en": "LAINE",
+    "category_zh": "普通物品（收藏品），特殊",
+    "category_en": "Normal Item (Collectible), Special",
+    "desc_zh": "",
+    "desc_en": ""
+  },
+  {
+    "id": "拉米娜 LAMINA",
+    "name_zh": "拉米娜",
+    "name_en": "LAMINA",
+    "category_zh": "普通物品（收藏品），特殊",
+    "category_en": "Normal Item (Collectible), Special",
+    "desc_zh": "",
+    "desc_en": ""
+  },
+  {
+    "id": "拉札拉克 LAZARAK",
+    "name_zh": "拉札拉克",
+    "name_en": "LAZARAK",
+    "category_zh": "普通物品（收藏品），特殊",
+    "category_en": "Normal Item (Collectible), Special",
+    "desc_zh": "",
+    "desc_en": ""
+  },
+  {
+    "id": "L.E.A.D. 南瓜終結者 L.E.A.D. PUMPKINATOR",
+    "name_zh": "L.E.A.D. 南瓜終結者",
+    "name_en": "L.E.A.D. PUMPKINATOR",
+    "category_zh": "普通物品（收藏品），特殊",
+    "category_en": "Normal Item (Collectible), Special",
+    "desc_zh": "",
+    "desc_en": ""
+  },
+  {
+    "id": "莉絲貝 LISBETH",
+    "name_zh": "莉絲貝",
+    "name_en": "LISBETH",
+    "category_zh": "普通物品（收藏品），特殊",
+    "category_en": "Normal Item (Collectible), Special",
+    "desc_zh": "",
+    "desc_en": ""
+  },
+  {
+    "id": "里希登斯坦領主 LORD LICHTENSTEIN",
+    "name_zh": "里希登斯坦領主",
+    "name_en": "LORD LICHTENSTEIN",
+    "category_zh": "普通物品（收藏品），特殊",
+    "category_en": "Normal Item (Collectible), Special",
+    "desc_zh": "",
+    "desc_en": ""
+  },
+  {
+    "id": "洛恩 LORNE",
+    "name_zh": "洛恩",
+    "name_en": "LORNE",
+    "category_zh": "普通物品（收藏品），特殊",
+    "category_en": "Normal Item (Collectible), Special",
+    "desc_zh": "",
+    "desc_en": ""
+  },
+  {
+    "id": "離途沼澤 LOSTFOOT’S BOG",
+    "name_zh": "離途沼澤",
+    "name_en": "LOSTFOOT’S BOG",
+    "category_zh": "普通物品（收藏品），特殊",
+    "category_en": "Normal Item (Collectible), Special",
+    "desc_zh": "",
+    "desc_en": ""
+  },
+  {
+    "id": "盧卡斯 LUCAS",
+    "name_zh": "盧卡斯",
+    "name_en": "LUCAS",
+    "category_zh": "普通物品（收藏品），特殊",
+    "category_en": "Normal Item (Collectible), Special",
+    "desc_zh": "",
+    "desc_en": ""
+  },
+  {
+    "id": "奧列格 OLEG",
+    "name_zh": "奧列格",
+    "name_en": "OLEG",
+    "category_zh": "普通物品（收藏品），特殊",
+    "category_en": "Normal Item (Collectible), Special",
+    "desc_zh": "",
+    "desc_en": ""
+  },
+  {
+    "id": "奧菲莉婭 OPHELIA",
+    "name_zh": "奧菲莉婭",
+    "name_en": "OPHELIA",
+    "category_zh": "普通物品（收藏品），特殊",
+    "category_en": "Normal Item (Collectible), Special",
+    "desc_zh": "",
+    "desc_en": ""
+  },
+  {
+    "id": "奧瑞莎 ORISA",
+    "name_zh": "奧瑞莎",
+    "name_en": "ORISA",
+    "category_zh": "普通物品（收藏品），特殊",
+    "category_en": "Normal Item (Collectible), Special",
+    "desc_zh": "",
+    "desc_en": ""
+  },
+  {
+    "id": "奧瑞克 ORRICK",
+    "name_zh": "奧瑞克",
+    "name_en": "ORRICK",
+    "category_zh": "普通物品（收藏品），特殊",
+    "category_en": "Normal Item (Collectible), Special",
+    "desc_zh": "",
+    "desc_en": ""
+  },
+  {
+    "id": "奧斯瓦多 OSVALDO",
+    "name_zh": "奧斯瓦多",
+    "name_en": "OSVALDO",
+    "category_zh": "普通物品（收藏品），特殊",
+    "category_en": "Normal Item (Collectible), Special",
+    "desc_zh": "",
+    "desc_en": ""
+  },
+  {
+    "id": "威廉 WILLIAM",
+    "name_zh": "威廉",
+    "name_en": "WILLIAM",
+    "category_zh": "普通物品（收藏品），特殊",
+    "category_en": "Normal Item (Collectible), Special",
+    "desc_zh": "",
+    "desc_en": ""
   }
 ];
