@@ -1423,7 +1423,7 @@ const allDescriptions = [
   },
   {
     "id": "驚喜袋（小號） SHOW BAG (SMALL)",
-    "name_zh": "驚喜袋 - 各種尺寸",
+    "name_zh": "驚喜袋（小號）",
     "name_en": "SHOW BAG (SMALL)",
     "category_zh": "普通物品（新奇物品），非普通Normal Item (Novelty), Uncommon",
     "category_en": "",
