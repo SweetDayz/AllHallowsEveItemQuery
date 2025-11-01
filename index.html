@@ -4,7 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>靜態查詢資料庫</title>
+    
+    <script src="database.js"></script>
+    <script src="descriptions.js"></script>
+
     <style>
+        /* CSS 樣式與 v6.1 完全相同，保持不變 */
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
             margin: 0;
@@ -30,14 +35,13 @@
             padding-bottom: 10px;
             margin-top: 0;
         }
-        /* [新增] 搜尋框樣式 */
         #searchBox {
             width: 100%;
             padding: 10px 12px;
             font-size: 16px;
             border-radius: 6px;
             border: 1px solid #ddd;
-            box-sizing: border-box; /* 確保 padding 不會撐開寬度 */
+            box-sizing: border-box;
             margin-bottom: 1.5rem;
         }
         .form-group {
@@ -68,8 +72,6 @@
             margin-top: 1.5rem;
             padding-top: 1.5rem;
         }
-        
-        /* 詳情顯示區域 */
         #detailsContainer {
             margin-top: 2rem;
             padding: 1.5rem;
@@ -134,7 +136,6 @@
             margin-top: 0.8rem;
             padding-top: 0.8rem;
         }
-        /* [新增] 搜尋高亮 */
         .highlight {
             background-color: yellow;
             font-weight: bold;
@@ -204,20 +205,12 @@
     </div>
 
     <script>
-        // ===============================================
-        // 4. [靜態資料庫 - 骨架]
-        // (資料將從 .json 檔案載入)
-        // ===============================================
+        // 由於 .js 檔案已在 <head> 載入，
+        // allDatabase 和 allDescriptions 變數現在可以直接使用。
         
-        // 全域變數，用於儲存查找表和原始資料
+        // 全域查找表
         const itemMasterList = new Map();
-        let allDescriptions = [];
-        let allDatabase = {};
 
-        // ===============================================
-        // 5. [全新] 程式邏輯 (v6.1 - Asynchronous)
-        // ===============================================
-        
         // 獲取所有 HTML 元素
         const searchBox = document.getElementById('searchBox');
         const queryTypeSelect = document.getElementById('queryTypeSelect');
@@ -232,53 +225,11 @@
         const lootItemSelect = document.getElementById('lootItemSelect');
         const detailsContainer = document.getElementById('detailsContainer');
 
-        // 頁面載入完成後，開始獲取資料
-        document.addEventListener('DOMContentLoaded', () => {
-            loadDataAndStartApp();
-        });
-
-        /**
-         * [核心] 獲取外部 .json 檔案並啟動應用
-         */
-        async function loadDataAndStartApp() {
-            try {
-                // 1. 同時獲取兩個資料檔
-                const [dbResponse, descResponse] = await Promise.all([
-                    fetch('database.json'), // 獲取情境資料庫
-                    fetch('descriptions.json') // 獲取物品總表
-                ]);
-
-                if (!dbResponse.ok) throw new Error(`無法載入 database.json: ${dbResponse.statusText}`);
-                if (!descResponse.ok) throw new Error(`無法載入 descriptions.json: ${descResponse.statusText}`);
-
-                // 2. 將 .json 文本解析為物件/陣列
-                allDatabase = await dbResponse.json();
-                allDescriptions = await descResponse.json();
-
-                // 3. 資料載入成功，啟動應用程式
-                startApp(allDatabase, allDescriptions);
-
-            } catch (error) {
-                console.error("資料載入時發生錯誤:", error);
-                document.querySelector('.container').innerHTML = `<h1>資料載入失敗</h1>
-                    <p>請檢查 <b>database.json</b> 和 <b>descriptions.json</b> 檔案是否存在於 index.html 旁邊，
-                    且其內容為有效的 JSON 格式。</p>
-                    <p><b>重要提示：</b>如果檔案存在，此錯誤可能是由於瀏覽器安全限制 (CORS) 造成的。
-                    您需要使用本地伺服器 (例如執行 'npx serve') 來預覽網站，
-                    而不是直接打開 'file://' 路徑。</p>`;
-            }
-        }
-        
-        /**
-         * [輔助] 建立敘述區塊的 HTML
-         * 傳入一個從 itemMasterList 查找到的 item 物件
-         */
+        // [輔助] 建立敘述區塊的 HTML
         function createDescriptionHtml(item, highlightTerm = "") {
             if (!item) return '';
-            
             let html = '';
             
-            // 處理高亮
             const nameZh = highlight(item.name_zh || '', highlightTerm);
             const nameEn = highlight(item.name_en || '', highlightTerm);
             const descZh = highlight(item.desc_zh || '', highlightTerm);
@@ -302,9 +253,7 @@
             return html;
         }
         
-        /**
-         * [輔助] 建立獎勵區塊的 HTML
-         */
+        // [輔助] 建立獎勵區塊的 HTML
         function createRewardHtml(rewardId, highlightTerm = "") {
             if (!rewardId) return '';
             const rewardItem = itemMasterList.get(rewardId);
@@ -316,26 +265,19 @@
                       </div>`;
         }
 
-        /**
-         * [輔助] 搜尋高亮文字
-         */
+        // [輔助] 搜尋高亮文字
         function highlight(text, term) {
             if (!term) return text;
-            // 'gi' g=全局匹配, i=不分大小寫
             const regex = new RegExp(`(${escapeRegExp(term)})`, 'gi');
             return text.replace(regex, '<span class="highlight">$1</span>');
         }
 
-        /**
-         * [輔助] 脫敏正則表達式特殊字元
-         */
+        // [輔助] 脫敏正則表達式特殊字元
         function escapeRegExp(string) {
             return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
         }
 
-        /**
-         * [輔助] 重置所有選單和詳情
-         */
+        // [輔助] 重置所有選單和詳情
         function resetAllInputs() {
             queryTypeSelect.value = '';
             shopsSection.style.display = 'none';
@@ -401,24 +343,18 @@
 
             // --- [ 2. 事件監聽 ] ---
 
-            // [新增] 搜尋框監聽
+            // [搜尋框] 監聽
             searchBox.addEventListener('input', (e) => {
                 const query = e.target.value.trim();
 
-                // 如果搜尋框為空，不執行任何動作，保持原狀
                 if (query === "") {
                     detailsContainer.style.display = 'none';
-                    // 如果希望搜尋框清空時重置下拉選單，取消下面這行的註解
-                    // resetAllInputs(); 
                     return;
                 }
-
-                // 清空所有下拉選單
-                resetAllInputs();
                 
+                resetAllInputs(); // 清空所有下拉選單
                 const lowerCaseQuery = query.toLowerCase();
 
-                // 搜尋 'descriptions' 總表
                 const results = [];
                 for (const item of descriptions) {
                     if (item.name_zh.toLowerCase().includes(lowerCaseQuery) || 
@@ -428,17 +364,8 @@
                     }
                 }
 
-                // 顯示搜尋結果 (我們只顯示第一筆，或您可以改成顯示列表)
                 if (results.length > 0) {
-                    // 為了簡單起見，我們只顯示第一筆最相關的結果
-                    // 您也可以修改這裡來顯示一個結果列表
                     const firstResult = results[0];
-                    
-                    // 我們需要判斷這第一筆結果的「情境」
-                    // 它是商店物品、任務獎勵、還是 Loot？
-                    // 這比較複雜，最簡單的作法是：
-                    // **直接顯示 Loot 物品的詳情**
-                    
                     let html = createDescriptionHtml(firstResult, query);
                     
                     // 嘗試找到它的商店資訊 (如果有)
@@ -454,7 +381,7 @@
                                 html += `<p><strong>收購價：</strong> <span>${itemLink.buyback_price}</span></p>`;
                             }
                             foundInShop = true;
-                            break; // 只顯示第一間找到的商店
+                            break; 
                         }
                     }
                     
@@ -471,14 +398,12 @@
             queryTypeSelect.addEventListener('change', () => {
                 const selectedType = queryTypeSelect.value;
                 
-                // 隱藏其他區塊
                 searchBox.value = ''; // 清空搜尋框
                 shopsSection.style.display = 'none';
                 tasksSection.style.display = 'none';
                 lootSection.style.display = 'none';
                 detailsContainer.style.display = 'none';
                 
-                // 重置次級選單
                 shopSelect.value = '';
                 shopItemSelect.innerHTML = '<option value="">— 請先選擇商店 —</option>';
                 shopItemSelect.disabled = true;
@@ -487,7 +412,6 @@
                 taskItemSelect.disabled = true;
                 lootItemSelect.value = '';
 
-                // 顯示選擇的區塊
                 if (selectedType === 'shops') shopsSection.style.display = 'block';
                 else if (selectedType === 'tasks') tasksSection.style.display = 'block';
                 else if (selectedType === 'loot') lootSection.style.display = 'block';
@@ -607,10 +531,26 @@
             });
 
             // --- [ 啟動 ] ---
-            initializeApp();
-            
-            console.log("應用程式已成功載入資料並啟動。");
+            // 由於資料是同步載入的，我們可以直接執行
+            try {
+                // 我們檢查 `allDatabase` 和 `allDescriptions` 是否已定義
+                // (它們應該由 <head> 中的 .js 檔案提供)
+                if (typeof allDatabase === 'undefined' || typeof allDescriptions === 'undefined') {
+                    throw new Error("database.js 或 descriptions.js 檔案遺失或載入失敗。");
+                }
+                startApp(allDatabase, allDescriptions);
+                console.log("應用程式已成功啟動 (同步模式)。");
+            } catch (error) {
+                console.error("啟動應用程式時發生錯誤:", error);
+                 document.querySelector('.container').innerHTML = `<h1>資料載入失敗</h1>
+                    <p>請檢查 <b>database.js</b> 和 <b>descriptions.js</b> 檔案是否存在於 index.html 旁邊。</p>
+                    <p>錯誤訊息: ${error.message}</p>`;
+            }
         }
+
+        // 立即執行，因為 <script> 標籤在 <body> 底部
+        startApp(allDatabase, allDescriptions);
+
     </script>
 </body>
 </html>
