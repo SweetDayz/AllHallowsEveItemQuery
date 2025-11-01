@@ -1,4 +1,4 @@
-<script>
+
 // 全域查找表
 const itemMasterList = new Map();
 
@@ -431,4 +431,4 @@ function startApp(database, descriptions) {
 
 // 立即執行
 startApp(allDatabase, allDescriptions);
-</script>
+
