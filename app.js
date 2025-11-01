@@ -6,6 +6,7 @@ let isUpdatingProgrammatically = false;
 
 // 獲取所有 HTML 元素
 const searchBox = document.getElementById('searchBox');
+const suggestionsContainer = document.getElementById('suggestionsContainer'); // [新增]
 const queryTypeSelect = document.getElementById('queryTypeSelect');
 const shopsSection = document.getElementById('shopsSection');
 const tasksSection = document.getElementById('tasksSection');
@@ -97,6 +98,41 @@ function resetSubMenus() {
 }
 
 /**
+ * [新增] 核心功能：顯示單一物品的完整詳情
+ */
+function displayItemDetails(item, highlightTerm = "") {
+    if (!item) {
+        detailsContainer.innerHTML = '<p>錯誤：找不到該物品的詳細資料。</p>';
+        detailsContainer.style.display = 'block';
+        return;
+    }
+
+    let html = createDescriptionHtml(item, highlightTerm);
+    
+    // 嘗試找到它的商店資訊 (如果有)
+    let foundInShop = false;
+    for (const shopId in allDatabase.shops.items) {
+        const itemLink = allDatabase.shops.items[shopId].find(i => i.item_id === item.id);
+        if (itemLink) {
+            const shopName = allDatabase.shops.categories[shopId] || shopId;
+            html += `<hr style="border:0; border-top:1px dashed #ccc; margin: 1rem 0;">`;
+            html += `<p><strong><em>可於 [${shopName}] 購買</em></strong></p>`;
+            html += `<p><strong>庫存：</strong> <span>${itemLink.stock || 'N/A'}</span></p>`;
+            html += `<p><strong>花費：</strong> <span>${itemLink.cost || 'N/A'}</span></p>`;
+            if (itemLink.buyback_price) {
+                html += `<p><strong>收購價：</strong> <span>${itemLink.buyback_price}</span></p>`;
+            }
+            foundInShop = true;
+            break; // 只顯示第一間找到的商店
+        }
+    }
+    
+    detailsContainer.innerHTML = html;
+    detailsContainer.style.display = 'block';
+}
+
+
+/**
  * [核心] 應用程式主體
  */
 function startApp(database, descriptions) {
@@ -155,21 +191,23 @@ function startApp(database, descriptions) {
 
     // --- [ 2. 事件監聽 ] ---
 
-    // [搜尋框] 監聽
+    // [已修改] 搜尋框監聽 (現在只處理建議)
     searchBox.addEventListener('input', (e) => {
         if (isUpdatingProgrammatically) return;
 
         const query = e.target.value.trim();
+        suggestionsContainer.innerHTML = ''; // 清空舊建議
 
-        if (query === "") {
+        if (query.length < 1) { // 至少輸入 1 個字才開始搜尋
+            suggestionsContainer.style.display = 'none';
             detailsContainer.style.display = 'none';
             return;
         }
         
+        // [已修改] 手動重置下拉選單
         isUpdatingProgrammatically = true;
         queryTypeSelect.value = ''; 
         isUpdatingProgrammatically = false;
-        
         resetSubMenus();
         
         const lowerCaseQuery = query.toLowerCase();
@@ -185,32 +223,55 @@ function startApp(database, descriptions) {
         }
 
         if (results.length > 0) {
-            const firstResult = results[0];
-            let html = createDescriptionHtml(firstResult, query);
-            
-            let foundInShop = false;
-            for (const shopId in database.shops.items) {
-                const itemLink = database.shops.items[shopId].find(i => i.item_id === firstResult.id);
-                if (itemLink) {
-                    const shopName = database.shops.categories[shopId] || shopId;
-                    html += `<hr style="border:0; border-top:1px dashed #ccc; margin: 1rem 0;">`;
-                    html += `<p><strong><em>可於 [${shopName}] 購買</em></strong></p>`;
-                    html += `<p><strong>庫存：</strong> <span>${itemLink.stock || 'N/A'}</span></p>`;
-                    html += `<p><strong>花費：</strong> <span>${itemLink.cost || 'N/A'}</span></p>`;
-                    if (itemLink.buyback_price) {
-                        html += `<p><strong>收購價：</strong> <span>${itemLink.buyback_price}</span></p>`;
-                    }
-                    foundInShop = true;
-                    break; 
-                }
-            }
-            
-            detailsContainer.innerHTML = html;
-            detailsContainer.style.display = 'block';
-
+            // 只顯示前 10 筆
+            results.slice(0, 10).forEach(item => {
+                const itemDiv = document.createElement('div');
+                itemDiv.className = 'suggestion-item';
+                // 將物品的唯一 ID 存在 data-id 屬性中
+                itemDiv.dataset.id = item.id; 
+                
+                // 顯示高亮的中文名和灰色的英文名
+                itemDiv.innerHTML = `${highlight(item.name_zh, query)} <span class="suggestion-en">${highlight(item.name_en, query)}</span>`;
+                suggestionsContainer.appendChild(itemDiv);
+            });
+            suggestionsContainer.style.display = 'block';
+            detailsContainer.style.display = 'none';
         } else {
+            suggestionsContainer.style.display = 'none';
             detailsContainer.innerHTML = '<p>找不到符合條件的物品。</p>';
             detailsContainer.style.display = 'block';
+        }
+    });
+    
+    // [新增] 建議列表的點擊監聽 (事件委派)
+    suggestionsContainer.addEventListener('click', (e) => {
+        // 找到被點擊的 .suggestion-item
+        const clickedItem = e.target.closest('.suggestion-item');
+        if (!clickedItem) return;
+
+        const itemId = clickedItem.dataset.id;
+        const item = itemMasterList.get(itemId);
+        
+        if (item) {
+            // 1. 顯示詳情
+            const query = searchBox.value.trim();
+            displayItemDetails(item, query);
+            
+            // 2. [可選] 將搜尋框文字替換為完整的中文名
+            isUpdatingProgrammatically = true;
+            searchBox.value = item.name_zh;
+            isUpdatingProgrammatically = false;
+            
+            // 3. 隱藏建議列表
+            suggestionsContainer.innerHTML = '';
+            suggestionsContainer.style.display = 'none';
+        }
+    });
+    
+    // [新增] 點擊頁面其他地方，隱藏建議列表
+    document.addEventListener('click', (e) => {
+        if (!searchBox.contains(e.target) && !suggestionsContainer.contains(e.target)) {
+            suggestionsContainer.style.display = 'none';
         }
     });
 
@@ -238,7 +299,7 @@ function startApp(database, descriptions) {
         shopItemSelect.disabled = true;
 
         if (selectedShopId) {
-            const itemLinks = database.shops.items[selectedShopId] || [];
+            const itemLinks = allDatabase.shops.items[selectedShopId] || [];
             if (itemLinks.length > 0) {
                 const fullItems = itemLinks.map(link => ({
                     linkData: link,
@@ -269,23 +330,16 @@ function startApp(database, descriptions) {
             detailsContainer.style.display = 'block';
             return;
         }
-        const itemLink = (database.shops.items[shopSelect.value] || []).find(i => i.item_id === selectedItemId);
+        const itemLink = (allDatabase.shops.items[shopSelect.value] || []).find(i => i.item_id === selectedItemId);
         if (!itemLink) {
             detailsContainer.innerHTML = '<p>錯誤：找不到該物品的商店資料。</p>';
             detailsContainer.style.display = 'block';
             return;
         } 
 
-        let html = `<h3>${item.name_zh}</h3>`;
-        html += `<p class="sub-name">${item.name_en || ''}</p>`;
-        html += `<p><strong>庫存：</strong> <span>${itemLink.stock || 'N/A'}</span></p>`;
-        html += `<p><strong>花費：</strong> <span>${itemLink.cost || 'N/A'}</span></p>`;
-        if (itemLink.buyback_price) {
-            html += `<p><strong>收購價：</strong> <span>${itemLink.buyback_price}</span></p>`;
-        }
-        html += createDescriptionHtml(item);
-        detailsContainer.innerHTML = html;
-        detailsContainer.style.display = 'block';
+        // [已修改] 現在呼叫 displayItemDetails
+        displayItemDetails(item);
+        // (我們不需要傳入 highlightTerm，因為這不是搜尋)
     });
 
     // [任務] 選單監聽
@@ -296,7 +350,7 @@ function startApp(database, descriptions) {
         taskItemSelect.disabled = true;
 
         if (selectedTaskId) {
-            const tasks = database.tasks.items[selectedTaskId] || [];
+            const tasks = allDatabase.tasks.items[selectedTaskId] || [];
             if (tasks.length > 0) {
                 tasks.sort((a, b) => a.name_zh.localeCompare(b.name_zh, 'zh-Hant'));
                 tasks.forEach(task => {
@@ -315,7 +369,7 @@ function startApp(database, descriptions) {
         if (!selectedTaskId) {
             detailsContainer.style.display = 'none'; return;
         }
-        const task = (database.tasks.items[taskSelect.value] || []).find(t => t.id === selectedTaskId);
+        const task = (allDatabase.tasks.items[taskSelect.value] || []).find(t => t.id === selectedTaskId);
         if (!task) {
             detailsContainer.innerHTML = '<p>錯誤：找不到該任務的資料。</p>';
             detailsContainer.style.display = 'block';
@@ -351,19 +405,15 @@ function startApp(database, descriptions) {
             detailsContainer.style.display = 'block';
             return;
         }
-
-        let html = `<h3>${item.name_zh}</h3>`;
-        html += `<p class="sub-name">${item.name_en || ''}</p>`;
-        html += createDescriptionHtml(item);
-        detailsContainer.innerHTML = html;
-        detailsContainer.style.display = 'block';
+        
+        // [已修改] 呼叫 displayItemDetails
+        displayItemDetails(item);
     });
 
     // --- [ 啟動 ] ---
     try {
-        // 檢查全域變數是否存在
         if (typeof allDatabase === 'undefined' || typeof allDescriptions === 'undefined') {
-            throw new Error("database.js 或 descriptions.js 檔案遺失或載入失敗。請檢查script標籤。");
+            throw new Error("database.js 或 descriptions.js 檔案遺失或載入失敗。請檢查 <head> 中的 <script src=...></script> 標籤。");
         }
         
         initializeApp();
@@ -378,6 +428,6 @@ function startApp(database, descriptions) {
     }
 }
 
-// 立即執行，因為 <script> 標籤在 <body> 底部
+// 立即執行
 startApp(allDatabase, allDescriptions);
 </script>
