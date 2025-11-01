@@ -9,7 +9,6 @@
     <script src="descriptions.js"></script>
 
     <style>
-        /* CSS 樣式與 v6.1 完全相同，保持不變 */
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
             margin: 0;
@@ -35,13 +34,14 @@
             padding-bottom: 10px;
             margin-top: 0;
         }
+        /* [新增] 搜尋框樣式 */
         #searchBox {
             width: 100%;
             padding: 10px 12px;
             font-size: 16px;
             border-radius: 6px;
             border: 1px solid #ddd;
-            box-sizing: border-box;
+            box-sizing: border-box; /* 確保 padding 不會撐開寬度 */
             margin-bottom: 1.5rem;
         }
         .form-group {
@@ -72,6 +72,8 @@
             margin-top: 1.5rem;
             padding-top: 1.5rem;
         }
+        
+        /* 詳情顯示區域 */
         #detailsContainer {
             margin-top: 2rem;
             padding: 1.5rem;
@@ -136,6 +138,7 @@
             margin-top: 0.8rem;
             padding-top: 0.8rem;
         }
+        /* [新增] 搜尋高亮 */
         .highlight {
             background-color: yellow;
             font-weight: bold;
@@ -204,10 +207,7 @@
             </div>
     </div>
 
-<script>
-        // 由於 .js 檔案已在 <head> 載入，
-        // allDatabase 和 allDescriptions 變數現在可以直接使用。
-        
+    <script>
         // 全域查找表
         const itemMasterList = new Map();
         
@@ -260,7 +260,12 @@
         function createRewardHtml(rewardId, highlightTerm = "") {
             if (!rewardId) return '';
             const rewardItem = itemMasterList.get(rewardId);
-            if (!rewardItem) return ''; 
+            // [新增] 查無資料的機制
+            if (!rewardItem) {
+                 return `<div class="reward-description">
+                            <strong>獎品資料遺失 (ID: ${rewardId})</strong>
+                         </div>`;
+            }
 
             return `<div class="reward-description">
                         <strong>獎品「${highlight(rewardItem.name_zh, highlightTerm)}」詳情：</strong>
@@ -271,8 +276,13 @@
         // [輔助] 搜尋高亮文字
         function highlight(text, term) {
             if (!term) return text;
-            const regex = new RegExp(`(${escapeRegExp(term)})`, 'gi');
-            return text.replace(regex, '<span class="highlight">$1</span>');
+            try {
+                const regex = new RegExp(`(${escapeRegExp(term)})`, 'gi');
+                return text.replace(regex, '<span class="highlight">$1</span>');
+            } catch (e) {
+                console.warn("Highlight regex error:", e);
+                return text;
+            }
         }
 
         // [輔助] 脫敏正則表達式特殊字元
@@ -302,7 +312,6 @@
         function startApp(database, descriptions) {
             
             // --- [ 1. 初始化 ] ---
-            
             function initializeApp() {
                 // 1.1 建立物品總表速查 Map
                 for (const item of descriptions) {
@@ -343,13 +352,18 @@
                 lootItems.forEach(item => {
                     lootItemSelect.appendChild(new Option(item.name_zh, item.id));
                 });
+                
+                // [新增] 如果 Loot 沒東西，顯示提示
+                if (lootItems.length === 0) {
+                     lootItemSelect.innerHTML = '<option value="">— 無 Loot 物品 —</option>';
+                     lootItemSelect.disabled = true;
+                }
             }
 
             // --- [ 2. 事件監聽 ] ---
 
             // [搜尋框] 監聽
             searchBox.addEventListener('input', (e) => {
-                // [已修改] 如果是程式觸發的，就忽略
                 if (isUpdatingProgrammatically) return;
 
                 const query = e.target.value.trim();
@@ -359,12 +373,11 @@
                     return;
                 }
                 
-                // [已修改] 手動重置下拉選單
                 isUpdatingProgrammatically = true;
                 queryTypeSelect.value = ''; // 只重置主選單的值
                 isUpdatingProgrammatically = false;
                 
-                resetSubMenus(); // 呼叫只重置「子選單」的函式
+                resetSubMenus();
                 
                 const lowerCaseQuery = query.toLowerCase();
 
@@ -388,6 +401,7 @@
                         const itemLink = database.shops.items[shopId].find(i => i.item_id === firstResult.id);
                         if (itemLink) {
                             const shopName = database.shops.categories[shopId] || shopId;
+                            html += `<hr style="border:0; border-top:1px dashed #ccc; margin: 1rem 0;">`;
                             html += `<p><strong><em>可於 [${shopName}] 購買</em></strong></p>`;
                             html += `<p><strong>庫存：</strong> <span>${itemLink.stock || 'N/A'}</span></p>`;
                             html += `<p><strong>花費：</strong> <span>${itemLink.cost || 'N/A'}</span></p>`;
@@ -403,6 +417,7 @@
                     detailsContainer.style.display = 'block';
 
                 } else {
+                    // [新增] 查無資料機制
                     detailsContainer.innerHTML = '<p>找不到符合條件的物品。</p>';
                     detailsContainer.style.display = 'block';
                 }
@@ -410,19 +425,15 @@
 
             // [主選單] 監聽
             queryTypeSelect.addEventListener('change', () => {
-                // [已修改] 如果是程式觸發的，就忽略
                 if (isUpdatingProgrammatically) return;
-
                 const selectedType = queryTypeSelect.value;
                 
-                // [已修改] 手動重置搜尋框
                 isUpdatingProgrammatically = true;
                 searchBox.value = ''; // 清空搜尋框
                 isUpdatingProgrammatically = false;
 
-                resetSubMenus(); // 重置子選單
+                resetSubMenus();
 
-                // 顯示選擇的區塊
                 if (selectedType === 'shops') shopsSection.style.display = 'block';
                 else if (selectedType === 'tasks') tasksSection.style.display = 'block';
                 else if (selectedType === 'loot') lootSection.style.display = 'block';
@@ -441,7 +452,7 @@
                         const fullItems = itemLinks.map(link => ({
                             linkData: link,
                             itemData: itemMasterList.get(link.item_id)
-                        })).filter(i => i.itemData); 
+                        })).filter(i => i.itemData); // 過濾掉總表中不存在的物品
 
                         fullItems.sort((a, b) => a.itemData.name_zh.localeCompare(b.itemData.name_zh, 'zh-Hant'));
 
@@ -450,6 +461,7 @@
                         });
                         shopItemSelect.disabled = false;
                     } else {
+                        // [新增] 查無資料機制
                         shopItemSelect.innerHTML = '<option value="">— 此商店無存貨 —</option>';
                     }
                 }
@@ -494,6 +506,7 @@
                         });
                         taskItemSelect.disabled = false;
                     } else {
+                        // [新增] 查無資料機制
                         taskItemSelect.innerHTML = '<option value="">— 此類別無任務 —</option>';
                     }
                 }
@@ -543,7 +556,7 @@
 
             // --- [ 啟動 ] ---
             try {
-                // [已修改] 檢查 .js 檔案中的全域變數
+                // 檢查全域變數是否存在
                 if (typeof allDatabase === 'undefined' || typeof allDescriptions === 'undefined') {
                     throw new Error("database.js 或 descriptions.js 檔案遺失或載入失敗。請檢查 <head> 中的 <script src=...></script> 標籤。");
                 }
@@ -561,7 +574,6 @@
         }
 
         // 立即執行，因為 <script> 標籤在 <body> 底部
-        // [已修改] 傳入從 .js 檔案載入的全域變數
         startApp(allDatabase, allDescriptions);
 
     </script>
