@@ -1,4 +1,4 @@
-{
+const allDatabase = {
   "shops": {
     "categories": {
       "shop-skeleton": "骷髏頓的商店",
@@ -2584,4 +2584,4 @@
       }
     ]
   }
-}
+};
