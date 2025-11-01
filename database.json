@@ -1,0 +1,2587 @@
+{
+  "shops": {
+    "categories": {
+      "shop-skeleton": "骷髏頓的商店",
+      "shop-market": "鬼燈市集",
+      "shop-restaurant": "餐館",
+      "shop-bobblehead": "搖頭娃娃商店",
+      "shop-curio": "詭異珍品"
+    },
+    "items": {
+      "shop-skeleton": [
+        {
+          "id": "skel-001",
+          "name": "蝙蝠鏢Batikans",
+          "category": "武器裝備",
+          "stock": "大量",
+          "cost": "20 個 5 CCP",
+          "price": 5
+        },
+        {
+          "id": "skel-002",
+          "name": "發條箭Clockwork Arrows",
+          "category": "武器裝備",
+          "stock": "限量",
+          "cost": "5 支 200 CCP",
+          "price": 200
+        },
+        {
+          "id": "skel-003",
+          "name": "發條盾Clockwork Shield",
+          "category": "武器裝備",
+          "stock": "限量",
+          "cost": "100 CCP",
+          "price": 100
+        },
+        {
+          "id": "skel-004",
+          "name": "鱷魚箭Crocarrow",
+          "category": "武器裝備",
+          "stock": "限量",
+          "cost": "5 支 100 CCP",
+          "price": 100
+        },
+        {
+          "id": "skel-005",
+          "name": "聖化戰斧Hallowed Axe",
+          "category": "武器裝備",
+          "stock": "限量",
+          "cost": "50 CCP",
+          "price": 50
+        },
+        {
+          "id": "skel-006",
+          "name": "聖化短弓Hallowed Bow",
+          "category": "武器裝備",
+          "stock": "限量",
+          "cost": "50 CCP",
+          "price": 50
+        },
+        {
+          "id": "skel-007",
+          "name": "聖化匕首Hallowed Dagger",
+          "category": "武器裝備",
+          "stock": "限量",
+          "cost": "50 CCP",
+          "price": 50
+        },
+        {
+          "id": "skel-008",
+          "name": "聖化盾牌Hallowed Shield",
+          "category": "武器裝備",
+          "stock": "限量",
+          "cost": "50 CCP",
+          "price": 50
+        },
+        {
+          "id": "skel-009",
+          "name": "聖化短劍Hallowed Sword",
+          "category": "武器裝備",
+          "stock": "限量",
+          "cost": "50 CCP",
+          "price": 50
+        },
+        {
+          "id": "skel-010",
+          "name": "提燈盾Lantern Shield",
+          "category": "武器裝備",
+          "stock": "限量",
+          "cost": "100 CCP",
+          "price": 100
+        },
+        {
+          "id": "skel-011",
+          "name": "閃電棒Lightning Rod",
+          "category": "武器裝備",
+          "stock": "限量",
+          "cost": "150 CCP",
+          "price": 150
+        },
+        {
+          "id": "skel-012",
+          "name": "南瓜炸彈Pumpkin Bomb",
+          "category": "武器裝備",
+          "stock": "大量",
+          "cost": "50 CCP",
+          "price": 50
+        },
+        {
+          "id": "skel-013",
+          "name": "尖嘯箭矢Screaming Arrows",
+          "category": "武器裝備",
+          "stock": "大量",
+          "cost": "20 支 100 CCP",
+          "price": 100
+        },
+        {
+          "id": "skel-014",
+          "name": "鍍銀柯爾特子彈Silvered Colt Rounds",
+          "category": "武器裝備",
+          "stock": "稀缺",
+          "cost": "500 CCP",
+          "price": 500
+        },
+        {
+          "id": "skel-015",
+          "name": "狼皮手套Wolf Gloves",
+          "category": "武器裝備",
+          "stock": "限量",
+          "cost": "50 CCP",
+          "price": 50
+        },
+        {
+          "id": "skel-016",
+          "name": "木樁Wooden Stake",
+          "category": "武器裝備",
+          "stock": "限量",
+          "cost": "25 CCP",
+          "price": 25
+        },
+        {
+          "id": "skel-017",
+          "name": "蝙蝠肉乾Bat Jerky",
+          "category": "消耗品",
+          "stock": "大量",
+          "cost": "5 CCP",
+          "price": 5
+        },
+        {
+          "id": "skel-018",
+          "name": "血酒瓶Blood Flask",
+          "category": "消耗品",
+          "stock": "限量",
+          "cost": "125 CCP",
+          "price": 125
+        },
+        {
+          "id": "skel-019",
+          "name": "血酒Blood Wine",
+          "category": "消耗品",
+          "stock": "限量",
+          "cost": "50 CCP",
+          "price": 50
+        },
+        {
+          "id": "skel-020",
+          "name": "大釜水Cauldron Water",
+          "category": "消耗品",
+          "stock": "大量",
+          "cost": "15 CCP",
+          "price": 15
+        },
+        {
+          "id": "skel-021",
+          "name": "死亡棒Death Sticks",
+          "category": "消耗品",
+          "stock": "限量",
+          "cost": "10 CCP",
+          "price": 10
+        },
+        {
+          "id": "skel-022",
+          "name": "新鮮南瓜Fresh Pumpkin",
+          "category": "消耗品",
+          "stock": "大量",
+          "cost": "5 CCP",
+          "price": 5
+        },
+        {
+          "id": "skel-023",
+          "name": "漏斗網蛋糕Funnel Web Cake",
+          "category": "消耗品",
+          "stock": "大量",
+          "cost": "15 CCP",
+          "price": 15
+        },
+        {
+          "id": "skel-024",
+          "name": "傑克南瓜燈種子Jack-O-Lantern Seeds",
+          "category": "消耗品",
+          "stock": "大量",
+          "cost": "10 CCP",
+          "price": 10
+        },
+        {
+          "id": "skel-025",
+          "name": "南瓜潘趣酒Pumpkin Punch",
+          "category": "消耗品",
+          "stock": "大量",
+          "cost": "15 CCP",
+          "price": 15
+        },
+        {
+          "id": "skel-026",
+          "name": "甜膩糖果Sickly Sweet Candy",
+          "category": "消耗品",
+          "stock": "大量",
+          "cost": "15 CCP",
+          "price": 15
+        },
+        {
+          "id": "skel-027",
+          "name": "史萊姆汁液Slime Juice",
+          "category": "消耗品",
+          "stock": "大量",
+          "cost": "25 CCP",
+          "price": 25
+        },
+        {
+          "id": "skel-028",
+          "name": "蜘蛛毒液蘋果酒Spider Venom Cider",
+          "category": "消耗品",
+          "stock": "大量",
+          "cost": "15 CCP",
+          "price": 15
+        },
+        {
+          "id": "skel-029",
+          "name": "死亡花束Deathly Bouquet",
+          "category": "新奇物品",
+          "stock": "大量",
+          "cost": "15 CCP",
+          "price": 15
+        },
+        {
+          "id": "skel-030",
+          "name": "假牙False Teeth",
+          "category": "新奇物品",
+          "stock": "大量",
+          "cost": "35 CCP",
+          "price": 35
+        },
+        {
+          "id": "skel-031",
+          "name": "高級神秘南瓜盒Greater Mystery Pumpkin Box",
+          "category": "新奇物品",
+          "stock": "大量",
+          "cost": "每個 50 CCP 或 5 個 200 CCP",
+          "price": 50
+        },
+        {
+          "id": "skel-032",
+          "name": "無頭騎士搖頭娃娃（藍色）Headless Horseman Bobblehead (Blue)",
+          "category": "新奇物品",
+          "stock": "售罄",
+          "cost": "25 CCP",
+          "price": 25
+        },
+        {
+          "id": "skel-033",
+          "name": "無頭騎士搖頭娃娃（綠色）Headless Horseman Bobblehead (Green)",
+          "category": "新奇物品",
+          "stock": "售罄",
+          "cost": "25 CCP",
+          "price": 25
+        },
+        {
+          "id": "skel-034",
+          "name": "無頭騎士搖頭娃娃（粉色）Headless Horseman Bobblehead (Pink)",
+          "category": "新奇物品",
+          "stock": "售罄",
+          "cost": "25 CCP",
+          "price": 25
+        },
+        {
+          "id": "skel-035",
+          "name": "無頭騎士搖頭娃娃（紫色）Headless Horseman Bobblehead (Purple)",
+          "category": "新奇物品",
+          "stock": "售罄",
+          "cost": "25 CCP",
+          "price": 25
+        },
+        {
+          "id": "skel-036",
+          "name": "無頭騎士搖頭娃娃（紅色）Headless Horseman Bobblehead (Red)",
+          "category": "新奇物品",
+          "stock": "限量",
+          "cost": "25 CCP",
+          "price": 25
+        },
+        {
+          "id": "skel-037",
+          "name": "無頭騎士搖頭娃娃（黃色）Headless Horseman Bobblehead (Yellow)",
+          "category": "新奇物品",
+          "stock": "售罄",
+          "cost": "25 CCP",
+          "price": 25
+        },
+        {
+          "id": "skel-038",
+          "name": "彈出式稻草人Pop-Up Scarecrow",
+          "category": "新奇物品",
+          "stock": "限量",
+          "cost": "100 CCP",
+          "price": 100
+        },
+        {
+          "id": "skel-039",
+          "name": "神秘南瓜盒Mystery Pumpkin Box",
+          "category": "新奇物品",
+          "stock": "大量",
+          "cost": "每個 25 CCP 或 5 個 100 CCP",
+          "price": 25
+        },
+        {
+          "id": "skel-040",
+          "name": "神秘骷髏Mystery Skull",
+          "category": "新奇物品",
+          "stock": "大量",
+          "cost": "每個 75 CCP 或 5 個 300 CCP",
+          "price": 75
+        },
+        {
+          "id": "skel-041",
+          "name": "南瓜撲克牌Pumpkin Playing Cards",
+          "category": "新奇物品",
+          "stock": "大量",
+          "cost": "10 CCP",
+          "price": 10
+        },
+        {
+          "id": "skel-042",
+          "name": "殭屍皮Zombie Skin",
+          "category": "新奇物品",
+          "stock": "限量",
+          "cost": "50 CCP",
+          "price": 50
+        },
+        {
+          "id": "skel-043",
+          "name": "血咒Blood Curse",
+          "category": "附魔",
+          "stock": "限量",
+          "cost": "200 CCP",
+          "price": 200
+        },
+        {
+          "id": "skel-044",
+          "name": "骨刃改造 Bone Blade Modification",
+          "category": "附魔",
+          "stock": "限量",
+          "cost": "300 CCP",
+          "price": 300
+        },
+        {
+          "id": "skel-045",
+          "name": "奇美拉詛咒Chimera Curse",
+          "category": "附魔",
+          "stock": "限量",
+          "cost": "200 CCP",
+          "price": 200
+        },
+        {
+          "id": "skel-046",
+          "name": "邪能詛咒Fel Curse",
+          "category": "附魔",
+          "stock": "限量",
+          "cost": "200 CCP",
+          "price": 200
+        },
+        {
+          "id": "skel-047",
+          "name": "鬼魅詛咒Ghostly Curse",
+          "category": "附魔",
+          "stock": "限量",
+          "cost": "200 CCP",
+          "price": 200
+        },
+        {
+          "id": "skel-048",
+          "name": "利維坦詛咒Leviathan Curse",
+          "category": "附魔",
+          "stock": "限量",
+          "cost": "200 CCP",
+          "price": 200
+        },
+        {
+          "id": "skel-049",
+          "name": "機械融合Machine Bonding",
+          "category": "附魔",
+          "stock": "限量",
+          "cost": "300 CCP",
+          "price": 300
+        },
+        {
+          "id": "skel-050",
+          "name": "心靈詛咒Mind Curse",
+          "category": "附魔",
+          "stock": "限量",
+          "cost": "200 CCP",
+          "price": 200
+        },
+        {
+          "id": "skel-051",
+          "name": "不死詛咒Undead Curse",
+          "category": "附魔",
+          "stock": "限量",
+          "cost": "200 CCP",
+          "price": 200
+        },
+        {
+          "id": "skel-052",
+          "name": "虛空詛咒Void Curse",
+          "category": "附魔",
+          "stock": "限量",
+          "cost": "200 CCP",
+          "price": 200
+        },
+        {
+          "id": "skel-053",
+          "name": "衰弱詛咒Weakening Curse",
+          "category": "附魔",
+          "stock": "限量",
+          "cost": "300 CCP",
+          "price": 300
+        },
+        {
+          "id": "skel-054",
+          "name": "防腐血清Anti-Decay Serum",
+          "category": "通用",
+          "stock": "限量",
+          "cost": "100 CCP",
+          "price": 100
+        },
+        {
+          "id": "skel-055",
+          "name": "空白墓碑Blank Tombstone",
+          "category": "通用",
+          "stock": "大量",
+          "cost": "20 CCP",
+          "price": 20
+        },
+        {
+          "id": "skel-056",
+          "name": "雕刻工具Carving Tools",
+          "category": "通用",
+          "stock": "大量",
+          "cost": "25 CCP",
+          "price": 25
+        },
+        {
+          "id": "skel-057",
+          "name": "鏈提燈Chain-O-Lantern",
+          "category": "通用",
+          "stock": "限量",
+          "cost": "250 CCP",
+          "price": 250
+        },
+        {
+          "id": "skel-058",
+          "name": "腐蝕之血Corrosive Blood",
+          "category": "通用",
+          "stock": "限量",
+          "cost": "100 CCP",
+          "price": 100
+        },
+        {
+          "id": "skel-059",
+          "name": "機械之血Machine Blood",
+          "category": "通用",
+          "stock": "限量",
+          "cost": "100 CCP",
+          "price": 100
+        },
+        {
+          "id": "skel-060",
+          "name": "惡夢燃料Nightmare Fuel",
+          "category": "通用",
+          "stock": "限量",
+          "cost": "50 CCP",
+          "price": 50
+        },
+        {
+          "id": "skel-061",
+          "name": "毒藥壺Pitcher of Poisons",
+          "category": "通用",
+          "stock": "限量",
+          "cost": "150 CCP",
+          "price": 150
+        },
+        {
+          "id": "skel-062",
+          "name": "劇毒生態瓶Poisonous Terrarium Portable",
+          "category": "通用",
+          "stock": "限量",
+          "cost": "500 CCP",
+          "price": 500
+        },
+        {
+          "id": "skel-063",
+          "name": "便攜棺材Portable Coffin",
+          "category": "通用",
+          "stock": "限量",
+          "cost": "100 CCP",
+          "price": 100
+        },
+        {
+          "id": "skel-064",
+          "name": "骷髏鑰匙Skeleton Key",
+          "category": "通用",
+          "stock": "限量",
+          "cost": "350 CCP",
+          "price": 350
+        },
+        {
+          "id": "skel-065",
+          "name": "狡詐之袋Sly Bag",
+          "category": "通用",
+          "stock": "稀缺",
+          "cost": "350 CCP",
+          "price": 350
+        },
+        {
+          "id": "skel-066",
+          "name": "折磨之釘Tormenting Nails",
+          "category": "通用",
+          "stock": "大量",
+          "cost": "每個 15 CCP 或 5 個 50 CCP",
+          "price": 15
+        },
+        {
+          "id": "skel-067",
+          "name": "柳枝蠟燭Wicker Candle",
+          "category": "通用",
+          "stock": "大量",
+          "cost": "5 CCP",
+          "price": 5
+        },
+        {
+          "id": "skel-068",
+          "name": "折磨鎖鏈Chains of Torment",
+          "category": "獨特物品",
+          "stock": "稀缺",
+          "cost": "500 CCP",
+          "price": 500
+        },
+        {
+          "id": "skel-069",
+          "name": "隱形床單Invisible Sheet",
+          "category": "獨特物品",
+          "stock": "稀缺",
+          "cost": "300 CCP",
+          "price": 300
+        },
+        {
+          "id": "skel-070",
+          "name": "糖果袋Treat Bag",
+          "category": "獨特物品",
+          "stock": "稀缺",
+          "cost": "500 CCP",
+          "price": 500
+        },
+        {
+          "id": "skel-071",
+          "name": "密文齒輪Ciphers",
+          "category": "獨特物品",
+          "stock": "獨特",
+          "cost": "100 CCP",
+          "price": 100
+        }
+      ],
+      "shop-market": [
+        {
+          "id": "mark-001",
+          "name": "牛革鞭Bovine Bullwhip",
+          "category": "武器裝備",
+          "stock": "限量",
+          "cost": "300 CCP",
+          "price": 300
+        },
+        {
+          "id": "mark-002",
+          "name": "獨眼巨人眼Cyclops Eye",
+          "category": "武器裝備",
+          "stock": "限量",
+          "cost": "300 CCP",
+          "price": 300
+        },
+        {
+          "id": "mark-003",
+          "name": "地獄火箭矢Hellfire Arrows",
+          "category": "武器裝備",
+          "stock": "限量",
+          "cost": "5 支 400 CCP",
+          "price": 400
+        },
+        {
+          "id": "mark-004",
+          "name": "巫妖腸線Lich’s Gut String",
+          "category": "武器裝備",
+          "stock": "限量",
+          "cost": "350 CCP",
+          "price": 350
+        },
+        {
+          "id": "mark-005",
+          "name": "鬼響鞭Rattle Whip",
+          "category": "武器裝備",
+          "stock": "限量",
+          "cost": "200 CCP",
+          "price": 200
+        },
+        {
+          "id": "mark-006",
+          "name": "蠍尾鞭Scorpion Tail",
+          "category": "武器裝備",
+          "stock": "限量",
+          "cost": "200 CCP",
+          "price": 200
+        },
+        {
+          "id": "mark-007",
+          "name": "骷髏胸甲Skeletal Breastplate",
+          "category": "武器裝備",
+          "stock": "稀缺",
+          "cost": "500 CCP",
+          "price": 500
+        },
+        {
+          "id": "mark-008",
+          "name": "脊骨巨劍Spinal Blade",
+          "category": "武器裝備",
+          "stock": "限量",
+          "cost": "250 CCP",
+          "price": 250
+        },
+        {
+          "id": "mark-009",
+          "name": "人頭杖Staff of Human Heads",
+          "category": "武器裝備",
+          "stock": "限量",
+          "cost": "400 CCP",
+          "price": 400
+        },
+        {
+          "id": "mark-010",
+          "name": "吸血鬼之淚Vampire Tears",
+          "category": "消耗品",
+          "stock": "限量",
+          "cost": "100 CCP",
+          "price": 100
+        },
+        {
+          "id": "mark-011",
+          "name": "吸血鬼之牙Vampiric Tooth",
+          "category": "消耗品",
+          "stock": "限量",
+          "cost": "200 CCP",
+          "price": 200
+        },
+        {
+          "id": "mark-012",
+          "name": "液態金屬Liquid Metal",
+          "category": "詛咒",
+          "stock": "限量",
+          "cost": "1000 CCP",
+          "price": 1000
+        },
+        {
+          "id": "mark-013",
+          "name": "南瓜血Pumpkin Blood",
+          "category": "詛咒",
+          "stock": "限量",
+          "cost": "1000 CCP",
+          "price": 1000
+        },
+        {
+          "id": "mark-014",
+          "name": "稻草人之血Scarecrow Blood",
+          "category": "詛咒",
+          "stock": "限量",
+          "cost": "1000 CCP",
+          "price": 1000
+        },
+        {
+          "id": "mark-015",
+          "name": "蛇血Snakes Blood",
+          "category": "詛咒",
+          "stock": "限量",
+          "cost": "1000 CCP",
+          "price": 1000
+        },
+        {
+          "id": "mark-016",
+          "name": "獨角獸之血Unicorn Blood",
+          "category": "詛咒",
+          "stock": "限量",
+          "cost": "1000 CCP",
+          "price": 1000
+        },
+        {
+          "id": "mark-017",
+          "name": "吸血鬼之血Vampires Blood",
+          "category": "詛咒",
+          "stock": "限量",
+          "cost": "1000 CCP",
+          "price": 1000
+        },
+        {
+          "id": "mark-018",
+          "name": "狼人之血Werewolves Blood",
+          "category": "詛咒",
+          "stock": "限量",
+          "cost": "1000 CCP",
+          "price": 1000
+        },
+        {
+          "id": "mark-019",
+          "name": "石像鬼粉Ground Gargoyle",
+          "category": "通用",
+          "stock": "限量",
+          "cost": "500 CCP",
+          "price": 500
+        },
+        {
+          "id": "mark-020",
+          "name": "妖精翅膀粉Ground Pixie Wings",
+          "category": "通用",
+          "stock": "限量",
+          "cost": "500 CCP",
+          "price": 500
+        },
+        {
+          "id": "mark-021",
+          "name": "肉鑰Meat Key",
+          "category": "通用",
+          "stock": "獨特",
+          "cost": "1000 CCP",
+          "price": 1000
+        },
+        {
+          "id": "mark-022",
+          "name": "骷髏馬雕像Skeleton Horse Idol",
+          "category": "通用",
+          "stock": "稀缺",
+          "cost": "1250 CCP",
+          "price": 1250
+        },
+        {
+          "id": "mark-023",
+          "name": "泰拉毒液Terra Poison",
+          "category": "通用",
+          "stock": "限量",
+          "cost": "500 CCP",
+          "price": 500
+        },
+        {
+          "id": "mark-024",
+          "name": "拷問工具 Torturers Tools",
+          "category": "通用",
+          "stock": "限量",
+          "cost": "100 CCP",
+          "price": 100
+        },
+        {
+          "id": "mark-025",
+          "name": "邪惡之水Unholy Water",
+          "category": "通用",
+          "stock": "限量",
+          "cost": "100 CCP",
+          "price": 100
+        },
+        {
+          "id": "mark-026",
+          "name": "牛環 Bull Ring",
+          "category": "獨特物品",
+          "stock": "稀缺",
+          "cost": "500 CCP",
+          "price": 500
+        },
+        {
+          "id": "mark-027",
+          "name": "火藥鼠Gunpowder Rat",
+          "category": "獨特物品",
+          "stock": "稀缺",
+          "cost": "1000 CCP",
+          "price": 1000
+        },
+        {
+          "id": "mark-028",
+          "name": "盒中瘟疫Pox in a Box",
+          "category": "獨特物品",
+          "stock": "稀缺",
+          "cost": "500 CCP",
+          "price": 500
+        },
+        {
+          "id": "mark-029",
+          "name": "黯淡戒指Tarnished Ring",
+          "category": "獨特物品",
+          "stock": "稀缺",
+          "cost": "300 CCP",
+          "price": 300
+        }
+      ],
+      "shop-restaurant": [
+        {
+          "id": "rest-001",
+          "name": "100% 火蜥蜴汁 100% Juice of Fire Newt",
+          "category": "飲品Drinks",
+          "stock": "大量",
+          "cost": "5 CCP",
+          "price": 5
+        },
+        {
+          "id": "rest-002",
+          "name": "大釜潘趣酒 Cauldron Punch",
+          "category": "飲品Drinks",
+          "stock": "大量",
+          "cost": "5 CCP",
+          "price": 5
+        },
+        {
+          "id": "rest-003",
+          "name": "黑烏鴉乾燥腳 Dried Fees of Black Crow",
+          "category": "飲品Drinks",
+          "stock": "大量",
+          "cost": "5 CCP",
+          "price": 5
+        },
+        {
+          "id": "rest-004",
+          "name": "未過濾毒藥 Unfiltered Poison",
+          "category": "飲品Drinks",
+          "stock": "大量",
+          "cost": "5 CCP",
+          "price": 5
+        },
+        {
+          "id": "rest-005",
+          "name": "女巫藥水 Witches Potion",
+          "category": "飲品Drinks",
+          "stock": "大量",
+          "cost": "5 CCP",
+          "price": 5
+        },
+        {
+          "id": "rest-006",
+          "name": "災難餅乾 Catastrophic Cookies",
+          "category": "零食Snacks",
+          "stock": "大量",
+          "cost": "5 塊 10 CCP",
+          "price": 10
+        },
+        {
+          "id": "rest-007",
+          "name": "傷亡玉米 Casualty Corn",
+          "category": "零食Snacks",
+          "stock": "大量",
+          "cost": "每包 5 CCP",
+          "price": 5
+        },
+        {
+          "id": "rest-008",
+          "name": "食屍鬼椒鹽捲餅 Ghoul Pretzels",
+          "category": "零食Snacks",
+          "stock": "大量",
+          "cost": "5 CCP",
+          "price": 5
+        },
+        {
+          "id": "rest-009",
+          "name": "綠色油脂玉米 Green Grizzle Corn",
+          "category": "零食Snacks",
+          "stock": "大量",
+          "cost": "每包 5 CCP",
+          "price": 5
+        },
+        {
+          "id": "rest-010",
+          "name": "風味糖果玉米 Flavored Candy Corn",
+          "category": "零食Snacks",
+          "stock": "大量",
+          "cost": "5 CCP",
+          "price": 5
+        },
+        {
+          "id": "rest-011",
+          "name": "果凍南瓜 Jelly Pumpkins",
+          "category": "零食Snacks",
+          "stock": "大量",
+          "cost": "10 CCP",
+          "price": 10
+        },
+        {
+          "id": "rest-012",
+          "name": "仙塵棒Pixie Stix",
+          "category": "零食Snacks",
+          "stock": "大量",
+          "cost": "10 CCP",
+          "price": 10
+        },
+        {
+          "id": "rest-013",
+          "name": "死神薯片 Reaper Chips",
+          "category": "零食Snacks",
+          "stock": "大量",
+          "cost": "15 CCP",
+          "price": 15
+        },
+        {
+          "id": "rest-014",
+          "name": "蝙蝠翅膀 Batty Bat Wings",
+          "category": "正餐Meals",
+          "stock": "大量",
+          "cost": "25 CCP",
+          "price": 25
+        },
+        {
+          "id": "rest-015",
+          "name": "定罪麵包盅 Condemned Cob Loaf",
+          "category": "正餐Meals",
+          "stock": "大量",
+          "cost": "30 CCP",
+          "price": 30
+        },
+        {
+          "id": "rest-016",
+          "name": "怪物肉丸 Monster Meat Balls",
+          "category": "正餐Meals",
+          "stock": "大量",
+          "cost": "30 CCP",
+          "price": 30
+        },
+        {
+          "id": "rest-017",
+          "name": "蟒蛇薯塊 Python Potato’s",
+          "category": "正餐Meals",
+          "stock": "大量",
+          "cost": "20 CCP",
+          "price": 20
+        },
+        {
+          "id": "rest-018",
+          "name": "煙燻牛頭怪 Smoked Minotaur",
+          "category": "正餐Meals",
+          "stock": "大量",
+          "cost": "40 CCP",
+          "price": 40
+        },
+        {
+          "id": "rest-019",
+          "name": "肋排 Spare Ribs",
+          "category": "正餐Meals",
+          "stock": "大量",
+          "cost": "5 根肋骨 40 CCP",
+          "price": 40
+        },
+        {
+          "id": "rest-020",
+          "name": "辣脊椎 Spicy Spines",
+          "category": "正餐Meals",
+          "stock": "大量",
+          "cost": "25 CCP",
+          "price": 25
+        },
+        {
+          "id": "rest-021",
+          "name": "怪趣拼盤 Spookuterie Board",
+          "category": "正餐Meals",
+          "stock": "大量",
+          "cost": "每玩家 30 CCP (最少 3 人)",
+          "price": 30
+        },
+        {
+          "id": "rest-022",
+          "name": "有毒通心粉 Toxic Mac",
+          "category": "正餐Meals",
+          "stock": "大量",
+          "cost": "25 CCP",
+          "price": 25
+        },
+        {
+          "id": "rest-023",
+          "name": "黑天鵝絨紙杯蛋糕 Black velvet Cupcakes",
+          "category": "甜點Desserts",
+          "stock": "大量",
+          "cost": "10 CCP",
+          "price": 10
+        },
+        {
+          "id": "rest-024",
+          "name": "血腥天鵝絨紙杯蛋糕 Bloody Velvet Cupcakes",
+          "category": "甜點Desserts",
+          "stock": "大量",
+          "cost": "10 CCP",
+          "price": 10
+        },
+        {
+          "id": "rest-025",
+          "name": "腐蝕性紙杯蛋糕 Caustic Cupcakes",
+          "category": "甜點Desserts",
+          "stock": "大量",
+          "cost": "10 CCP",
+          "price": 10
+        },
+        {
+          "id": "rest-026",
+          "name": "被詛咒的紙杯蛋糕 Cursed Cupcakes",
+          "category": "甜點Desserts",
+          "stock": "大量",
+          "cost": "10 CCP",
+          "price": 10
+        },
+        {
+          "id": "rest-027",
+          "name": "毒蘋果 Poisoned Apples",
+          "category": "甜點Desserts",
+          "stock": "大量",
+          "cost": "15 CCP",
+          "price": 15
+        },
+        {
+          "id": "rest-028",
+          "name": "尖叫芝士布朗尼 Scream-Cheese Brownie",
+          "category": "甜點Desserts",
+          "stock": "大量",
+          "cost": "10 CCP",
+          "price": 10
+        },
+        {
+          "id": "rest-029",
+          "name": "蛇咬切片 Snakebite Slice",
+          "category": "甜點Desserts",
+          "stock": "大量",
+          "cost": "10 CCP",
+          "price": 10
+        }
+      ],
+      "shop-bobblehead": [
+        {
+          "id": "bobb-001",
+          "name": "蝙蝠 Bat",
+          "category": "普通款Generic",
+          "stock": "大量",
+          "cost": "20 CCP",
+          "price": 20,
+          "buyback_price": "5 CCP"
+        },
+        {
+          "id": "bobb-002",
+          "name": "幽靈 Ghost",
+          "category": "普通款Generic",
+          "stock": "大量",
+          "cost": "20 CCP",
+          "price": 20,
+          "buyback_price": "10 CCP"
+        },
+        {
+          "id": "bobb-003",
+          "name": "希德搖頭娃娃 Sid’s Bobblehead",
+          "category": "普通款Generic",
+          "stock": "無",
+          "cost": "5 CCP",
+          "price": 5,
+          "buyback_price": "不值錢"
+        },
+        {
+          "id": "bobb-004",
+          "name": "骷髏 Skeen",
+          "category": "普通款Generic",
+          "stock": "大量",
+          "cost": "20 CCP",
+          "price": 20,
+          "buyback_price": "5 CCP"
+        },
+        {
+          "id": "bobb-005",
+          "name": "蜘蛛 Spider",
+          "category": "普通款Generic",
+          "stock": "大量",
+          "cost": "20 CCP",
+          "price": 20,
+          "buyback_price": "10 CCP"
+        },
+        {
+          "id": "bobb-006",
+          "name": "魅魔 Succubus",
+          "category": "普通款Generic",
+          "stock": "大量",
+          "cost": "20 CCP",
+          "price": 20,
+          "buyback_price": "15 CCP"
+        },
+        {
+          "id": "bobb-007",
+          "name": "殭屍 Zombie",
+          "category": "普通款Generic",
+          "stock": "大量",
+          "cost": "20 CCP",
+          "price": 20,
+          "buyback_price": "10 CCP"
+        },
+        {
+          "id": "bobb-008",
+          "name": "無頭騎士搖頭娃娃（藍色）Headless Horseman Bobblehead (Blue)",
+          "category": "季節款Seasonal",
+          "stock": "售罄",
+          "cost": "-",
+          "price": null,
+          "buyback_price": "100 CCP"
+        },
+        {
+          "id": "bobb-009",
+          "name": "無頭騎士搖頭娃娃（綠色）Headless Horseman Bobblehead (Green)",
+          "category": "季節款Seasonal",
+          "stock": "售罄",
+          "cost": "-",
+          "price": null,
+          "buyback_price": "125 CCP"
+        },
+        {
+          "id": "bobb-010",
+          "name": "無頭騎士搖頭娃娃（粉色）Headless Horseman Bobblehead (Pink)",
+          "category": "季節款Seasonal",
+          "stock": "售罄",
+          "cost": "-",
+          "price": null,
+          "buyback_price": "75 CCP"
+        },
+        {
+          "id": "bobb-011",
+          "name": "無頭騎士搖頭娃娃（紫色）Headless Horseman Bobblehead (Purple)",
+          "category": "季節款Seasonal",
+          "stock": "售罄",
+          "cost": "-",
+          "price": null,
+          "buyback_price": "100 CCP"
+        },
+        {
+          "id": "bobb-012",
+          "name": "無頭騎士搖頭娃娃（紅色）Headless Horseman Bobblehead (Red)",
+          "category": "季節款Seasonal",
+          "stock": "限量",
+          "cost": "25 CCP",
+          "price": 25,
+          "buyback_price": "15 CCP"
+        },
+        {
+          "id": "bobb-013",
+          "name": "無頭騎士搖頭娃娃（黃色）Headless Horseman Bobblehead (Yellow)",
+          "category": "季節款Seasonal",
+          "stock": "售罄",
+          "cost": "-",
+          "price": null,
+          "buyback_price": "75 CCP"
+        },
+        {
+          "id": "bobb-014",
+          "name": "亞當 Adam",
+          "category": "特別款Special",
+          "stock": "限量",
+          "cost": "50 CCP",
+          "price": 50,
+          "buyback_price": "30 CCP"
+        },
+        {
+          "id": "bobb-015",
+          "name": "阿嘉莎 Agatha",
+          "category": "特別款Special",
+          "stock": "限量",
+          "cost": "50 CCP",
+          "price": 50,
+          "buyback_price": "20 CCP"
+        },
+        {
+          "id": "bobb-016",
+          "name": "傲霜女巫姊妹三人組 Alabaster Witch Sisters Trio",
+          "category": "特別款Special",
+          "stock": "限量",
+          "cost": "120 CCP",
+          "price": 120,
+          "buyback_price": "55 CCP"
+        },
+        {
+          "id": "bobb-017",
+          "name": "阿納巨蟒 Anaconda",
+          "category": "特別款Special",
+          "stock": "限量",
+          "cost": "50 CCP",
+          "price": 50,
+          "buyback_price": "15 CCP"
+        },
+        {
+          "id": "bobb-018",
+          "name": "阿斯特洛斯之樹 Asteroth’s Tree",
+          "category": "特別款Special",
+          "stock": "限量",
+          "cost": "50 CCP",
+          "price": 50,
+          "buyback_price": "10 CCP"
+        },
+        {
+          "id": "bobb-019",
+          "name": "弗萊徹 Fletcher",
+          "category": "特別款Special",
+          "stock": "限量",
+          "cost": "50 CCP",
+          "price": 50,
+          "buyback_price": "5 CCP"
+        },
+        {
+          "id": "bobb-020",
+          "name": "拉西安娜 Laciana",
+          "category": "特別款Special",
+          "stock": "限量",
+          "cost": "50 CCP",
+          "price": 50,
+          "buyback_price": "25 CCP"
+        },
+        {
+          "id": "bobb-021",
+          "name": "雷恩 Laine",
+          "category": "特別款Special",
+          "stock": "限量",
+          "cost": "50 CCP",
+          "price": 50,
+          "buyback_price": "35 CCP"
+        },
+        {
+          "id": "bobb-022",
+          "name": "拉米娜 Lamina",
+          "category": "特別款Special",
+          "stock": "限量",
+          "cost": "50 CCP",
+          "price": 50,
+          "buyback_price": "15 CCP"
+        },
+        {
+          "id": "bobb-023",
+          "name": "拉札拉克 Lazarak",
+          "category": "特別款Special",
+          "stock": "限量",
+          "cost": "50 CCP",
+          "price": 50,
+          "buyback_price": "15 CCP"
+        },
+        {
+          "id": "bobb-024",
+          "name": "L.E.A.D. 南瓜終結者 L.E.A.D. Pumpkinator",
+          "category": "特別款Special",
+          "stock": "限量",
+          "cost": "50 CCP",
+          "price": 50,
+          "buyback_price": "50 CCP"
+        },
+        {
+          "id": "bobb-025",
+          "name": "莉絲貝 Lisbeth",
+          "category": "特別款Special",
+          "stock": "限量",
+          "cost": "50 CCP",
+          "price": 50,
+          "buyback_price": "35 CCP"
+        },
+        {
+          "id": "bobb-026",
+          "name": "里希登斯坦領主 Lord Lichtenstein",
+          "category": "特別款Special",
+          "stock": "限量",
+          "cost": "50 CCP",
+          "price": 50,
+          "buyback_price": "20 CCP"
+        },
+        {
+          "id": "bobb-027",
+          "name": "洛恩 Lorne",
+          "category": "特別款Special",
+          "stock": "限量",
+          "cost": "50 CCP",
+          "price": 50,
+          "buyback_price": "10 CCP"
+        },
+        {
+          "id": "bobb-028",
+          "name": "離途沼澤 Lostfoot’s Bog",
+          "category": "特別款Special",
+          "stock": "限量",
+          "cost": "50 CCP",
+          "price": 50,
+          "buyback_price": "5 CCP"
+        },
+        {
+          "id": "bobb-029",
+          "name": "盧卡斯 Lucas",
+          "category": "特別款Special",
+          "stock": "限量",
+          "cost": "50 CCP",
+          "price": 50,
+          "buyback_price": "20 CCP"
+        },
+        {
+          "id": "bobb-030",
+          "name": "奧列格 Oleg",
+          "category": "特別款Special",
+          "stock": "限量",
+          "cost": "50 CCP",
+          "price": 50,
+          "buyback_price": "5 CCP"
+        },
+        {
+          "id": "bobb-031",
+          "name": "奧菲莉婭 Ophelia",
+          "category": "特別款Special",
+          "stock": "限量",
+          "cost": "50 CCP",
+          "price": 50,
+          "buyback_price": "40 CCP"
+        },
+        {
+          "id": "bobb-032",
+          "name": "奧瑞莎 Orisa",
+          "category": "特別款Special",
+          "stock": "限量",
+          "cost": "50 CCP",
+          "price": 50,
+          "buyback_price": "30 CCP"
+        },
+        {
+          "id": "bobb-033",
+          "name": "奧瑞克 Orrick",
+          "category": "特別款Special",
+          "stock": "限量",
+          "cost": "50 CCP",
+          "price": 50,
+          "buyback_price": "20 CCP"
+        },
+        {
+          "id": "bobb-034",
+          "name": "奧斯瓦多 Osvaldo",
+          "category": "特別款Special",
+          "stock": "限量",
+          "cost": "50 CCP",
+          "price": 50,
+          "buyback_price": "5 CCP"
+        },
+        {
+          "id": "bobb-035",
+          "name": "威廉 William",
+          "category": "特別款Special",
+          "stock": "限量",
+          "cost": "50 CCP",
+          "price": 50,
+          "buyback_price": "20 CCP"
+        },
+        {
+          "id": "bobb-036",
+          "name": "搖頭娃娃靈魂分離器Bobblehead Soul Separator",
+          "category": "工具",
+          "stock": "獨特",
+          "cost": "5000 CCP",
+          "price": 5000,
+          "buyback_price": "-"
+        },
+        {
+          "id": "bobb-037",
+          "name": "保護盒Protective Box",
+          "category": "工具",
+          "stock": "大量",
+          "cost": "10 CCP",
+          "price": 10,
+          "buyback_price": "-"
+        }
+      ],
+      "shop-curio": [
+        {
+          "id": "curio-001",
+          "name": "骨鏢Bone Darts",
+          "category": "武器裝備",
+          "stock": "大量",
+          "cost": "20 支 5 CCP",
+          "price": 5
+        },
+        {
+          "id": "curio-002",
+          "name": "小丑錘Clown Hammer",
+          "category": "武器裝備",
+          "stock": "限量",
+          "cost": "50 CCP",
+          "price": 50
+        },
+        {
+          "id": "curio-003",
+          "name": "假花Fake Flower",
+          "category": "武器裝備",
+          "stock": "限量",
+          "cost": "60 CCP",
+          "price": 60
+        },
+        {
+          "id": "curio-004",
+          "name": "滴血餅乾Bleeding Biscuit",
+          "category": "消耗品",
+          "stock": "大量",
+          "cost": "8 CCP",
+          "price": 8
+        },
+        {
+          "id": "curio-005",
+          "name": "棉花糖蘋果酒Cotton Candy Cider",
+          "category": "消耗品",
+          "stock": "大量",
+          "cost": "5 CCP",
+          "price": 5
+        },
+        {
+          "id": "curio-006",
+          "name": "棉花糖玉米Cotton Candy Corn",
+          "category": "消耗品",
+          "stock": "大量",
+          "cost": "10 CCP",
+          "price": 10
+        },
+        {
+          "id": "curio-007",
+          "name": "眼球棒Eyeball On A Stick",
+          "category": "消耗品",
+          "stock": "大量",
+          "cost": "3 CCP",
+          "price": 3
+        },
+        {
+          "id": "curio-008",
+          "name": "炸手指Fried Fingers",
+          "category": "消耗品",
+          "stock": "大量",
+          "cost": "8 CCP",
+          "price": 8
+        },
+        {
+          "id": "curio-009",
+          "name": "腎結石玉米糖Kidney Corn",
+          "category": "消耗品",
+          "stock": "大量",
+          "cost": "15 CCP",
+          "price": 15
+        },
+        {
+          "id": "curio-010",
+          "name": "瘟疫花生Pestilent Peanuts",
+          "category": "消耗品",
+          "stock": "大量",
+          "cost": "10 CCP",
+          "price": 10
+        },
+        {
+          "id": "curio-011",
+          "name": "驚嚎冰棒Screamsicle",
+          "category": "消耗品",
+          "stock": "大量",
+          "cost": "8 CCP",
+          "price": 8
+        },
+        {
+          "id": "curio-012",
+          "name": "尖叫汽水Soda Scream",
+          "category": "消耗品",
+          "stock": "大量",
+          "cost": "5 CCP",
+          "price": 5
+        },
+        {
+          "id": "curio-013",
+          "name": "電擊太妃糖Zappy Taffy",
+          "category": "消耗品",
+          "stock": "大量",
+          "cost": "5 根 5 CCP",
+          "price": 5
+        },
+        {
+          "id": "curio-014",
+          "name": "殭屍玉米Zombie Corn",
+          "category": "消耗品",
+          "stock": "大量",
+          "cost": "15 CCP",
+          "price": 15
+        },
+        {
+          "id": "curio-015",
+          "name": "女妖毛絨玩偶 Banshee Plushie",
+          "category": "新奇物品",
+          "stock": "限量",
+          "cost": "80 CCP",
+          "price": 80
+        },
+        {
+          "id": "curio-016",
+          "name": "骨製煙花Bonework",
+          "category": "新奇物品",
+          "stock": "大量",
+          "cost": "每個 5 CCP 或 10 個 25 CCP",
+          "price": 5
+        },
+        {
+          "id": "curio-017",
+          "name": "烏鴉毛絨玩偶 Crow Plushie",
+          "category": "新奇物品",
+          "stock": "限量",
+          "cost": "5 CCP",
+          "price": 5
+        },
+        {
+          "id": "curio-018",
+          "name": "幽靈毛絨玩偶 Ghost Plushie",
+          "category": "新奇物品",
+          "stock": "限量",
+          "cost": "80 CCP",
+          "price": 80
+        },
+        {
+          "id": "curio-019",
+          "name": "食屍鬼毛絨玩偶 Ghoul Plushie",
+          "category": "新奇物品",
+          "stock": "限量",
+          "cost": "20 CCP",
+          "price": 20
+        },
+        {
+          "id": "curio-020",
+          "name": "老鼠毛絨玩偶 Rat Plushie",
+          "category": "新奇物品",
+          "stock": "限量",
+          "cost": "5 CCP",
+          "price": 5
+        },
+        {
+          "id": "curio-021",
+          "name": "骷髏毛絨玩偶 Skeleton Plushie",
+          "category": "新奇物品",
+          "stock": "限量",
+          "cost": "10 CCP",
+          "price": 10
+        },
+        {
+          "id": "curio-022",
+          "name": "希德搖頭娃娃 Sid’s Bobblehead",
+          "category": "新奇物品",
+          "stock": "大量",
+          "cost": "50 CCP",
+          "price": 50
+        },
+        {
+          "id": "curio-023",
+          "name": "蜘蛛毛絨玩偶 Spider Plushie",
+          "category": "新奇物品",
+          "stock": "限量",
+          "cost": "5 CCP",
+          "price": 5
+        },
+        {
+          "id": "curio-024",
+          "name": "可疑的紅氣球Suspiciously Red Balloon",
+          "category": "新奇物品",
+          "stock": "大量",
+          "cost": "10 CCP",
+          "price": 10
+        },
+        {
+          "id": "curio-025",
+          "name": "蟾蜍氣球Toad Balloon",
+          "category": "新奇物品",
+          "stock": "大量",
+          "cost": "10 CCP",
+          "price": 10
+        },
+        {
+          "id": "curio-026",
+          "name": "屍妖毛絨玩偶 Wight Plushie",
+          "category": "新奇物品",
+          "stock": "限量",
+          "cost": "60 CCP",
+          "price": 60
+        },
+        {
+          "id": "curio-027",
+          "name": "殭屍毛絨玩偶 Zombie Plushie",
+          "category": "新奇物品",
+          "stock": "限量",
+          "cost": "10 CCP",
+          "price": 10
+        },
+        {
+          "id": "curio-028",
+          "name": "驚喜袋（小號） Show Bag (small)",
+          "category": "驚喜袋",
+          "stock": "大量",
+          "cost": "25 CCP",
+          "price": 25
+        },
+        {
+          "id": "curio-029",
+          "name": "驚喜袋（中號） Show Bag (medium)",
+          "category": "驚喜袋",
+          "stock": "大量",
+          "cost": "45 CCP",
+          "price": 45
+        },
+        {
+          "id": "curio-030",
+          "name": "驚喜袋（大號） Show Bag (large)",
+          "category": "驚喜袋",
+          "stock": "大量",
+          "cost": "60 CCP",
+          "price": 60
+        },
+        {
+          "id": "curio-031",
+          "name": "驚喜袋（特大號） Show Bag (extra-large)",
+          "category": "驚喜袋",
+          "stock": "大量",
+          "cost": "75 CCP",
+          "price": 75
+        }
+      ]
+    }
+  },
+  "tasks": {
+    "categories": {
+      "task-bounty": "鬼燈市集：達卡的懸賞告示牌",
+      "task-contest": "餐館：貝拉的飲食競賽",
+      "task-games": "詭異珍品：雜耍遊戲"
+    },
+    "items": {
+      "task-bounty": [
+        {
+          "id": "bounty-001",
+          "name_zh": "屍體化",
+          "name_en": "Corpsified",
+          "reward_str": "500 CCP",
+          "reward_val": 500,
+          "desc_zh": "讓亞當異形怪的最後一擊由屍體工廠的陷阱造成。",
+          "desc_en": "Have the final blow on Adam the Abomination be dealt by one of the corpse factories traps"
+        },
+        {
+          "id": "bounty-002",
+          "name_zh": "懦弱領主",
+          "name_en": "Cowardly Lord",
+          "reward_str": "1000 CCP",
+          "reward_val": 1000,
+          "desc_zh": "偷走里希登斯坦領主的煉金藥水，並在徹底擊敗他之前將里希登斯坦變成一隻雞。真是個膽小鬼。",
+          "desc_en": "Steal Lord Lichtenstein’s alchemical potions and turn Lichtenstein into a chicken before defeating him outright. What a chicken."
+        },
+        {
+          "id": "bounty-003",
+          "name_zh": "顏色調換",
+          "name_en": "Color Swapping",
+          "reward_str": "1500 CCP",
+          "reward_val": 1500,
+          "desc_zh": "在同一場戰鬥遭遇中，僅使用冰凍傷害擊敗安柏傲霜女巫，僅使用火焰傷害擊敗紫晶傲霜女巫，並僅使用閃電傷害擊敗安漷傲霜女巫。",
+          "desc_en": "Defeat Amber Alabaster using only cold damage, defeat Amethyst Alabaster using only fire damage and defeat Aqua Alabaster using only lightning damage during the same combat encounter."
+        },
+        {
+          "id": "bounty-004",
+          "name_zh": "匕首匕首",
+          "name_en": "Dagger Dagger",
+          "reward_str": "1000 CCP",
+          "reward_val": 1000,
+          "desc_zh": "僅使用匕首或匕首類型武器造成的傷害擊敗刀鋒兄弟艾歷克斯和阿克塞爾。盜賊們，我說得對吧。",
+          "desc_en": "Defeat Alex and Axel, the Blade Brothers using only damage dealt by daggers or weapons with the dagger type. Rogues am I right."
+        },
+        {
+          "id": "bounty-005",
+          "name_zh": "自掘墳墓",
+          "name_en": "Digging Your Own Grave",
+          "reward_str": "1000 CCP",
+          "reward_val": 1000,
+          "desc_zh": "在掘墓者奧瑞克挖掘或至少在地下時，對他造成致命一擊。高效的埋葬。",
+          "desc_en": "Get the killing blow on Orrick the Gravedigger while he is burrowed or at least under the ground. Efficient Burials."
+        },
+        {
+          "id": "bounty-006",
+          "name_zh": "火，火！",
+          "name_en": "Fire, Fire!",
+          "reward_str": "500 CCP",
+          "reward_val": 500,
+          "desc_zh": "僅使用造成火焰傷害的攻擊擊敗亞當異形怪。燒焦了。",
+          "desc_en": "Defeat Adam the Abomination using only attacks that deal Fire Damage. Burned."
+        },
+        {
+          "id": "bounty-007",
+          "name_zh": "滾出我的地盤，洛恩！",
+          "name_en": "Get Off My Lorne",
+          "reward_str": "1500 CCP",
+          "reward_val": 1500,
+          "desc_zh": "僅使用徒手打擊擊敗墓穴的洛恩。就像真正的武僧一樣。",
+          "desc_en": "Defeat Lorne of the Tomb using only Unarmed Strikes. Just like a real monk."
+        },
+        {
+          "id": "bounty-008",
+          "name_zh": "斬首",
+          "name_en": "Headless",
+          "reward_str": "1000000 CCP",
+          "reward_val": 1000000,
+          "desc_zh": "砍下無頭騎士的頭。",
+          "desc_en": "Cut off the Horseman’s head."
+        },
+        {
+          "id": "bounty-009",
+          "name_zh": "縫合完畢",
+          "name_en": "Left in Stiches",
+          "reward_str": "500 CCP",
+          "reward_val": 500,
+          "desc_zh": "僅在奧斯瓦多縫屍匠從他的「縫合完畢」能力中獲得所有五種增強後，才擊敗他。更可能是痛苦的發作。",
+          "desc_en": "Defeat Osvaldo the Stitcher only after he has obtained all five augments from his Stitched Up ability. Fits of pain more likely."
+        },
+        {
+          "id": "bounty-010",
+          "name_zh": "南瓜爆炸",
+          "name_en": "Punk-Splosion",
+          "reward_str": "500 CCP",
+          "reward_val": 500,
+          "desc_zh": "使用一個點燃的南瓜炸彈對南瓜之王拉札拉克造成致命一擊。",
+          "desc_en": "Get the killing blow on Lazarak the Pumpkin King using a lit Pumpkin Bomb."
+        },
+        {
+          "id": "bounty-011",
+          "name_zh": "重新充能",
+          "name_en": "Recharged",
+          "reward_str": "1000 CCP",
+          "reward_val": 1000,
+          "desc_zh": "將 L.E.A.D. 南瓜終結者的生命值降至其起始總生命值的一半以下，然後僅使用火焰傷害將其治療回滿生命值，然後再徹底擊敗它。火焰吸收太棒了。",
+          "desc_en": "Drop the L.E.A.D. Pumpkinator to below half of its starting total HP and then use only Fire damage to heal it back up to full health before defeating it outright. Fire Absorption is great."
+        },
+        {
+          "id": "bounty-012",
+          "name_zh": "劈砍木屑",
+          "name_en": "Rip Rip Woodchip",
+          "reward_str": "500 CCP",
+          "reward_val": 500,
+          "desc_zh": "僅使用造成揮砍傷害的攻擊擊敗阿斯特洛斯之樹。砍砍。",
+          "desc_en": "Defeat Asteroth’s Tree by using only attacks that inflict Slashing Damage. Chop chop"
+        },
+        {
+          "id": "bounty-013",
+          "name_zh": "銀器殺手",
+          "name_en": "Silver Slayer",
+          "reward_str": "500 CCP",
+          "reward_val": 500,
+          "desc_zh": "僅使用鍍銀武器的攻擊擊敗虧月之人盧卡斯。",
+          "desc_en": "Defeat Lucas of the Waning Moon using only attacks from silvered weapons."
+        },
+        {
+          "id": "bounty-014",
+          "name_zh": "沉沒感",
+          "name_en": "Sinking Feeling",
+          "reward_str": "500 CCP",
+          "reward_val": 500,
+          "desc_zh": "在沉洞水面下游泳時，對沉洞阿納巨蟒造成最後一擊。",
+          "desc_en": "Land the final blow on the Anaconda of the Sinkhole while swimming beneath the surface in the same sinkhole."
+        },
+        {
+          "id": "bounty-015",
+          "name_zh": "濺射傷害",
+          "name_en": "Splash Damage",
+          "reward_str": "1500 CCP",
+          "reward_val": 1500,
+          "desc_zh": "在受到莉絲貝誘惑魔女的「誘惑打擊」能力影響時擊敗她。",
+          "desc_en": "Defeat Lisbeth the Temptress while under the effects of her Seductive Strike ability."
+        },
+        {
+          "id": "bounty-016",
+          "name_zh": "那是我的血",
+          "name_en": "That’s My Blood",
+          "reward_str": "1500 CCP",
+          "reward_val": 1500,
+          "desc_zh": "在被奧瑞莎凝血者擊倒並成功成為其「生命吸取」能力目標後，對她造成致命一擊。",
+          "desc_en": "Get the killing blow on Orisa the Blood Curdler after being downed and successfully targeted by her Life Sucker ability."
+        },
+        {
+          "id": "bounty-017",
+          "name_zh": "網上戰士",
+          "name_en": "Web Warrior",
+          "reward_str": "500 CCP",
+          "reward_val": 500,
+          "desc_zh": "在被蜘蛛女王拉西安娜的網束縛時，對她造成致命一擊。",
+          "desc_en": "Land the killing blow on Laciana the Spider Queen while restrained by her webs."
+        },
+        {
+          "id": "bounty-018",
+          "name_zh": "你不是我",
+          "name_en": "You’re Not Me",
+          "reward_str": "1500 CCP",
+          "reward_val": 1500,
+          "desc_zh": "在受到雷恩完美主義者的「記憶竊取」和「完美鏡像」能力影響後，對她造成致命一擊。有兩個？",
+          "desc_en": "Get the Killing blow on Laine the Perfectionist after you have been affected by her Memory Tap and Perfect Mirror Abilities. There’s two?"
+        },
+        {
+          "id": "bounty-019",
+          "name_zh": "你太自戀了",
+          "name_en": "You’re So Vain",
+          "reward_str": "500 CCP",
+          "reward_val": 500,
+          "desc_zh": "戰鬥中沒有獵人可以對瘋狂少女阿嘉莎造成傷害。僅通過在她的巢穴中揭露鏡子來擊敗她。",
+          "desc_en": "No hunter may deal damage to Agatha the Mad Maiden during the battle. Defeat her only by uncovering mirrors in her lair."
+        }
+      ],
+      "task-contest": [
+        {
+          "id": "contest-001",
+          "name_zh": "硫磺餅乾",
+          "name_en": "Brimstone Biscuit",
+          "cost_str": "30 CCP",
+          "cost_val": 30,
+          "reward_zh": "易燃紙",
+          "reward_en": "Fickle Flame",
+          "desc_zh": "盛在一塊鐵板上，硫磺餅乾看起來像一大塊煤，其外殼上有發紅光的脈絡，不斷散發出熱氣。食物有 12 HP 和 16 AC。在它的回合，食物自動擊中玩家，造成 1D8 火焰傷害，因為它灼燒玩家。",
+          "desc_en": "Served on a slab of iron, the brimstone biscuit looks like a large lump of coal with glowing red veins coursing through its shell that constantly emanates a haze of heat. The food has 12 HP and 16 AC. On its turn the food automatically hits the player with 1D8 Fire Damage as it burns the player."
+        },
+        {
+          "id": "contest-002",
+          "name_zh": "末日蘑菇",
+          "name_en": "Doom Shroom",
+          "cost_str": "40 CCP",
+          "cost_val": 40,
+          "reward_zh": "蓬蓬炸彈",
+          "reward_en": "Puff Bomb",
+          "desc_zh": "一個 2 英尺 x 2 英尺大的、看起來像皮革的蘑菇帽，盛在新鮮採摘的龍葵床上。我的意思是它看起來完全無害可食用。食物有 50 HP 和 3 AC。在它的回合，食物釋放孢子。當食物釋放孢子時，進食的玩家必須進行 DC13 的體質豁免，失敗則受到 1D10 毒素傷害，成功則傷害減半。即使你豁免成功，也不會獲得對此效果的免疫。",
+          "desc_en": "A large 2 foot by 2 foot leathery looking mushroom cap served on bed of freshly picked nightshade. I mean it looks perfectly harmless to eat. The food has 50 HP and 3 AC. On its turn the food releases spores. When the food releases spores, the eating player must make a DC13 Constitution saving throw or be dealt 1D10 Poison Damage on a failed save or half as much on a successful save. You do not gain immunity to this effect if you succeed."
+        },
+        {
+          "id": "contest-003",
+          "name_zh": "淤泥啤酒",
+          "name_en": "Ooze Booze",
+          "cost_str": "20 CCP",
+          "cost_val": 20,
+          "reward_zh": "脊骨啤酒杯",
+          "reward_en": "Spine Stein",
+          "desc_zh": "一杯豐盛的半加侖大杯，滿溢著黏稠的綠色液體，偶爾發出低沉的咕嚕聲。當你從桌子上拿起它時，你注意到溢出的液體會自己拉回杯子裡。食物有 15 HP 和 18 AC。在它的回合，食物用偽足自動擊中玩家，造成 1D8 鈍擊傷害。",
+          "desc_en": "A hearty sized ½ gallon mug overflowing with a viscous green liquid that occasionally makes a low gurgling sound. As you pick it up from the table you take note that the overflowing fluid pulls itself back into the mug. The food has 15 HP and 18 AC. On its turn the food automatically hits the player with a pseudopod for 1D8 Bludgeoning damage."
+        },
+        {
+          "id": "contest-004",
+          "name_zh": "尖刺苔蘚沙拉",
+          "name_en": "Spike Moss Salad",
+          "cost_str": "15 CCP",
+          "cost_val": 15,
+          "reward_zh": "不死之勺",
+          "reward_en": "Undead Spoon",
+          "desc_zh": "一團看似無害的綠色苔蘚，盤子上淋著香醋。可惜的是，當你觸摸它時，它立刻變成了一個尖刺球。食物有 30 HP 和 5 AC。在它的回合，食物自動擊中玩家，造成 1D6 穿刺傷害，因為它刺傷玩家。",
+          "desc_en": "A messy clump of seemingly harmless green moss that is plated up with a balsamic drizzle. Too bad that it instantly turns into a ball of spikes when you touch it. The food has 30 HP and 5 AC. On its turn the food automatically hits the player with 1D6 Piercing Damage as it spikes the player."
+        },
+        {
+          "id": "contest-005",
+          "name_zh": "扼殺魷魚",
+          "name_en": "The Strangler Squid",
+          "cost_str": "25 CCP",
+          "cost_val": 25,
+          "reward_zh": "惡魔之鹽",
+          "reward_en": "Demon Salt",
+          "desc_zh": "一根粗壯的、四英尺長的烤觸手，聞起來有黃油和海鹽的味道。如果觸手沒有在盤子上移動，它可能是一頓豐盛的大餐。食物有 25 HP 和 12 AC。在它的回合，食物自動擊中玩家，造成 1D10 鈍擊傷害，因為它扼殺玩家。",
+          "desc_en": "A single thick, four foot long roasted tentacle that smells of butter and sea salt. It probably would be a hearty feast if the tentacle wasn’t moving around on the plate. The food has 25 HP and 12 AC.On its turn the food automatically hits the player with 1D10 Bludgeoning Damage as it strangles the player."
+        },
+        {
+          "id": "contest-006",
+          "name_zh": "吸血鬼水蛭",
+          "name_en": "The Vampire Leech",
+          "cost_str": "50 CCP",
+          "cost_val": 50,
+          "reward_zh": "黏稠袋",
+          "reward_en": "Glutinous Bag",
+          "desc_zh": "一條宴會尺寸的油炸水蛭，嘴裡長滿了鋒利的吸血鬼牙齒。吸血鬼水蛭會試圖在你把它吃到死之前把你吸乾。食物有 30 HP 和 10 AC。在它的回合，食物自動擊中玩家，造成 1D6 穿刺傷害，並恢復那麼多生命值，因為它從玩家身上吸取生命。",
+          "desc_en": "A full banquet sized deep fried leech that has a mouth full of razor sharp vampire teeth. The vampire leech is going to try and suck you dry before you can eat it to death. The food has 30 HP and 10 AC. On its turn the food automatically hits the player with 1D6 Piercing Damage and regains that many Hit Points as it sucks the life from the player."
+        },
+        {
+          "id": "contest-007",
+          "name_zh": "帝王蜘蛛蟹宴（4-5名玩家）",
+          "name_en": "King Spider Crab Banquet",
+          "cost_str": "120 CCP",
+          "cost_val": 120,
+          "reward_zh": "蜘蛛蟹護符",
+          "reward_en": "Spider Crab Charm",
+          "desc_zh": "一個供整個隊伍嘗試生存的特殊飲食競賽。一隻桌子大小的清蒸蜘蛛蟹，絕對還活著，並且不想成為你的餐點。享用吧！對於這個挑戰，根據正常情況為每個玩家單獨擲先攻。食物有 80 HP 和 15 AC。在它的回合，食物用它的蜘蛛蟹爪自動擊中每個玩家，造成 1D8 揮砍和 1D8 穿刺傷害。",
+          "desc_en": "A special eating competition for a whole party to try and survive. A small table sized steamed spider crab that is most definitely still alive and doesn’t want to be you meal. Enjoy! For this challenge roll initiative for each player separately as per normal. The food has 80 HP and 15 AC. On its turn the food automatically hits each player with its spider crab claws for 1D8 Slashing and 1D8 Piercing damage."
+        }
+      ],
+      "task-games": [
+        {
+          "id": "game-001",
+          "name_zh": "膀胱爆破",
+          "name_en": "Bladder Pop",
+          "cost_str": "10 CCP",
+          "cost_val": 10,
+          "desc_zh": "玩家獲得 3 支骨鏢，投向一面充滿膨脹膀胱的牆。對於每支飛鏢，玩家必須對膀胱的 8 AC 進行一次遠程攻擊檢定。成功命中則一個膀胱被戳破。對於每個被戳破的膀胱，玩家必須擲 1D10 並將結果相加來計算玩家的分數。",
+          "desc_en": "The player is given 3 bone darts to throw at a wall of inflated bladders. For each dart players must make a ranged attack roll against the 8 AC of the bladders. A bladder is popped on a successful hit. For each bladder popped the player must roll 1D10 and add the results together to calculate the players score."
+        },
+        {
+          "id": "game-002",
+          "name_zh": "肋骨投擲",
+          "name_en": "Rib Toss",
+          "cost_str": "10 CCP",
+          "cost_val": 10,
+          "desc_zh": "向玩家提供 6 根彎曲的肋骨，嘗試將其套在幾根脊椎骨中的一根上。對於每根投出的肋骨，玩家進行一次臨時遠程武器攻擊。玩家將根據每次攻擊檢定的成功程度得分。10 或更高得 1 分，14 或更高得 3 分，17 或更高得 5 分。將它們全部相加得到獎品。",
+          "desc_en": "The player is provided with 6 curved ribs to attempt at tossing around one of several spines. For each rib tossed the player makes an improvised ranged weapon attack. The player will score depending on how successful each attack roll is. 10 or higher is 1 point, 14 or higher is 3 points and 17 or higher is 5 points. Add them all together for the prize."
+        },
+        {
+          "id": "game-003",
+          "name_zh": "腦力深潛",
+          "name_en": "Brain Bobbing",
+          "cost_str": "5 CCP",
+          "cost_val": 5,
+          "desc_zh": "玩家必須頭朝下潛入一個黏糊糊的、你不想知道裡面是什麼的桶裡，並用他們的嘴或等效器官抓住一個大腦。玩家必須首先成功通過 DC13 的體質豁免，否則會因厭惡而退縮並失敗遊戲。如果成功，玩家必須用他們的嘴對大腦的 10 AC 進行一次臨時近戰攻擊。如果玩家沒有溺水或把頭縮回來，他們可以進行多次嘗試來獲取一個大腦。一旦檢回一個大腦，玩家擲 3D8，這將代表他們的分數和大腦大小。",
+          "desc_en": "Players must plunge headfirst into a slimy barrel of you don’t want to know what and grab a brain with their mouth or equivalent orifice. The player must first succeed on a DC13 Constitution saving throw or reel back in disgust and fail the game. If they are successful, the player must make an improvised melee attack with their mouth against the brains 10 AC. The player may make multiple attempts to get a brain if they don’t drown or pull their head out. Once a brain is retrieved the player rolls 3D8 which will represent their points and the brain size."
+        },
+        {
+          "id": "game-004",
+          "name_zh": "噩夢釣魚",
+          "name_en": "Nightmare Fishing",
+          "cost_str": "15 CCP",
+          "cost_val": 15,
+          "desc_zh": "玩家必須將他們的整個手臂或等效附肢放入一池漆黑黏稠的液體中。一旦低於水面，他們就無法再看到手臂，但能感覺到有東西撞擊它、觸摸和輕咬他們。玩家必須根據下表從最簡單的 DC 開始，成功通過越來越困難的感知豁免，以克服恐懼並將手臂保持在液體中。他們堅持的時間越長，水下有生物附著在他們手臂上的感覺就會變得越強烈。根據下表，將根據他們能將手臂保持在 liquid 中的時間長短來授予分數。如果玩家豁免失敗，他們還會在相當於他們試圖通過的 DC 的分鐘數內陷入恐慌狀態。此外，成功通過 DC20 的玩家還將因其勇氣獲得一個額外獎品，名為「海洋靈魂」的物品。\n\nWIS DC | Points\n---|---\n- | 0\nDC8 | 5\nDC10 | 10\nDC12 | 15\nDC14 | 20\nDC16 | 25\nDC18 | 30\nDC20 | 31+",
+          "desc_en": "The player must lower their entire arm or equivalent appendage into a pitch black pool of viscous liquid. Once below the water’s surface they can no longer see the arm, but can feel things bumping into it, touching and nibbling at them. The player must succeed on increasingly difficult Wisdom saving throws tarting with the easiest DC on the table below in order to overcome their fear and keep their arm in the liquid. The longer they last the greater the sensations of creatures latching onto their arm beneath the surface will become. Points will be awarded based on how long they can keep their arm in the liquid as per the below table. If a player fails a saving throw they will also become Frightened for a number of minutes equal to the DC they were attempting to pass. Additionally players who succeed DC20 will also be given an additional prize in the form of an item called a Sea Soul for their bravery.\n\nWIS DC | Points\n---|---\n- | 0\nDC8 | 5\nDC10 | 10\nDC12 | 15\nDC14 | 20\nDC16 | 25\nDC18 | 30\nDC20 | 31+"
+        }
+      ]
+    }
+  },
+  "loot": {
+    "items": [
+      {
+        "id": "loot-001",
+        "name_zh": "深淵護符",
+        "name_en": "Abyssal Amulet",
+        "category_zh": "奇物（護身符），獨特",
+        "category_en": "Wondrous Item (Amulet), Unique",
+        "desc_zh": "這條護符觸手冰涼。它由一條啞光黑色金屬鏈製成，中心懸掛著一塊看似黑色縞瑪瑙的碎片。護符本身會輕輕彎曲周圍的光線，幾乎像是在吸收光線。即使在這裡，它也是一件黑暗物品。大多數人在僅僅一兩個小時後就會發瘋。佩戴此物品時，你會完全失明，沒有任何視覺。作為視覺的交換，你獲得了感知周圍細微震動的能力。你獲得 200 英尺的震顫感知，並且可以攻擊任何你能聽到/感知到的生物而無劣勢。",
+        "desc_en": "This amulet is ice cold to the touch. It appears to be made out of a jet black metal chain with a matte black onyx looking shard hanging from its centre. The amulet itself gently bends any light surrounding it, almost as if it is absorbing it. This is a dark item even here. Most go mad after just an hour or two. While wearing this item, you are completely blind, you have no sense of sight whatsoever. In return for your vision you gain the ability to sense the subtle vibrations all around you. You gain 200 feet of Tremorsense and can attack any creature you can hear/sense without disadvantage."
+      },
+      {
+        "id": "loot-002",
+        "name_zh": "亞當的蘋果",
+        "name_en": "Adam’s Apple",
+        "category_zh": "奇物（法術法器），獨特",
+        "category_en": "Wondrous Item (Spell Focus), Unique",
+        "desc_zh": "這物品絕對不是一個真正的蘋果。它實際上是亞當過大的喉嚨軟骨，形狀略似蘋果。它大約有一個大拳頭大小，由腐爛的骨頭和變黑的肉製成，早已過了保存期限。它散發出惡臭的魔法氣味。此物品可以調適，並可作為+1魔法源用於施法。此外，在滿月下每月一次，調適的生物可以施展 6 環「創造不死生物」法術，無需消耗法術位或材料成分（除了所需的屍體）。",
+        "desc_en": "This item is definitely not an actual apple. It is in fact Adam’s oversized throat cartilage that vaguely resembles the shape of an apple. It is about the size of a large fist and is made of rotten bone and blackened flesh that is well past its use by date. It lets of the pungent stench of foul magic. This item can be attuned to and can be used as a +1 magic source for spellcasting. Additionally once per month under the full moon, the attuned creature may cast Create Undead as a 6th level spell without expending a spell slot or materials (aside from the required corpses)."
+      },
+      {
+        "id": "loot-003",
+        "name_zh": "阿嘉莎的婚戒",
+        "name_en": "Agatha’s Wedding Rings",
+        "category_zh": "奇物（戒指），獨特",
+        "category_en": "Wondrous Item (Rings), Unique",
+        "desc_zh": "一對簡單但漂亮的銀戒指，上面雕刻著精靈圖案。任何接觸其中一枚戒指的生物都能感覺到其中散發出的貪婪飢餓感。此物品算作兩個獨立的魔法物品。當兩個生物分別調適了兩枚戒指中的一枚時，任一生物受到的傷害將由兩個生物平均分攤（向上取整）。",
+        "desc_en": "A pair of simple but pretty silver rings engraved with elvish patterns. Any creature whom touches one of the rings can feel a ravenous hunger emanating from within. This item counts as two separate magical items. When two creatures are attuned to one of the two rings each, damage received by either creature is divided equally (rounded up) amongst the two creatures."
+      },
+      {
+        "id": "loot-004",
+        "name_zh": "亞里斯泰爾的掘墓鏟",
+        "name_en": "Alistair’s Grave Digger",
+        "category_zh": "奇物（工具），獨特",
+        "category_en": "Wondrous Item (Tool), Unique",
+        "desc_zh": "這是一把大鏟子，或者也許是一把大鍬。無論如何，它是一把 einfache 的超大尺寸鐵鏟，配有 6 英尺長的柄，上面包裹著看似鞣製過的人皮。這把特殊的掘墓鏟是魔法物品。每當這把鏟子被用作動作來移動泥土時，它會魔法般地挖出一個恰好 6 英尺深、3 英尺寬、6 英尺長的洞。挖出的泥土將會被堆積成一個相同尺寸、形狀完美的土方，放置在洞周圍使用者選擇的任何位置。這箱泥土會保持其形狀和所有特性。這把鏟子不僅能挖掘泥土。嘗試將這把鏟子推入任何固體材料，例如金屬、石頭、磚塊、泥土或其他材料如沙子或礫石。如果使用不一致的材料，例如乾沙，土箱會立即散開。它簡直就是挖出一個形狀完美的墓穴。這不是很整齊嗎？",
+        "desc_en": "A large shovel, or perhaps it is a large spade. Either way it is a simple oversized iron shovel with a 6 foot handle that is wrapped with what appears to be tanned skin. This particular grave digger is magical. Whenever this shovel is used as an action to move earth it will magically move exactly a 6 feet deep hole that is 3 feet wide and 6 feet long. The earth will be deposited into a perfectly shaped box of the same measurements anywhere the user chooses around the hole. The box of earth retains its shape and all properties. This shovel is capable of digging more than just dirt. Attempting to push this shovel into any sold material, such as metal, stone, brick, earth or other materials such as sand or gravel. If an inconsistent material such as dry sand is used, the box will fall apart immediately. It quite literally digs a perfectly shaped grave. Isn’t that neat."
+      },
+      {
+        "id": "loot-005",
+        "name_zh": "亞里斯泰爾的塵土罐",
+        "name_en": "Alistair’s Jar of Dirt",
+        "category_zh": "奇物，獨特",
+        "category_en": "Wondrous Item, Unique",
+        "desc_zh": "這個巨大的骯髒玻璃罐大約 1 英尺高，近半滿裝著一些看起來潮濕的泥土。可惜聽不到塵土罐傳來任何跳動聲。這個魔法塵土罐有一個簡單的金屬蓋子，可以旋開。打開罐子並從一個敞開的墓穴中抓一把泥土放入罐內，會魔法般地將那個墓穴與罐子連結起來。任何時候，玩家可以從罐中灑出一些泥土到一個敞開的墓穴中。躺在這個敞開的墓穴裡將允許該生物立即從那個墓穴傳送到任何曾將其泥土放入罐中的墓穴。自然，大多數墓穴將不再是敞開的墓穴，因此當該生物出現在他們選擇的目標墓穴時，會出現一個臨時的敞開墓穴，讓他們在墓穴重新閉合前逃出。此傳送能力每天只能使用一次。塵土罐可以容納無盡的泥土，並記住所有與其連結的墓穴。",
+        "desc_en": "This large dirty glass jar is about 1 foot tall and is nearly half full of some damp looking earth. Sadly no thumping can be heard from the jar of dirt. This magical jar of dirt has a simple metal lid that can be unscrewed. Opening the jar and placing a fistful of dirt into the jar from an open grave magically links that grave to the jar. At any time a player may sprinkle some dirt from the jar into an open grave. Laying down in the open grave will allow the creature to instantly teleport from that open grave to any grave that has had its dirt placed inside the jar. Naturally most graves will be no longer open graves, as such when the creature appears at the intended grave of their choice, a temporary open grave will appear, allowing them to escape the grave before it closes back over. The teleportation can only be used once per day. The dirt jar can hold an endless amount of dirt and remembers all graves it is connected to."
+      },
+      {
+        "id": "loot-006",
+        "name_zh": "亞里斯泰爾的墓碑",
+        "name_en": "Alistair’s Tombstone",
+        "category_zh": "護甲（盾牌），獨特",
+        "category_en": "Armor (Shield), Unique",
+        "desc_zh": "亞里斯泰爾的墓碑看起來不怎麼樣。它是一塊略大於常規盾牌的破舊墓碑。墓碑的底部基座似乎早已碎裂。一些生鏽的鏈條纏繞在石頭中央，並用背面以皮革製成的臨時握把鎖定，使得這塊墓碑可以像盾牌一樣攜帶。風化石頭的前 superficie 僅粗糙地雕刻著名字「亞里斯泰爾」和字母「R.I.P.」。這塊墓碑可以被用作重型盾牌，為持用者的 AC 提供+3 加值。持用或攜帶它會使潛行檢定處於劣勢，並使你的移動速度減少 5 英尺。此外，持用者可以在其回合中消耗一個動作，用亞里斯泰爾的墓碑推撞 5 英尺範圍內的一個敵人。持用者和該生物必須進行力量檢定以決定誰贏得推撞。如果該生物贏了，什麼都不會發生。如果墓碑的持用者贏了，目標生物會被向後推開 10 英尺，並受到 1D10 黯蝕傷害，因為陰影般的爪手從石頭的裂縫中冒出，在該生物被推開時抓撓其身體。",
+        "desc_en": "Alistair’s tombstone doesn’t really look like much. It is a decrepit tombstone slightly larger than a regular shield. The bottom base of the tombstone appears to have crumbled long ago. Some rusted chains have been wrapped around the centre of the stone and locked in place with a makeshift handle on the back made of leather allowing the tombstone to be carried just like a shield. The front face of the crumbling stone features only the name Alistair and the letters R.I.P. carved roughly into it. The tombstone can be used as a heavy shield that provides a +3 bonus to the wielders AC. Wielding it or carrying it provides a disadvantage to stealth checks and reduces your movement speed by 5 feet. Additionally the wielder may expend an action on their turn to shove an enemy within 5 feet range with Alistair’s Tombstone. The wielder and creature must make a Strength Roll to determine who wins the shove. If the creature wins, nothing happens. If the wielder of the tombstone wins, the target creature is shoved back 10 feet and is dealt 1D10 Necrotic damage as shadowy clawed hands emerge from the cracks in the stone, scratching at the creatures body as it is pushed away."
+      },
+      {
+        "id": "loot-007",
+        "name_zh": "亞里斯泰爾之甕",
+        "name_en": "Alistair’s Urn",
+        "category_zh": "奇物，獨特",
+        "category_en": "Wondrous Item, Unique",
+        "desc_zh": "一個簡單的金屬甕，形狀像一個小花瓶，配有匹配的蓋子。金屬因年代久遠而失去光澤，觸感冰冷。打開甕會讓你的鼻孔充滿淡淡的泥土花香。甕裡裝著幾把細膩的灰色粉末，很可能是高品質的骨灰。將粉末從亞里斯泰爾之甕灑在一具屍體上，會導致整具屍體悶燒並慢慢分解成細膩的灰色粉末，不留下任何其他東西。任何穿戴的裝備也會化為塵埃。來自屍體的殘留粉末可用於重新裝滿甕。任何從甕中取出的粉末將在 1 分鐘內失去其特性。",
+        "desc_en": "A simple metal urn shaped like a small vase complete with a matching lid. The metal is tarnished from age and is cold to the touch. Opening the urn fills your nostrils with the subtle smell of earthy flowers. The urn holds several handfuls of a fine grey powder, most likely high quality ashes. Sprinkling the powder from Alistair’s Urn on a corpse will cause the entire corpse to smoulder and slowly disintegrate into a fine grey powder leaving nothing else behind. Any worn equipment is also turned to dust. The residue powder from a corpse may be used to refill the urn. Any powder removed from the urn will lose its properties within 1 minute."
+      },
+      {
+        "id": "loot-008",
+        "name_zh": "阿納巨蟒的熱感眼",
+        "name_en": "Anaconda’s Thermal Eye",
+        "category_zh": "奇物，獨特",
+        "category_en": "Wondrous Item, Unique",
+        "desc_zh": "透過這個濕潤但未腐爛的蛇眼眼球如同觀察鏡般窺視，可以看到生物或溫暖物體散發出的熱量光暈。物體越熱，光暈越亮。光暈可以穿透玻璃或最多 10 英尺的灌木叢、2 英尺的木頭或 1 英尺的石頭。光暈的輪廓不是很清晰，因此例如你無法分辨門另一邊的中型生物是什麼，只知道它是中型體型，依此類推。",
+        "desc_en": "While peering through this soggy non-decaying serpents eyeball like a looking glass one can see heat auras emanating from creatures or warm objects. The hotter the object the brighter the aura. The auras emanate through glass or up to 10 feet of shrubbery, 2 feet of wood or 1 foot of stone. The auras are not very defined so for example you cannot tell what the medium sized creature on the other side of the door is, only that it is medium in size and so forth."
+      },
+      {
+        "id": "loot-009",
+        "name_zh": "阿斯特洛斯的背叛",
+        "name_en": "Asteroth’s Betrayal",
+        "category_zh": "軍用武器（巨劍），獨特",
+        "category_en": "Martial Weapon (Great Sword), Unique",
+        "desc_zh": "一把精心鍛造的銀色巨劍，密封在華麗的黑色皮革劍鞘內。這是曾經由大惡魔阿斯特洛斯攜帶上戰場的刀刃。當揮舞此武器時，如果該生物在敵方上一輪行動中受到傷害，則該回合用此劍進行的任何攻擊都將具有優勢，因為刀刃會像殺死其原主的那次背叛一樣尋求復仇。",
+        "desc_en": "A finely forged silver great sword sealed within an ornate black leather scabbard. This is the blade once carried into battle by the arch demon Asteroth. When wielding this weapon if the creature was dealt damage during the enemy’s last activation then any attacks made with this sword for that turn will be made with advantage as the blade seeks its revenge for the betrayal just like the one that killed its original master."
+      },
+      {
+        "id": "loot-010",
+        "name_zh": "自動護目鏡",
+        "name_en": "Automated Goggles",
+        "category_zh": "奇物，獨特",
+        "category_en": "Wondrous Item, Unique",
+        "desc_zh": "它本應類似某種高科技護目鏡。但實際上，它更像是一副眼鏡，連接著另外十幾副其他眼鏡。這些青銅鏡框的眼鏡配有多種不同顏色的鏡片，每個鏡片都連接到一個小型槓桿機構，允許佩戴者切換正在使用的鏡片，並將其他鏡片安全地收存起來，無需調適。可以隨時以自由動作更換鏡片，以引發以下效果之一：\nl  黃色鏡片：允許使用者完美地看到一英里外的物體，如同它們只在 50 英尺外。\nl  藍色鏡片：允許使用者看到受隱形或乙太化效果影響的物品或生物。\nl  綠色鏡片：允許使用者在完全無光源的黑暗中完美視物。\nl  紅色鏡片：允許使用者看到 30 英尺內活體生物的微弱輪廓，穿透實體牆壁和障礙物。\nl  橙色鏡片：允許使用者查看鎖和陷阱的內部結構，在開鎖或解除陷阱時提供+2 加值。\nl  紫色鏡片：允許使用者直接觀看極熱或極亮的物體而不致失明。\nl  透明鏡片：是完全正常的閱讀眼鏡，適用於遠視。",
+        "desc_en": "It is supposed to resemble some form of high tech goggles. But in actual fact it’s more like a pair of glasses, attached to a dozen other pairs of glasses. These bronze framed spectacles have a multitude of different colored lenses each attached to a small lever mechanism that allows the wearer to change which lenses are being looked through and which are safely stored out of the way no attunement required. The lenses may be changed at any time as a free action to invoke one of the following effects. \n-         Yellow Lenses allow the user to see perfectly up to one mile away as if it were only 50 feet away.\n-         Blue Lenses allow the user to items or creatures under the effects of invisibility or etherealness.\n-         Green Lenses allow the user to see perfectly in the dark even if there is no light source. - Red Lenses allow the user to see faint outlines of living creatures within 30 feet, through solid walls and obstacles.\n-         Orange Lenses allow the user to see inside the intricacies of locks and traps, providing a +2 bonus to picking the lock or disarming the trap.\n-         Purple Lenses allow the user to directly look at intensely hot or bright objects without going blind. \n-         Clear Lenses are perfectly normal reading glasses for the long sighted."
+      },
+      {
+        "id": "loot-011",
+        "name_zh": "記憶之袋",
+        "name_en": "Bag of Memories",
+        "category_zh": "奇物，獨特",
+        "category_en": "Wondrous Item, Unique",
+        "desc_zh": "這個柔軟的細緻棕色小皮袋，由一條簡單的紅色繫繩牢牢封閉。此袋是魔法物品，除非使用者已與其調適，否則拒絕被打開。一旦擁有者與袋調適，他們可以花費 20 分鐘進行儀式以執行以下一項：\n玩家可以從一個自願或無意識的生物複製任何記憶。記憶可以是隨機的，或者使用者可以在該生物的記憶中搜尋特定的記憶。此袋可以容納任意數量的記憶。\n玩家可以從一個自願或無意識的生物永久移除任何記憶。每次儀式只能移除一個記憶。是的，你最終可以讓一個生物完全忘記一切。\n玩家可以將袋中的一個記憶植入一個自願或無意識的生物。該記憶不會覆蓋現有記憶，但該生物完全相信那是他們的記憶。\n玩家和任何自願的參與者可以查看和體驗存儲在記憶之袋中的任何記憶。",
+        "desc_en": "The small brown fine leather bag is soft to the touch and is held closed firmly by a simple red cord. The bag is magical and will refuse to be opened unless the user is attuned to it. Once an owner has attuned to the bag they may spend 20 minutes performing a ritual to perform one of the following: - The player may copy any memory from a willing or unconscious creature. The memory can be random or the user can search through the creature’s memories for a specific one. The bag can hold any number of memories. - The player may permanently remove any memory from a willing or unconscious creature. Only one memory may be removed per ritual. And yes you can eventually cause a creature to completely forget everything. - The player may implant a memory from the bag into a willing or unconscious creature. The memory does not overwrite an existing one, but the creature completely believes that is their memory. - The player and any willing participants may view and experience any memory stored in the bag of memories."
+      },
+      {
+        "id": "loot-012",
+        "name_zh": "導血針",
+        "name_en": "Blood Shunt",
+        "category_zh": "簡易武器（匕首），獨特",
+        "category_en": "Simple Weapon (Dagger), Unique",
+        "desc_zh": "一根細長的銀色金屬管，一端磨成鋸齒狀尖端，因過度使用而佈滿細小刮痕。導血針曾被奧瑞莎用來通過將其插入主要動脈，慢慢將受害者體內的每一滴血液抽乾。這個危險的工具可以被用作魔法武器，操作方式類似普通匕首，但具有附加效果：如果它對活體生物造成傷害，該生物將陷入流血狀態。在流血生物每回合開始時，它會因失血而受到額外的 1D2 傷害。此效果最多可疊加 5 次。",
+        "desc_en": "A thin silver metal tube edged into a serrated tip at one end is covered in small scratches from overuse. The blood shunt was once used to Orisa to slowly drain her victims of every last drop of their blood by inserting it into a major artery. This dangerous tool can be used as a magical weapon that operates like a regular dagger with the added effect that if it deals damage to a living creature, the creature will be inflicted with a bleeding effect. At the beginning of each of the bleeding creature’s turns it is dealt an additional 1D2 damage as it bleeds out. This effect can stack 5 times."
+      },
+      {
+        "id": "loot-013",
+        "name_zh": "骨刃",
+        "name_en": "Bone Blade",
+        "category_zh": "附魔物品，稀有",
+        "category_en": "Enchantment Item, Rare",
+        "desc_zh": "一張破舊的卷軸，用一條蒼白色的繩子綁著。這是一次性附魔，可用於附魔一個觸及範圍內自願的單一生物。將此附魔用於生物是極度痛苦的，目標生物在附魔過程中將失去 5D6 生命值。如果過程成功，該生物現在能夠消耗一個動作並犧牲 10 點生命值，從其手腕皮膚下突出一個由自身部分骨骼製成的短刃。此刀刃被視為短劍，使用完畢後可以收回。如果刀刃破損或遺失，該生物的身體需要 24 小時才能創造一個新的。",
+        "desc_en": "A tattered scroll bound with a pale white cord. This is a single use enchantment that can be used to enchant a single willing creature within touch. Using this enchantment on a creature is extremely painful and the target creature will lose 5D6 Hit Points over the course of the enchantment process. If the process is successful the creature is now able to expend an action and sacrifice 10 Hit Points to protrude a short blade crafted using some of their own bones from beneath their wrist skin. This blade is treated as a short sword and can be replaced back after finished being used. If the blade is broken or lost it will take 24 hours for the creature’s body to create a new one."
+      },
+      {
+        "id": "loot-014",
+        "name_zh": "硫磺鐵棍",
+        "name_en": "Brimstone Bar",
+        "category_zh": "簡易武器（長棍），獨特",
+        "category_en": "Simple Weapon (Quarterstaff), Unique",
+        "desc_zh": "一根看似沉悶的 5 英尺長鐵棍，由單塊看起來像不斷冷卻的熔岩材料製成。偶爾會有發紅光的裂縫沿其長度開啟和閉合。鐵棍觸感總是溫暖，並帶有淡淡的硫磺味。硫磺鐵棍被視為免疫火焰傷害，並且是一把 versatile 武器，單手造成 1D6 鈍擊傷害，雙手造成 1D8 鈍擊傷害。鐵棍含有 5 發充能，不會自動恢復。充能只能通過將鐵棍放置在篝火或更高溫度的熱源中來恢復。每在熱源中放置一小時，鐵棍將恢復 1 發充能。進行攻擊時，使用者可以選擇消耗任意數量的充能。如果攻擊成功，鐵棍將對每個以此方式消耗的充能額外造成 1D6 火焰傷害。如果攻擊失敗，充能仍會被消耗。",
+        "desc_en": "A seemingly dull 5 foot bar made from a single piece of what constantly looks like cooling lava. Occasionally red glowing cracks upon and close along its length. The bar is always warm to the touch and smells faintly of sulphur. The brimstone bar is considered immune to fire damage and is a versatile weapon, dealing 1D6 Bludgeoning damage with one hand or 1D8 with two hands. The bar contains 5 charges which do not replenish automatically. Charges can only be replenished by laying the bar in heat source of a bonfire or hotter. For each hour it lays within the heat source, the bar will regain 1 charge. When making an attack the user may choose to expend any number of charges. If the attack is successful the bar will inflict an additional 1D6 Fire damage for each charge expended this way. If the attack fails the charges are still used."
+      },
+      {
+        "id": "loot-015",
+        "name_zh": "屠夫的刀",
+        "name_en": "Butcher’s Knife",
+        "category_zh": "簡易武器（匕首），獨特",
+        "category_en": "Simple Weapon (Dagger), Unique",
+        "desc_zh": "屠夫的刀是一把簡單的結實刀刃，壓入木製刀柄中。儘管有明顯的磨損，刀刃仍然鋒利無比，可以像切紙一樣輕易切開肉體。屠夫的刀在手中感覺很重；這是一件用來撕裂肉體和劈開骨頭的工具。這個目的的重量會嚇到一些人，但也會驅使另一些人前進。這把武器應被視為一把 +5 匕首。",
+        "desc_en": "The butcher’s knife is a simple stout blade pressed into a wooden handle. The blade despite its obvious wear and tear is razor sharp and can easily cut through flesh as though it were paper. The Butcher’s knife\n\tfeels heavy in one’s hand; this is a tool for rending flesh and cracking through bones. The weight of this purpose will frighten some but drive others forward. This weapon should be treated as a +5 Dagger."
+      },
+      {
+        "id": "loot-016",
+        "name_zh": "密文齒輪",
+        "name_en": "Ciphers",
+        "category_zh": "奇物，獨特 (6)",
+        "category_en": "Wondrous Item, Unique (6)",
+        "desc_zh": "這是一把奇怪的鑰匙。它是一個中等大小、沉重的齒輪，其冷灰色金屬主體周圍恰好有 26 個齒。每個齒面上都印有一個字母。必須收集這些密文齒輪才能打開返回凡人領域的傳送門。",
+        "desc_en": "This is an odd key. It is a medium sized heavy Cog with exactly 26 teeth surrounding its cold grey metallic body. Each tooth face has a single letter imprinted into it. These ciphers must be collected in order to open the gateway back to the mortal realms."
+      },
+      {
+        "id": "loot-017",
+        "name_zh": "小丑鞋",
+        "name_en": "Clown Shoes",
+        "category_zh": "奇物，獨特",
+        "category_en": "Wondrous Item, Unique",
+        "desc_zh": "這些鮮紅色且顯眼得令人討厭的閃亮鞋子總是比新的生物腳型大上好幾號。穿著時，它們每走幾步就會發出尷尬的吱吱聲，就像踩在吱吱作響的玩具上一樣。穿著這些鞋子時，該生物在潛行檢定上處於劣勢，並且除非視線被完全遮蔽，否則無法躲藏。此外，穿著這些鞋子時，該生物可以消耗一個反應動作，使 10 英尺內的一個目標生物下一次進行的攻擊檢定處於劣勢（他們也應該說一個討厭的笑話）。最後，本回合已執行疾走動作的生物，如果他們在整個第一次疾走動作期間都穿著這些鞋子，則可以在本回合再執行一次疾走動作。",
+        "desc_en": "These bright red and obnoxiously obvious shiny shoes are always several sizes to big even after adjusting to a new creatures foot size. When being worn they let out awkward squeaks every few steps as if walking on a squeaky toy. While wearing these shoes, the creature has disadvantage on Stealth checks and cannot hide unless completely obscured from sight. Additionally while wearing these shoes the wearer may expend a reaction to impose disadvantage on the next attack a target creature within 10 feet would make (they should make an obnoxious joke as well). Finally a creature that has taken a dash action this turn may make an additional dash action this turn if they are wearing these shoes for the entirety of the first dash action."
+      },
+      {
+        "id": "loot-018",
+        "name_zh": "百袋大衣",
+        "name_en": "Coat of Many Pockets",
+        "category_zh": "奇物，獨特",
+        "category_en": "Wondrous Item, Unique",
+        "desc_zh": " 一件破爛的黑棕色外套，看起來歷經滄桑。它散發出一些奇怪而糾纏的魔法，彷彿僅靠一根細線勉強維持。仔細觀察，這件破爛的斗篷實際上完全由口袋製成。數百個不同大小的口袋全部縫合在一起，粗略形成一件斗篷的形狀。每個口袋都連接到一個統一的下層次元，可以存儲任何能穿過口袋開口而不撕裂口袋或內部足夠鋒利以切割內部的物體。活物在下層次元中無法呼吸，最終會窒息。你必須知道次元裡有什麼才能從口袋中取出它。每一個口袋都通向同一個下層次元，因此你可以從任何一個口袋中取出物品，無論它最初存放在哪個口袋裡。無論次元內存儲了多少東西，這件大衣的重量始終不變。撕破或摧毀任何口袋會導致一個通往星界位面的傳送門出現，吞噬附近的一切。",
+        "desc_en": " A tattered black and brown coat that looks like it has seen far better days. It emanates some strange and tangled magic as if it is barely held together by a single thread. On closer inspection the tattered cloak is actually entirely made out of pockets. Hundreds of different sized pockets all sewn together to make the rough shape of a clock. Each pocket links to a unified sub dimension that can store any object that get fit through the pockets opening without ripping the pocket or being sharp enough to cut the inside apart. Living objects will not be able to breath in the sub dimension and will eventually suffocate. You must know what is in the sub dimension to be able to pull it out of a pocket. Each and every pocket leads to the same sub dimension and as such you can remove an item from any of the pockets no matter which one it was stored in. The coat is always the same weight no matter how much is stored in the sub dimension. Ripping apart or destroying any pockets will cause a portal to the astral plane to appear, consuming anything near it."
+      },
+      {
+        "id": "loot-019",
+        "name_zh": "屍體線圈",
+        "name_en": "Corpse Coil",
+        "category_zh": "奇物，獨特",
+        "category_en": "Wondrous Item, Unique",
+        "desc_zh": " 一個小型黃銅裝置，由眾多小齒輪和緊密纏繞的銅線圈組成。齒輪連接到線圈頂部的一個中央手柄。一個小皮質手柄讓人可以握住線圈，並用另一隻手轉動手柄。你可以在你的回合中花費一個動作來上緊線圈。它在積聚線圈中的電荷時會產生明亮的火花。一旦線圈充電完成，它將保留該單次電荷長達 1 分鐘。在那分鐘內，你可以使用一個動作並消耗該電荷來執行以下一項：對一個生物進行一次近戰攻擊，成功命中時造成 2D12 閃電傷害。強力電擊一個倒地（進行死亡豁免）的生物，並擲一顆 D20，結果為 10 或更高則該生物傷勢穩定；結果低於 10 則該生物離死亡更近一步（死亡豁免失敗次數 +1）。電擊一具死亡不超過 1 小時的屍體，並擲一顆 D20，結果高於 10 則該屍體會復活恰好 1 分鐘，結果低於 10 則什麼都不發生。",
+        "desc_en": " A small brass contraption consisting of numerous small gears and cogs surrounded by a tightly wound copper coil. The cogs and gears are connected to a central handle on top of the coil. A small leather handle allows one to hold the coil and turn the handle with the other hand. You may spend an action on your turn to wind up the coil. It creates bright sparks as it builds up an electrical charge in the coil. Once the coil is charged it will retain that single charge for 1 minute. During that minute you may use an action and expend the charge to do one of the following. - Make a melee attack against a creature dealing 2D12 Lightning Damage on a successful hit. - Forcefully shock a downed (death saves) creature and roll a D20, on a 10 or higher the creature is stabilized on a roll of less than 10 the creature is put one step closer to death (+1 to failed death saves). - Shock a corpse that has been dead for no longer than 1 hour and roll a D20, on a roll higher than 10 the corpse is revived for exactly 1 minute, on a roll of less than 10 nothing happens."
+      },
+      {
+        "id": "loot-020",
+        "name_zh": "鱷魚蛋",
+        "name_en": "Crocodile Egg",
+        "category_zh": "夥伴寵物，稀有",
+        "category_en": "Companion Pet, Rare",
+        "desc_zh": "這是一顆象牙色的蛋，表面有溫和的凹凸圖案。如果小心照料，這顆蛋會在 2D4 天內孵化出一隻手掌大小的鱷魚，並可以根據官方規則成為寵物或夥伴。它具有普通鱷魚的屬性。",
+        "desc_en": "This is an ivory coloured egg with a gentle bumpy pattern across its surface. If looked after carefully this egg hatches into a hand sized crocodile in 2D4 days and can become a pet or companion as set out in the official rules. It has the statistics of a regular croc."
+      },
+      {
+        "id": "loot-021",
+        "name_zh": "烏鴉蛋",
+        "name_en": "Crow Egg",
+        "category_zh": "夥伴寵物，稀有",
+        "category_en": "Companion Pet, Rare",
+        "desc_zh": "這是一顆斑駁的藍棕色烏鴉蛋，大小如一塊小石頭。如果小心照料，這顆蛋會在 2D4 天內孵化出一隻可馴服的小型烏鴉幼鳥，並可以根據官方規則成為寵物或夥伴。它具有普通烏鴉的屬性。",
+        "desc_en": " This is a speckled blue and brown crow’s egg about the size of a small rock. If looked after carefully this egg hatches into a tameable small sized crow hatchling within 2D4 days and can become a pet or companion as set out in the official rules. It has the statistics of a regular crow."
+      },
+      {
+        "id": "loot-022",
+        "name_zh": "結晶鱷魚眼淚",
+        "name_en": "Crystalized Crocodile Tears",
+        "category_zh": "奇物，極稀有",
+        "category_en": "Wondrous Item, Very Rare",
+        "desc_zh": "這些結晶的眼淚幾乎完全透明，大小不超過金桔。消耗一個動作，你可以將一滴眼淚扔到 60 英尺內的任何一點。當眼淚在該點著陸或撞擊到固體物體時，它會碎裂並瞬間釋放出季風般的水量。突然釋放的水量大約足以填滿一個直徑 50 英尺、深 20 英尺的圓形區域。如果沒有適當的容器來容納那麼多水，它將根據流體的正常規則高速向外氾濫。其力量足以將大型生物推開至少 20 英尺，或中型生物 30 英尺，或小型生物 40 英尺。",
+        "desc_en": "These crystalized tears are nearly completely transparent and are no larger than a kumquat. Expending an action you may throw a tear at any point within 60 feet. When the tear lands at the point or impacts are solid object it shatters and instantly unleashes a monsoon of water. The amount of water suddenly unleased is roughly enough to fill a circle 50 feet in diameter and 20 feet deep. Without a proper container to house that much water it will flood outwards at high speed as per the normal rules of fluids. The force is great enough to push a large creature at least 20 feet or a medium creature 30 feet or a small creature 40 feet."
+      },
+      {
+        "id": "loot-023",
+        "name_zh": "再甦醒的詛咒",
+        "name_en": "Curse of Reawakening",
+        "category_zh": "普通物品（收藏品），獨特",
+        "category_en": "Normal Item (Collectible), Unique",
+        "desc_zh": "來自收藏家的禮物。「再甦醒的詛咒」是一本破舊的紙質日記，由某個可憐生物的頭髮絲線裝訂而成。它被打結繫緊。解開結會使書本自動魔法般地打開到隨機一頁。頁面上的文字開始融合，在泛黃的污漬頁面上形成移動的圖畫。有一個黑皮膚的精靈男子站在小鎮高處的一扇敞開窗戶附近。也許這是關於里希登斯坦領主的故事？「他們又來了。同樣的時間，同樣的地點，同樣的議程。過去 662 年來的每一個月明之年，他們都會來。這似乎是由於星界位面牆壁中的某種擾動。包含各個領域的屏障變弱，發生了一些跨界干擾。這是科學證實的。但這個，這個是別的東西。有東西在吸引他們來這裡。每一年，毫無例外。有時是同一批人，有時是新的，或者兩者混合。年復一年，我再次強調這不是巧合。他們來了，他們屠殺我們，奪走我們的財富和我們的鑰匙，然後他們離開。該死的威廉，誰知道他想做什麼。如果他讓任何人通過，那他是什麼傳說守望者。其他人則滿足於維持現狀，繼續他們恐怖的旅程。反正死在這裡也不是永久的。當我們死去，我們只會在新月轉變時回來。總是如此。我永遠無法理解他們。但我仍然必須在這個舞台上扮演我的角色。等等。又開始了。那再熟悉不過的馬蹄聲。那個該死的騎手又回來了。這聲音甚至讓我這已死的脊樑都發抖。我恨它。為什麼我應該害怕這個領域的某樣東西，就像害怕我自己一樣？我想知道今年誰會獲勝。」",
+        "desc_en": " A gift from the collector. The Curse of Reawakening is a tattered paper journal held together by strands of some poor creature’s hair. It is knotted shut. Undoing the knot will cause the book to open magically by itself to a random page. The words on the page begin to meld and form moving drawings on the stained yellow pages. There is a dark skinned elvish man standing near an open window high over the town. Perhaps this is a tale of Lord Lichtenstein? “They came again. The same time, same place and same agenda. Once a moonlit year for the past 662 years they have come. It seems to be due to some disturbance in the walls of the astral plane. The barriers that contain the realms weaken and some crossover interference occurs. This is scientifically proven. But this, this is something else. Something is drawing them here. Each and every year without fail. Sometimes it is the same ones, sometimes it is new ones or a mixture of both. Again year after bloody year I say it is not a coincidence. They come, they slaughter us, take our riches and our keys and then they leave. Blast that William, who knows what he thinks he is doing. Some legendary watcher he is if he lets just anyone through. The others are content to leave things as they are, to continue on with their horrific journeys. Death isn’t permanent here anyways. When we die we will just come back at the turning of the new moon. Always the same. I never understand them. But still I must play my role on this stage. Wait. It’s starting again. The ever so familiar sound of that horse. That bastard rider is back again. The sound even sends shivers down my dead spine. I hate it. Why should I fear something of this realm just like me? I wonder who will be victorious this year.”"
+      },
+      {
+        "id": "loot-024",
+        "name_zh": "無盡火水",
+        "name_en": "Endless Fire Water",
+        "category_zh": "奇物，極稀有",
+        "category_en": "Wondrous Item, Very Rare",
+        "desc_zh": " 裝在一個帶有金屬蓋的小深棕色瓶子裡，所謂的無盡火水即使密封嚴實，也總是散發出溫和的辛辣氣味。然而，打開瓶子時，你可能需要更換你的嗅覺，因為大量的香料會立即充滿周圍的空氣。喝下這種濃稠的油狀液體後，一個生物必須進行 DC20 的體質豁免。生物可以選擇自動失敗。失敗時，該生物將遭受等於 20 減去其豁免檢定結果的火焰傷害，並立即開始向他們面對的任何方向噴出 10 英尺錐形範圍的熱火焰。儘管被稱為無盡火水，但此效果實際上會在大約 1 分鐘後結束。任何在火焰中或被火焰觸及的生物必須進行 DC15 的敏捷豁免，失敗則遭受 2D6 火焰傷害，成功則傷害減半。",
+        "desc_en": " Contained within a small dark brown bottle and sealed with metal cap the so called endless fire water always exudes a soft spicy smell despite being sealed tight. Upon opening the bottle however one might need to replace their sinuses given how much spice fills the immediate air space. Upon drinking the thick oily liquid a creature must make a DC20 Constitution saving throw.  A creature may choose to fail. On a failure the creature will suffer fire damage equal to 20 minus their saving throw and will immediately begin belching hot flames in a 10 foot cone in whatever direction they are facing. Despite being called endless fire water, this effect will actually end in about 1 minute. Any creature caught in or entering the flames must make a DC15 Dexterity saving throw or suffer 2D6 Fire Damage or half as much on a successful save."
+      },
+      {
+        "id": "loot-025",
+        "name_zh": "紳士手杖",
+        "name_en": "Gentlemen’s Cane",
+        "category_zh": "奇物，獨特",
+        "category_en": "Wondrous Item, Unique",
+        "desc_zh": "這根結實的手杖打磨得如月光般閃亮，並以一個小型紅色水晶球作為握柄。手杖本身由樹妖樹僕製成，水晶球則由同一棵樹的結晶血液製成。用力將手杖敲擊地面會使紅色水晶球從內部發光，以深紅色調照亮周圍 15 英尺區域。再次敲擊手杖會熄滅光芒。",
+        "desc_en": " This sturdy walking can is polished to a moonlit shine and features a small red crustal orb as the handle. The cane itself is made from a Jubokko tree and the orb is made from the crystalized blood of the same tree. Tapping the cane on the ground firmly causes the red orb to glow from within, illuminating a 15ft area around in in a deep red hue of light. Tapping the cane again will extinguish the light."
+      },
+      {
+        "id": "loot-026",
+        "name_zh": "好色魔鬼",
+        "name_en": "Horny Devil",
+        "category_zh": "奇物，獨特",
+        "category_en": "Wondrous Item, Unique",
+        "desc_zh": "從一個魅魔角上斷裂下來的碎片。這片變暗的角碎片充滿了說服的魔法，並在擁有者周圍散發出強大的氣場。當這隻角在你擁有時，你在基於魅力的檢定上具有優勢，假設它們用於社交場合。有時這些檢定效果有點太好了。",
+        "desc_en": "A broken fragment severed from a succubus’s horns. This shard of darkened horn is filled with persuasive magic’s and emanates a powerful aura around those whom own it. While this horn is in your possession you have advantage on charisma based checks assuming they are being used ion social situations. Sometimes these checks work a little too well."
+      },
+      {
+        "id": "loot-027",
+        "name_zh": "雜耍飛刀",
+        "name_en": "Juggling Blades",
+        "category_zh": "軍用武器（3把匕首），獨特",
+        "category_en": "Martial Weapon (3 Daggers), Unique",
+        "desc_zh": "這些刀具有著亮銀色刀刃，刀身近一英尺長，還不包括刀柄的長度。總是成套發現和製造，一套3把，這些獨特的匕首需要極大的耐心和技巧才能有效使用。當持有這三把刀作為一個動作時，持用者可以開始雜耍這些刀。持續雜耍這些刀需要專注，並在受到傷害時視為正常專注。當 actively 雜耍這些刀時，持用者可以消耗一個動作，自動對30英尺內最多3個可見目標造成1D4揮砍傷害。在此之後，持用者還可以消耗一個附贈動作，在雜耍中添加一把額外的匕首。每添加一把額外的匕首，可以造成傷害的目標數量就增加一個。每把額外的匕首也會使維持專注的難度增加+2。",
+        "desc_en": "The gently curved bright silver blades of these knives are nearly a foot long without the length of the handle. Always found and constructed in a set of 3, these unique daggers require a great deal of patience and skill to use effectively. When holding the three knives as an action the wielder may commence juggling the knives. Continuing to juggle the knives requires concentration and is treated as normal concentration when taking damage. While actively juggling the knives the wielder may expend an action to automatically inflict 1D4 Slashing damage to up to 3 visible targets within 30 feet. Directly after this a wielder may also expend a bonus action to add an additional dagger to their juggling. Each time an additional dagger is added the number of targets that can be dealt damage increases by one. Each additional dagger also increases the difficulty of maintaining concentration by +2."
+      },
+      {
+        "id": "loot-028",
+        "name_zh": "拉米娜的鋸齒牙",
+        "name_en": "Lamina’s Saw Tooth",
+        "category_zh": "簡易武器（匕首），獨特",
+        "category_en": "Simple Weapon (Dagger), Unique",
+        "desc_zh": "這顆部分破裂且參差不齊的鱷魚牙齒呈淡黃色，尺寸近1英尺長。這顆鋸齒牙具有普通匕首的所有正常屬性，但其傷害已增加至1D6，並且在穿透生物抗性時被視為鍍銀武器。",
+        "desc_en": "This partially cracked and jagged crocodiles tooth is an off yellow color and nearly 1 foot long in size. The saw tooth has all normal properties of a regular dagger, but its damage has been increased to 1D6 and it is considered silvered for the purposes of bypassing creature’s resistances."
+      },
+      {
+        "id": "loot-029",
+        "name_zh": "里希登斯坦的怪物圖鑑",
+        "name_en": "Licht’s Monster Manual",
+        "category_zh": "奇物，獨特",
+        "category_en": "Wondrous Item, Unique",
+        "desc_zh": "這本手冊是一本破舊的書，似乎用某種皮革般的皮膚裝訂。這本巨著包含了里希登斯坦領主對來自各個存在領域的許多生物進行的所有秘密研究。這本巨著可用於確定最常見的怪物、生物和野獸（由DM決定）的弱點和抗性。",
+        "desc_en": "The manual is a tattered book that appears to be bound with some kind of leathery skin. This tome contains all the secret research that Lord Lichtenstein has conducted on many creatures from across the realms of existence. This tome can be used to ascertain the weakness and resistances of the most common monsters, creatures and beasts known (up to DM)."
+      },
+      {
+        "id": "loot-030",
+        "name_zh": "莉絲貝的幸運符",
+        "name_en": "Lisbeth’s Lucky Charm",
+        "category_zh": "奇物，獨特",
+        "category_en": "Wondrous Item, Unique",
+        "desc_zh": "這個小巧的心形鎖墜是那些與心靈力量打交道之人的珍貴財產。鎖墜內有一張來源不明的褪色肖像。更換肖像會使幸運符失效。佩戴並與此物品調適的生物免疫被魅惑，除非他們自願如此。",
+        "desc_en": " This small heart shaped locket is a prized possession of those who deal with the strength of the mind. Inside the locket is a faded portrait of an unknown origin. Replacing the portrait will prevent the charm from working. Creatures that wear and attune to this item have immunity to becoming charmed unless they are willing to do so."
+      },
+      {
+        "id": "loot-031",
+        "name_zh": "洛恩的裹屍布",
+        "name_en": "Lorne’s Bandages",
+        "category_zh": "奇物，獨特",
+        "category_en": "Wondrous Item, Unique",
+        "desc_zh": "此物品包含一小堆污漬斑斑的黃色裹屍布，它們早已風華不再，可能不應該再用來實際包紮傷口。將這些受詛咒的裹屍布包裹在一具死亡不超過 10 天的屍體上，會暫時復活該屍體，成為一具木乃伊，只要它仍然被裹屍布包裹。這不是永久性的，可以通過移除詛咒來解除。屍體在包裹時會停止腐爛，但如果裹屍布被摧毀，效果將停止。",
+        "desc_en": " This item consists of a small pile of stained yellow bandages that have seen far better days and probably shouldn’t be used to actually bandage wounds. Wrapping these cursed bandages around a corpse that has been dead for no more than 10 days will temporarily revive the corpse as a mummy for as long as it remains wrapped in the bandages. It is not permanent and can be dispelled by removing the curse. The body will cease to decay while wrapped but if the bandages are destroyed the effect will cease."
+      },
+      {
+        "id": "loot-032",
+        "name_zh": "迷足族的沼澤水袋",
+        "name_en": "Lostfoot’s Bogskin",
+        "category_zh": "奇物，獨特",
+        "category_en": "Wondrous Item, Unique",
+        "desc_zh": "這個沼澤水袋外觀是一個污跡斑斑的骯髒水囊，看起來飽經風霜。拔掉沼澤水袋的塞子會釋放出一股死水和腐爛植被的惡臭。儘管沼澤水袋看起來很大，但使用者每天最多可以倒出 4 加侖的停滯沼澤水。任何飲用此水的生物必須成功通過 DC15 的體質豁免，否則會中毒 1 小時。警告：持續飲用此水可能導致長期副作用，對此我們概不負責。",
+        "desc_en": "The Bogskin has the appearance of a stained and dirty water skin that has seen better days. Unstoppering the Bogskin releases a putrid odour of stagnant water and rotting vegetation. Despite how big the Bogskin appears, the user can pour out up to 4 gallons of stagnant swamp water each day. Any creature that drinks the water must succeed on a DC15 Constitution saving throw or become poisoned for 1 hour. Warning, continuous consumption of the water may result in long term side effects for which we are not liable for."
+      },
+      {
+        "id": "loot-033",
+        "name_zh": "迷足族的失蹤靴子",
+        "name_en": "Lostfoot’s Missing Boots",
+        "category_zh": "奇物，獨特",
+        "category_en": "Wondrous Item, Unique",
+        "desc_zh": "這些破裂且黏滑的皮革靴子不斷散發出刺鼻的氣味。穿著這些靴子時，你可以將任何沼澤地、濕地、泥濘、淺水體或類似環境視為堅實地面，用於移動目的，而不會是困難地形。",
+        "desc_en": "These cracked and slimy leather boots constantly let of a pungent smell. While wearing these boots you may treat any swampland, marshland, mud, bogs, and shallow bodies of water or similar environments as solid ground for the purpose of movement without it being difficult terrain."
+      },
+      {
+        "id": "loot-034",
+        "name_zh": "盧卡斯的項圈",
+        "name_en": "Lucas’s Collar",
+        "category_zh": "奇物，獨特",
+        "category_en": "Wondrous Item, Unique",
+        "desc_zh": "盧卡斯的項圈曾經是亮紅色皮革配銀色扣環，但現在已褪色成斑駁的棕色，並染上了千百次殺戮的血跡。它寬大厚實，但佩戴舒適。調適並將此物品佩戴在脖子上，賦予使用者嗅聞 100 英尺內新鮮血液的能力。他們還能確定血液相對於他們当前位置的方向。",
+        "desc_en": "Lucas’s Collar was once bright red leather with a silver clasp, but now is faded to a mottled brown and stained with the blood of a thousand kills. It is wide and chucky but can be worn comfortably. Attuning to and wearing this item around one’s neck grants the user the ability to smell fresh blood within 100ft of the user. They are also able to determine the direction in which the blood is from their current position."
+      },
+      {
+        "id": "loot-035",
+        "name_zh": "女兒面具",
+        "name_en": "Mask of the Daughter",
+        "category_zh": "奇物，獨特（面具）",
+        "category_en": "Wondrous Item, Unique (Mask)",
+        "desc_zh": "一個簡單、有缺損的面具，由單塊骨頭雕刻而成，描繪了一個哭泣的年輕女子面孔。佩戴此面具時，佩戴者獲得火焰傷害抗性，並且每天一次，佩戴者可以在自身周圍 15 英尺區域內呼出冰冷寒風。被困在寒風中的生物必須進行 DC15 的體質豁免，失敗則受到 4D4 冰凍傷害，成功則傷害減半。此外，作為一個附贈動作或反應動作，你可以魔法般地將此面具與你物品欄中的另一個面具交換。",
+        "desc_en": "A simple chipped mask, carved from a single piece of bone depicting a crying young woman’s face. While this mask is worn, the wearer gains resistance to Fire Damage and once per day the wearing may expel ice cold winds in a 15 foot area around themselves. Creatures caught in the icy winds must make a DC15 Constitution saving throw, taking 4D4 Cold damage on a failed save or half as much on a successful one. Additionally as a bonus action or a reaction you may magically swap this mask for another one in your inventory."
+      },
+      {
+        "id": "loot-036",
+        "name_zh": "父親面具",
+        "name_en": "Mask of the Father",
+        "category_zh": "奇物，獨特（面具）",
+        "category_en": "Wondrous Item, Unique (Mask)",
+        "desc_zh": "一個簡單、有裂痕的面具，由單塊骨頭雕刻而成，描繪了一個強忍淚水的老年男子面孔。佩戴此面具時，佩戴者獲得雷鳴傷害抗性，並且每天一次，佩戴者可以用星界護甲包圍自己。該護甲授予 2D10 臨時生命值。此外，作為一個附贈動作或反應動作，你可以魔法般地將此面具與你物品欄中的另一個面具交換。",
+        "desc_en": "A simple cracked mask, carved from a single piece of bone depicting an elderly man’s face stifling tears. While this mask is worn, the wearer gains resistance to Thunder damage and once per day the wearer may surround themselves with an ethereal Armor. The Armor grants 2D10 Temporary Hit Points. Additionally as a bonus action or a reaction you may magically swap this mask for another one in your inventory."
+      },
+      {
+        "id": "loot-037",
+        "name_zh": "母親面具",
+        "name_en": "Mask of the Mother",
+        "category_zh": "奇物，獨特（面具）",
+        "category_en": "Wondrous Item, Unique (Mask)",
+        "desc_zh": "一個簡單、剝落的面具，由單塊骨頭雕刻而成，描繪了一個哭泣的女子面孔。佩戴此面具時，佩戴者獲得冰凍傷害抗性，並且每天一次，佩戴者可以在自身周圍 10 英尺區域內呼出灼熱火焰。任何被困在這些火焰中的生物必須進行 DC16 的敏捷豁免，失敗則受到 3D6 火焰傷害，成功則傷害減半。此外，作為一個附贈動作或反應動作，你可以魔法般地將此面具與你物品欄中的另一個面具交換。",
+        "desc_en": "A simple flaking mask, carved from a single piece of bone depicting a weeping woman’s face. While this mask is worn, the wearer gains resistance to Cold damage and once per day the wearer may expel scorching flames in a 10 foot area around themselves. Any creature caught in these flames must make a DC16 Dexterity saving thro, taking 3D6 Fire damage on a failed save or half as much on a successful one. Additionally as a bonus action or a reaction you may magically swap this mask for another one in your inventory."
+      },
+      {
+        "id": "loot-038",
+        "name_zh": "兒子面具",
+        "name_en": "Mask of the Son",
+        "category_zh": "奇物，獨特（面具）",
+        "category_en": "Wondrous Item, Unique (Mask)",
+        "desc_zh": "一個簡單、有刮痕的面具，由單塊骨頭雕刻而成，描繪了一個淚流滿面的年輕男孩。佩戴此面具時，佩戴者獲得力場傷害抗性，並且每天一次可以提升自己的能力，在所有攻擊上獲得 +5 加值，並且對任何對敵人施展的能力和/或法術的 DC 獲得 +2 加值。此提升持續到佩戴者下個回合開始。此外，作為一個附贈動作或反應動作，你可以魔法般地將此面具與你物品欄中的另一個面具交換。",
+        "desc_en": "A simple scratched mask, carved from a single piece of bone depicting a young boy amidst fits of tears. While this mask is worn, the wearer gains resistance to Force damage and once per day may boost their own ability, gaining a +5 bonus to all attacks and a +2 to your DC for any abilities and/or spells cast upon opponents. This boost lasts until the beginning of the wearers next turn. Additionally as a bonus action or a reaction you may magically swap this mask for another one in your inventory."
+      },
+      {
+        "id": "loot-039",
+        "name_zh": "肉鉤",
+        "name_en": "Meat Hook",
+        "category_zh": "奇物，獨特",
+        "category_en": "Wondrous Item, Unique",
+        "desc_zh": "一條生鏽且血跡斑斑的長鏈，一端連著一個鋒利的鋸齒狀鉤子。這是屠夫用來懸掛肉類進行熟成和切割的工具 。屠夫奥列格發現了這個鉤子更實用的用途，用來在他的冷藏室裡鉤住還在動的屍體。當鉤子被扔出時，鏈條會延伸 25 英尺，然後鉤子會返回投擲者手中，並將其碰巧鉤住或纏住的任何東西拉回來。",
+        "desc_en": "A rusted and bloodied length of chain with a razor sharp jagged hook attacked to one end. A tool used by butchers to string up meat for aging and carving. Oleg the butcher discovered a more practical use for the hook when using it to catch still moving carcasses in his cool room. When the hook is thrown the chain extends 25 feet before the hook returns back to the throwers hand pulling anything it happened to catch or tangle up with it."
+      },
+      {
+        "id": "loot-040",
+        "name_zh": "母親的模仿鳥",
+        "name_en": "Mothers Mockingbird",
+        "category_zh": "奇物，稀有",
+        "category_en": "Wondrous Item, Rare",
+        "desc_zh": "母親的模仿鳥實際上是一個小巧、做工精緻的華麗音樂盒，可以通過轉動側面的一個小曲柄把手來播放。轉動時，它會播放一首安撫靈魂的精緻旋律 。聽這首歌太久最終會讓 20 英尺內的任何生物入睡至少一小時 。",
+        "desc_en": "Mother’s mockingbird is actually a small expertly crafted ornate music box that can be played by turning a small crank handle on its side. When turned it plays a delicate melody that soothes the soul. Listening to this song for too long will eventually put any creatures within 20 feet to sleep for at least an hour."
+      },
+      {
+        "id": "loot-041",
+        "name_zh": "噩夢再生",
+        "name_en": "Nightmares Regrow",
+        "category_zh": "普通物品，常見",
+        "category_en": "Normal Item, Common",
+        "desc_zh": "來自收藏家的禮物。「噩夢再生」是一本沾滿泥土的日記，似乎由活樹根裝訂而成 。解開這本骯髒的書會使它自動彈開到隨機一頁，上面有一幅女巫在小屋裡對著大釜辛勤工作的墨水圖像。圖像似乎是活的並且在移動，同時一個聲音在讀者的腦海中迴盪，彷彿在敘述場景。這似乎是關於沼澤女巫奧菲莉婭的故事 。「…在它進鍋之前，還要轉三圈生鏽的釘子。好了，全都完成了。似乎太多個月亮已經從最後一個齒輪滾過我的門檻以來過去了。當我轉身看到它就在我的桌子上時，這一切都太明顯了。鎮上的傻瓜們如此高度垂涎的那個齒輪形狀的金屬碎片。儘管我對它的存在感到厭惡，我仍然被它吸引。我們這些可怕的生物被齒輪所影響。我們想要把它們據為己有，想要確保沒有人能把它們從我們身邊奪走。它們給予我們，某種東西。某種我們曾經失去的東西。它在我們體內生長。我們擁有它的時間越長，它再生長的速度就越快。無論我們失去的是什麼。但我們永遠無法長時間持有一個來重新獲得它。當它從我們的屍體上被偷走，或者被送出去以避免另一次羞辱性的死亡時，我們會回到我們已成為的噩夢般的恐怖存在。就應該是這樣，永遠如此。我們應該戴上我們這些真實的面孔，生活在這永無止境的恐怖放縱循環中。已做的事無法挽回。不是由我們。不是由他們。命運是如何扭曲我們和我們的意圖，這真是奇怪。在將我們交付給我們的報應時，她允許我們成長為我們曾經想成為的一切。」",
+        "desc_en": "A gift from the collector. Nightmares Regrow is a dirt stained journal that appears to be bound with living tree roots. Unbinding the grubby book will cause it to spring open to a random mottled page where an inked image of a witch toiling over a cauldron in a small hut. The image seems to be alive and moving as a voice fills the reader’s mind as if narrating the scene. This seems to be a tale about Ophelia the witch of the marsh. “And three turns of rusted nail before it goes in the pot. There all done. Seems like too many moons had passed since the last cog had rolled through my doorway. It was all too obvious as I turned to see it upon my table. The gear shaped scrap of metal that the town fools so highly coveted. Despite my distaste for its presence I was still drawn to it. The cogs hold sway over us. We horrible creatures are drawn to them, wanting to keep them to ourselves, wanting to ensure no one can take them from us. They give us, something. Something that we had lost. It grows inside us. The longer we are in possession of one the faster it regrows. Whatever it was that we lost. But never can we hold on to one long enough to gain it back. When it is stolen from our corpse or given away to prevent another humiliating death we return to the nightmarish horrors that we have become. As it should be, forever and always. We deserve to wear these true faces of ours, to live in this never ending cycle of horrific indulgence. What is done cannot be undone. Not by us. Not by them. Strange how fate twists us and our intentions. In delivering us to our reckoning, she allowed us to grow into everything we wanted to ever be.”"
+      },
+      {
+        "id": "loot-042",
+        "name_zh": "吵鬧切割者",
+        "name_en": "Noisy Cutter",
+        "category_zh": "軍用武器（重武器），獨特",
+        "category_en": "Martial Weapon (Heavy Weapon), Unique",
+        "desc_zh": "一個由齒輪、齒輪和旋轉刀片組成的獨特裝置。（想像一個發條鏈鋸）吵鬧切割者是一種原始而恐怖的武器，經常被刀鋒兄弟用於雜耍表演。配備一個看似只有一個安全握持位置的地方和一個裝滿黏稠液體的惡臭油箱，這個裝置尖叫著古老和不必要的暴力。吵鬧切割者最多有 10 發充能，但無法正常恢復 。要恢復充能，使用者必須消耗一個動作，用油或惡夢燃料加滿油箱 。一瓶油將為物品提供 2 發充能，而一加侖惡夢燃料將完全補滿所有充能 。在持用者的回合中，他們可以消耗一個動作和 3 發充能，對 5 英尺內的目標進行一次基於力量的近戰攻擊。如果攻擊成功，目標將受到 6D6 揮砍傷害 。或者，持用者可以消耗一個動作和 1 發充能來啟動吵鬧切割者，使其下一次使用吵鬧切割者的攻擊動作具有優勢。",
+        "desc_en": "A unique contraption of gears, cogs and rotating knives. (Imagine a clockwork chainsaw) The noisy cutter is a primitive and horrific weapon often used in juggling acts by the blade brothers. Sporting what looks like only one safe place to hold it and a foul tank of viscous liquid, the contraption screams archaic and needlessly violent. The noisy cutter has a maximum of 10 charges but cannot regain them normally. To regain charges the user must expend an action filling the tank with either oil or Nightmare Fuel. One flask of oil will grant 2 charges to the item, while a gallon of Nightmare Fuel will completely refill all charges. On the wielders turn they may expend an action and 3 charges to make a strength based melee attack at a target within 5 feet. If the attack is successful the target is dealt 6D6 Slashing Damage. Instead a wielder may expend an action and 1 charge to rev the Noisy Cutter granting advantage to their next attack action with the Noisy Cutter."
+      },
+      {
+        "id": "loot-043",
+        "name_zh": "歐柏的鈴鐺",
+        "name_en": "Obol’s Bell",
+        "category_zh": "奇物，獨特",
+        "category_en": "Wondrous Item, Unique",
+        "desc_zh": "來自歐柏船尾的生鏽神秘黃銅鈴鐺，搖響時只會發出陰沉的鐺鐺聲。當鈴鐺恰好搖響三聲時，一艘星界划艇會從任何附近足夠大的水體表面下出現。該划艇被視為常規划艇 。此外，該划艇免疫傷害，並持續 8 小時，或直到通過再次搖響鈴鐺三聲將其解散。如果鈴鐺在划艇被召喚時掉落或放開，那麼星界划艇將會沉入水面下，如同被解散一樣。",
+        "desc_en": "The rusty arcane brass bell from the stern of obols boat makes only gloomy donging noises when rung. When the bell is rung exactly three times an ethereal rowboat appears from beneath the surface of any nearby suitably large enough body of water. The rowboat considered to be a regular rowboat. Additionally the rowboat is impervious to damage and lasts for 8 hours or until it is dismissed by ringing the bell three more times. If the bell is dropped or let go off while the rowboat is summoned, than the ethereal rowboat will sink beneath the surface as if it had been dismissed."
+      },
+      {
+        "id": "loot-044",
+        "name_zh": "歐柏的錢袋",
+        "name_en": "Obol’s Coin Pouch",
+        "category_zh": "奇物，獨特（需要調適）",
+        "category_en": "Wondrous Item, Unique (requires attunement)",
+        "desc_zh": "看著這個簡單、破爛且結滿鹽粒的皮質小袋，沒有人會認為它有什麼特別之處。搖晃袋子總是會發出微弱的硬幣叮噹聲 。每天一次，你可以從袋中取出最多 10 枚金幣 。這些金幣觸感總是冰冷且潮濕 。任何從袋中取出的硬幣將在下次日出時消失 。同樣在下次日出時，每消失一枚硬幣，袋子將獲得一發充能 。當調適的生物死亡時，他們會被詛咒去幫助歐柏擺渡死者穿越靈魂之海 。他們必須為袋子在他們死亡時所擁有的每一發充能擺渡一個靈魂 。或者，調適的生物可以在死亡前，每將一枚金幣放回袋子中，就可以減少袋子的一發充能。",
+        "desc_en": "Looking at this simple tattered and salt encrusted leather pouch one would not assume there was anything special about it. Shaking the bag always makes a faint sound of jingling coins. Once per day you may withdraw up to 10 Gold Coins from the pouch. The coins are always cold and wet to the touch. Any coins removed from the pouch will vanish at the next sunrise. Also at the next sunrise, for each coin that vanishes, the pouch will gain one charge. When the attuned creature dies they are cursed to aid Obol ferrying the dead across the sea of souls. They must ferry one soul for each charge the pouch has when they die. Alternatively the attuned creature may reduce the number of chares the pouch has by one for each gold coin that is placed back into the pouch before they die."
+      },
+      {
+        "id": "loot-045",
+        "name_zh": "歐柏之槳",
+        "name_en": "Obol’s Oar",
+        "category_zh": "奇物，獨特",
+        "category_en": "Wondrous Item, Unique",
+        "desc_zh": "這支長而華麗的單葉槳由一塊在靈魂之海中漂浮了一百年後被沖上岸的深色浮木雕刻而成。當乘坐移動的水上交通工具（無論其大小，例如獨木舟或大帆船）旅行時，一個生物可以主動使用奧波爾之槳來划槳。當使用槳來划水時，該水上船隻的速度會加倍 。只有在該生物持續划槳時速度才會加倍 。一旦划槳停止，船隻將恢復正常航行速度 。",
+        "desc_en": "This long ornate single paddled oar is carved from a single dark piece of driftwood that had floated in the sea of souls for a 100 years before washing ashore. While travelling in a moving aquatic vehicle regardless of the vehicles size, such as a canoe or a galleon ship a creature may actively use Obol’s Oar to paddle. While using the oar to paddle the aquatic vessel’s speed is doubled. It is only doubled while the creature continues to paddle. Once the paddling has stopped the vessel will resume regular travelling speed."
+      },
+      {
+        "id": "loot-046",
+        "name_zh": "歐柏的另一個靈魂",
+        "name_en": "Obol’s Other Soul",
+        "category_zh": "奇物，獨特（需要調適）",
+        "category_en": "Wondrous Item, Unique (requires attunement)",
+        "desc_zh": "此物品包含一個微微發光的水晶球，其周圍不斷環繞著蒸發的白色光流。在一次長休結束時，一個生物可以選擇與這個結晶靈魂綁定 。靈魂一旦與一個生物綁定，就無法移除，直到該生物死亡或被如祈願術或移除詛咒之類的效果移除。當與靈魂綁定時，該生物被授予消耗一個動作在凡人領域和死者領域之間轉換的能力。在死者領域時，該生物獲得以下好處：\nl  該生物變成虛體，可以穿過不超過 5 英尺厚的物體和牆壁，如同在困難地形中移動。\nl  該生物無法以能力或攻擊為目標其他生物，除非他們也在死者領域 。\nl  該生物可以看到並與在不到 24 小時前死亡的生物的靈魂交談 。\nl  該生物可以消耗一個動作吸收 5 英尺內的一個靈魂，並恢復等於一顆生命骰擲骰結果的生命值 。它不會消耗生命骰 。該生物必須完成一次短休才能再次使用此好處 。",
+        "desc_en": "This item consists of a faintly glowing crystal orb that is enveloped in constant wisps of white light that evaporate around it. At the end of a long rest a creature may choose to bond with the crystalline soul. The soul once bonded to a creature, cannot be removed until the creature dies or it is removed by an effect such as wish or remove curse. While bonded to the soul, the creature is granted the ability to expend an action to transition between the mortal realm and the realm of the dead. While in the realm of the dead the creature gains the following benefits.\n\t·  The creature becomes incorporeal and can pass through objects and walls no more than 5 feet thick as if it were difficult terrain.\n\t·  The creature cannot target other creatures with abilities or attacks, unless they are in the realm of the dead also.\n\t·  The creature can see and speak with the souls of creatures who have died within less than 24 hours.\n\t·  The creature may expend an action to absorb a soul within 5 feet and regain hit points equal to one hit dice roll. It does not consume the hit dice. The creature must finish a short rest before using this benefit again."
+      },
+      {
+        "id": "loot-047",
+        "name_zh": "唯一的朋友",
+        "name_en": "Only Friend",
+        "category_zh": "簡易武器（矛），獨特",
+        "category_en": "Simple Weapon (Spear), Unique",
+        "desc_zh": "這把獨特的矛是一根長而堅硬的粗木桿，帶有一個大的金屬尖頭，裝飾著奇怪的彎曲雕刻。與普通矛不同，這把武器被投擲時造成 1D10 穿刺傷害 。如果使用者與物品調適，那麼使用一個附贈動作，矛會立即閃現回其主人手中。它非常孤獨 。",
+        "desc_en": "This unique spear is a long hard thick wooden shaft with a large metallic pointy end adorned with strange curving carvings. Unlike a regular spear this deals 1D10 piercing damage when thrown as a weapon. If the user is attuned to the item it will then using a bonus action the spear will immediately return back to its owners hand in a flash. It gets very lonely."
+      },
+      {
+        "id": "loot-048",
+        "name_zh": "奧菲莉婭的研缽與杵",
+        "name_en": "Ophelia’s Mortar and Pestle",
+        "category_zh": "奇物，獨特",
+        "category_en": "Wondrous Item, Unique",
+        "desc_zh": "一套小而重、使用已久的研缽與杵，由火山硫磺石鑿成。如果使用者花費至少 20 分鐘研磨一磅植物材料，那麼他們能夠魔法般地創造以下一項：1 磅麵粉、0.5 磅胡椒粉、0.5 磅灰燼、4 盎司鹽、3 盎司調味香料、2 盎司硫磺、2 盎司骨粉或 1 盎司黑火藥 。",
+        "desc_en": "A small but heavy, well-worn mortar and pestle set hewn from volcanic brimstone. If the user spends at least 20 minutes grinding a pound of plant material then they are able to magically create one of the following: 1 pound of flour, ½ pound of pepper, ½ pound of ash, 4 ounces of salt, 3 ounces of seasoning spices, 2 ounces of sulphur, 2 ounces of bone dust or 1 ounce of black powder."
+      },
+      {
+        "id": "loot-049",
+        "name_zh": "原始噩夢",
+        "name_en": "Original Nightmare",
+        "category_zh": "普通物品，常見",
+        "category_en": "Normal Item, Common",
+        "desc_zh": "來自收藏家的禮物。「原始噩夢」是一本破舊的兒童故事書，用人皮裝訂 。這本書被一條怪誕的皮革帶子繫緊 。解開皮帶會使書本自動魔法般地打開到隨機一頁 。頁面上的文字開始融合，在泛黃的污漬頁面上形成移動的圖畫 。它講述了一個來自萬聖域的著名故事 。\n一個關於凡人女子的故事。她渴望在自己的世界裡平靜生活，然而周遭之人從未將她視作人類。她的家人把她當作奴僕，她的朋友利用她達成私慾，而鎮上的人們則視她為負擔。她被稱為詛咒之人，眾人深信不疑。儘管如此，她仍努力追尋幸福。\n那女子一生從未犯下任何罪孽，卻長年飽受折磨。直到某日，她遇見了一位奇異的男子——他將她視為平等之人，甚至視為戀人。兩人共度數月，女子第一次感受到真正的快樂。\n但凡事終將消逝。凡人種族的容貌與心靈皆殘酷卑劣。那男子已有妻室，為了自保，他聲稱自己被女巫附身，被迫在她的操控下做出可怕之事。女子被誣陷為女巫，毫無證據便被判以絞刑。所有人都認定她有罪。\n當她立於木台之上，環顧人群，本以為能看到哀傷的面孔，卻只見滿場的笑意與冷笑。原來，鎮民早已策劃她的死。繩索收緊，生命逐漸被奪走時，她最後一絲人性崩斷。\n她用僅存的氣息，壓抑住淚水，讓怒火吞噬了自己。她詛咒——詛咒整座小鎮，詛咒她身邊的所有人。她詛咒父母、兄弟姊妹與那虛偽的戀人；詛咒他們腳下的大地，詛咒他們呼吸的空氣。她一遍又一遍地詛咒，直到最後——她連自己的名字、自己的存在，也一同詛咒。\n然後，整座小鎮被吞噬了……\n 真奇怪。其餘的頁面似乎不見了。我想知道它們怎麼了。",
+        "desc_en": "A gift from the collector. The original Nightmare is a tattered old children’s story book, bound in human skin. The book is held closed by a strand of the grotesque leather. Undoing the strap will cause the book to open magically by itself to a random page. The words on the page begin to meld and form moving drawings on the stained yellow pages. It tells a well-known story from the Hallow. \n“A tale about a mortal woman who tried to live peacefully in her world. The woman however was never treated as human by those around her. Her family treated her like a slave, her friends used her to get what they wanted and the townsfolk treated her like a burden. She was a curse and everybody believed it, yet still she pressed on to be happy. The woman had done nothing wrong in her life. Her torment continued for untold years before she met a strange man who treated her as an equal and as a lover. They spent many months together and the woman felt truly happy. But nothing lasts forever. The looks and personalities of the mortal races are cruel and vile. The man was married to another, he claimed he had been possessed by the witch and made to do horrible things at her beck and call. The woman was unfairly tried as a witch and sentenced to death by hanging. All found her guilty without any proof. As she stood atop her wooden stage she looked around at the faces she thought would mourn her, but she only saw smiles and grins. The townsfolk had plotted her demise from the beginning. As the rope was drawn and the life slowly squeezed from her lungs, her final shred of humanity snapped. Mustering her remaining breath she fought back her tears as the rage filled up inside her. She cursed. She cursed the town. She cursed the people around her. She cursed her parents, her siblings, and her fake lover. She cursed the ground they stood on, she cursed the air they breathed. She cursed and cursed and cursed until finally she cursed her own name, cursed her own very existence. The town was swallowed whole…” \nThat’s odd. The rest of the pages appear to be missing. I wonder what happened to them."
+      },
+      {
+        "id": "loot-050",
+        "name_zh": "奧瑞莎的手術刀",
+        "name_en": "Orisa’s Scalpel",
+        "category_zh": "奇物，獨特",
+        "category_en": "Wondrous Item, Unique",
+        "desc_zh": "這把手術刀異常乾淨，幾乎沒有重量，且鋒利無比。它不到一手掌長，手柄上刻有字母 OC 。此物品的擁有者可以選擇對近戰範圍內一個自願的活體目標造成 2 點揮砍傷害，使刀刃沾滿血液 。擁有者將在對該手術刀造成傷害的目標進行的醫療檢定上獲得優勢 。此效果持續到血液從刀刃上被清理乾淨為止 。",
+        "desc_en": "This scalpel is remarkably clean, almost weightless and razor sharp. It is less than a hands length long and has the letters OC etched into the handle. The owner of this item may choose to inflict 2 Slashing Damage to a willing, living target within melee range coating the blade in blood. The owner will gain advantage on Medicine checks for the target that the scalpel caused damage to. This effect lasts until the blood is cleaned from the blade."
+      },
+      {
+        "id": "loot-051",
+        "name_zh": "奧瑞克的鬼燈",
+        "name_en": "Orrick’s Ghost Lamp",
+        "category_zh": "奇物，獨特",
+        "category_en": "Wondrous Item, Unique",
+        "desc_zh": "這個略帶泥土和血跡的頭燈配有一條可調節的彈性束帶，適合任何頭部或頭盔尺寸。一團鬼火棲息在燈的內部，當搖動時，會在物品周圍 20 英尺半徑內發出綠光 。這對於在黑暗中需要雙手操作的人來說非常有用 。",
+        "desc_en": "This slightly dirt filled and blood stained head lamp comes with an adjustable elastic strap that fits any head or helm size. A small will-o-wisp inhabits the interior of the lamp and when rattled around will emit a green light in a 20 foot radius around the item. This is mighty useful for people who need both hands in the dark."
+      },
+      {
+        "id": "loot-052",
+        "name_zh": "奧斯瓦多的血管",
+        "name_en": "Osvaldo’s Veins",
+        "category_zh": "奇物，獨特",
+        "category_en": "Wondrous Item, Unique",
+        "desc_zh": "這個物品絕對令人毛骨悚然。簡單雕刻的線軸不超過人類手掌大小 。它很輕，似乎由某種泛黃的骨頭製成 。緊緊纏繞在線軸上的是 100 英尺長的、看起來細長如線的東西 。在極近的檢查下，這條線似乎是由微小的血管和毛細血管編織而成，很可能是來自奧斯瓦多自己的身體。這條線極其堅固，非常難以折斷或切割 。奧斯瓦多本人為他完美且非人般堅固的縫線感到自豪，這條線也不例外 。這條線總共有 25 點生命值，只能通過 DC21 的力量檢定才能扯斷 。與傳統的線不同，這種線免疫火焰 。奧斯瓦多的血管負重評級為 1000 磅 。",
+        "desc_en": "This item is definitely creepy. The simple carved spool is no larger than the palm of a human hand. It is lightweight and appears to be made of some kind of yellowing bone. Tightly wound around the spool is 100 feet of a thing gangly looking thread. On extremely close inspection the thread appears to be woven of tiny veins and capillaries, most likely from Osvaldo’s own body. This thread is extremely strong and very difficult to break or cut. Osvaldo himself was proud of his perfect and inhumanly strong stitches and this thread is no different. This thread has a total of 25 Hit Points and can only be bust with a Strength Check of DC21. Unlike traditional threads this one is impervious to fire. Osvaldo’s veins has a load rating of 1000 pounds."
+      },
+      {
+        "id": "loot-053",
+        "name_zh": "完美之血",
+        "name_en": "Perfect Blood",
+        "category_zh": "奇物，獨特",
+        "category_en": "Wondrous Item, Unique",
+        "desc_zh": "這種渾濁的紫色黏液只能由/從完美主義者雷恩那裡收穫。它不存在於其他任何地方。黏液觸感黏稠，在你手中像油灰一樣可塑。一旦收集，這種黏液無法被拉開或分離。將黏液塑形到一個生物的臉上，允許使用者完全改變該角色的臉部。眼睛顏色、膚色、鼻子大小、嘴唇、耳朵形状，甚至牙齒或種族面部特徵在使用完美之血時都會暫時改變。使用者可以複製他們曾經見過的任何臉孔，也可以創造新的臉孔。效果發生後，不可能分辨出這張臉是假的，儘管佩戴者肯定能感覺到，因為他們感到有點窒息。完美之血的效果持續到黏液從佩戴者臉上被拉下來為止。該物品可以無限重複使用，它畢竟是完美的。",
+        "desc_en": "This murky purple slime can only be harvested by/from Laine the perfectionist. It exists nowhere else. The slime is sticky to the touch and malleable like putty in your hands. The slime once collected cannot be pulled apart or separated. Moulding the slime onto a creatures face allows the user to completely change the face of the character in question. Eye colour, skin tone, nose size, lips, ear shape and even teeth or racial facial features will temporarily change while using the perfect blood. The user can duplicate any face they have ever seen before as well as create new ones. After the effects have taken place, it is impossible to distinguish that the face is fake, although the person wearing it can definitely tell as they feel a little suffocated. The effects of the perfect blood last until the slime is pulled off the face of the wearer. The item can be reused infinitely, it is perfect after all."
+      },
+      {
+        "id": "loot-054",
+        "name_zh": "針插",
+        "name_en": "Pin Cushion",
+        "category_zh": "奇物，獨特",
+        "category_en": "Wondrous Item, Unique",
+        "desc_zh": "這個小紅色針插裝飾著銀色縫線和同色系的小流蘇。針插上有數百根鋒利的縫衣針，鈍端朝上從表面突出。可以隨時從針插上拔出一根針。當一根針被拔出時，另一根會長出來取代它的位置。一根針可以被視為微型武器，如果用於攻擊動作，能夠造成 1D2 點穿刺傷害。這些針也可用於縫紉、開鎖、製造破片炸彈，或者只是創造一個字面意義上的針堆。無論你有什麼需求，總會有針。沒有限制可以移除多少根針。",
+        "desc_en": "This small red cushion is decorated with silver stitching and small tassels of the same colour. The cushion is home to hundreds of razor sharp sewing needles protruding blunt end up from the surface. A needle may be plucked from the cushion at any time. When a needle is plucked from it, another will grow to take its place. A needle may be considered a tiny weapon capable of inflicting 1D2 points of Piercing Damage if used in an attack action. The needles can also be useful with sewing, picking locks, building shrapnel bombs or just creating a literal haystack of needles. Whatever your needs there will always be needles. There is no limit to how many needles can be removed."
+      },
+      {
+        "id": "loot-055",
+        "name_zh": "瘟疫散布者",
+        "name_en": "Plague Bearer",
+        "category_zh": "奇物，獨特",
+        "category_en": "Wondrous Item, Unique",
+        "desc_zh": "這個小型附魔銀製香爐連接著一條短鏈，使其可以來回搖擺。裡面沒有明顯的香料可以燃燒；然而，有一小段黑色的燈芯。點燃這根燈芯會立即導致濃密的綠色煙霧從香爐中漫無目的地飄出。煙霧將擴散到一個 30 英尺的立方體區域。任何被困在此煙霧中的生物必須進行 DC14 的體質豁免，否則中毒 1 分鐘。可以在該生物回合結束時重複進行此豁免。",
+        "desc_en": "This small enchanted silver incense burner is attached to a short chain making it useful to swing back and forth. There is no obvious incense inside to burn; however there is a small blacked wick. Lighting this wick will immediately cause thick green smog to drift aimlessly from the burner. The smog will spread over a 30ft cube. Nay creature caught in this smog must make a DC14 Constitution saving throw or become poisoned for 1 minute. The save can be repeated at the end of that creatures turn."
+      },
+      {
+        "id": "loot-056",
+        "name_zh": "便攜哨兵機器人",
+        "name_en": "Portable Sentry Bot",
+        "category_zh": "奇物，獨特",
+        "category_en": "Wondrous Item, Unique",
+        "desc_zh": "一個小型生鏽的發條機器人，配備一個喇叭和某種描述在它頭上的機械燈。這個小錫罐機器人有胳膊和腿，但它們的動作不是很流暢。一個大小合適的上弦鑰匙位於它的背部。轉動鑰匙幾次就足以為哨兵機器人充電並允許其使用。將哨兵機器人放在地面上，面向一個方向，將啟動其哨兵協議。機器人會緩慢地向它被放置的方向行走 10 英尺，轉身並走回它來的方向，在它機械地跺腳走動時發出輕柔的咔嗒聲。它將繼續這種移動長達一小時。在其巡邏期間，如果哨兵 10 英尺內有任何未受隱形效果影響的移動，或者哨兵機器人被除了為其上弦的生物之外的任何東西或任何人觸碰，它將導致哨兵機器人開始其警報協議。在警報協議期間，機器人會吹響它的喇叭，發出震耳欲聾的響聲，使 30 英尺內的所有生物耳聾一分鐘。它頭上的燈spě 開始閃爍，周期性地用明亮的紅光照亮自身周圍 30 英尺的區域。警報序列將持續剩餘的哨兵協議時間，或者直到它被摧毀或被為其上弦的生物撿起。",
+        "desc_en": "A small rusted clockwork robot sporting a trumpet and some description of a mechanical lamp on what assumedly is its head. The little tin bot has arms and legs but they aren’t very fluid in their movements. A sizable wind up key is located on its back. Winding up the key a few times will be enough to charge the sentry bot and allow its usage. Placing the sentry bot on the ground facing a direction will start its sentry protocols. The bot will slowly walk 10 feet towards the direction it was placed, turn around and walk back the direction it has come from making a gentle clicking noise as it mechanically stomps around. It will continue this movement for up to an hour. During its patrol if there is any movement with 10 feet of the sentry that is not under the effects of invisibility or if the sentry bot is touched by anything or anyone other than the creature who wound it up it will cause the sentry bot to begin its alarm protocols. During the alarm protocol the bot will blow its trumpet deafeningly loudly, deafening all creatures within 30 feet for one minute. The lamp on its head will also begin to flash, periodically illuminating a 30 foot area around itself with a bright red light. The alarm sequence will continue for the remaining duration of the hour left over from the sentry protocol or until it is destroyed or picked up by the creature who wound it up."
+      },
+      {
+        "id": "loot-057",
+        "name_zh": "南瓜之心",
+        "name_en": "Pumpkin Heart",
+        "category_zh": "奇物，獨特",
+        "category_en": "Wondrous Item, Unique",
+        "desc_zh": "南瓜之心是一個多汁的、佈滿通風口和管道的小外殼，滲出橙色的汁液。這顆心在你的手中緩慢而輕柔地跳動，滲出更多的汁液，供應永不枯竭。這顆心跳動得越快，就表示你離高品質的南瓜越近。它面對的南瓜品質越好，它就跳得越快、汁液越多。也許在那些神秘南瓜上會有用？",
+        "desc_en": "The pumpkin heart is a small juicy husk of vents and pipes that ooze an orange coloured juice. The heart unceremoniously beats slowly and softly in your hand, oozing more juice in a never-ending supply. The heart beats faster the closer you are to good quality pumpkins. The better the quality pumpkin it is facing the faster and juicier it beats. Might be useful on those Mystery pumpkins?"
+      },
+      {
+        "id": "loot-058",
+        "name_zh": "烏鴉顱骨項鍊",
+        "name_en": "Raven Skull Necklace",
+        "category_zh": "奇物，獨特",
+        "category_en": "Wondrous Item, Unique",
+        "desc_zh": "一個漂白的白色烏鴉頭骨，掛在一條簡單的長環棕色編織繩上。佩戴此項鍊時，你會有不祥的烏鴉在遠處跟隨著你。每天黎明時，擲一顆 D6。擲出 1、2 或 3 時，什麼都不會發生。擲出 4 時，一隻烏鴉會帶給你一個價值 1 CP 的小飾品。擲出 5 時，一隻烏鴉會帶給你一個價值 1 SP 的小飾品。擲出 6 時，一隻烏鴉會帶給你一個價值 1 GP 的小飾品。",
+        "desc_en": "A bleached white raven’s skull hung from a simple long loop of brown braided cord. While wearing this necklace you are ominously followed at a distance by ravens. At dawn each day roll a D6. On a roll of 1, 2 or 3 nothing happens. On a roll of 4 a raven brings you a trinket worth 1 CP. On a roll of 5 a raven brings you a trinket worth 1 SP. On a roll of 6 a raven brings you a trinket worth 1 GP."
+      },
+      {
+        "id": "loot-059",
+        "name_zh": "萬聖域重建錄",
+        "name_en": "Reconstruction of Hallow",
+        "category_zh": "普通物品（收藏品），獨特",
+        "category_en": "Normal Item (collectible), Unique",
+        "desc_zh": "來自收藏家的禮物。「萬聖域重建錄」是一本老舊的日記，缺少封面，僅靠長長的金色髮絲勉強維持。展開第一頁會使書本自動魔法般地打開到隨機一頁。頁面上的文字開始融合，形成在羊皮紙上舞動的移動圖畫。它似乎是一個年輕女子，或者可能是。這個身影不斷地變換形態，從不在單一形象上停留超過幾秒鐘。這可能是關於雷恩的故事嗎？\n「這個嗎？不，還是不太合適。那昨天那個呢？不，太偏了。為什麼在這場完美的惡夢裡，偏偏有這麼多瑕疵？這面鏡子肯定變形了。得再向史凱頓申請一面新的。\n唉，看來今天又得回去替年輕的娜菈小姐主持診療了。又是一場診療，又是一個夜晚，又一次將我完美的天賦浪費在這些醜陋的生物身上。唯一的希望，是有幾個外來者能被帶到我這裡來。我真想看看能不能有新的臉能加入我的收藏。也許這次的下巴會更俐落，也許會有我最近聽說的那種漂亮酒窩。光是想像就令人愉悅。\n現在，只能等著看看威廉今年會從他的魔帽裡抽出誰了。他到底是怎麼決定誰生誰死的？我甚至不知道他是誰，或者曾是誰。重建之後，一切都變了。我明白。但其他人都那麼顯而易見——他們只是成為了自己本來該是的樣子。唯獨他、那個商人，還有我，是這座墳墓裡的變數。\n我也是重建的一部分。不過，我那被拓展的才能讓我能照自己意願重寫故事。這裡沒有人會記得從前的我。當我親手劃開那具皮囊，從她的軀體裡爬出、重生之時，我就確保了這一點。\n嗯……這念頭太感傷了。也許該換個髮色了。這顏色，看起來有點舊了呢。」",
+        "desc_en": "A gift from the collector. Reconstruction of Hallow is an aging diary missing its cover, barely held together with long woven strands of golden hair. Unfolding the first page will cause the book to open magically by itself to a random page. The words on the page begin to meld and form moving drawings that danced across the parchment. It appears to be a young woman or at least it might be. The figure continues to change forms endlessly never resting on a single figure for more than a few seconds. Could this be a story about Laine?\n “Maybe this one? No it doesn’t fit right. What about the one from yesterday? No it’s too off centre. Why must there be so many imperfections in such a perfect nightmare. This mirror must have a warp in it. I’ll have to requisition another one from Skelton. I guess it is back to young Miss Nara for today’s clinic then. Mental sigh. Another clinic. Another night. Another waste of my perfectly good talents on these hideous creatures. My only hope is that some of the interlopers head my way. I would love for a new face to add to my look. Maybe this one will have a better chin, or maybe some of those new dimples I keep hearing about. I am thrilled at the thought. Now I only have to wait see who William pulls from his magic hat this year. How does he choose who lives and who dies anyway. I don’t even know who he is, who he was. During the reconstruction everything changed so much I know. But everyone else is so obvious, they just become what they always were. Only he, the merchant and I are the wild cards in this grave. I was part of the reconstruction as well, but my newly expanded talents allowed me to rewrite my story just the way I wanted it. Nobody here would ever remember the old me. I had mode sure of that when I sliced her open and crawled out born anew. Hmm a little to melancholy, maybe it’s time to change my hair color as well, it’s looking a little worn.”"
+      },
+      {
+        "id": "loot-060",
+        "name_zh": "團長高頂禮帽",
+        "name_en": "Ringmaster’s Top Hat",
+        "category_zh": "奇物，獨特",
+        "category_en": "Wondrous Item, Unique",
+        "desc_zh": "此物品包含一頂無可挑剔閃亮的黑色高頂禮帽，從帽簷算起至少一英尺高。帽子內部直徑 10 英寸，內襯深紅色絲綢面料，出於某種原因看起來糾結而皺巴巴的。這頂高頂禮帽實際上是一個通往次元次元的入口，很像百袋大衣。該次元最多可以容納 250 磅，只要它能穿過帽子的開口。無論裡面裝了多少東西，帽子總是重 5 磅。與其他次元次元不同，高頂禮帽內部的次元自然含有空氣，生物即使被放入次元內也能安全呼吸。撕毀、破壞或將高頂禮帽放入另一個次元次元會導致一個通往星界位面的傳送門出現，吞噬其 5 英尺內的任何東西並蒸發該物品。",
+        "desc_en": "This item consists of an impeccably shiny black top hat that is at least a foot high from the brim. The inside of the hat is 10 inches across and lined with a crimson red silken fabric that for some reason looks tangled and scrunched up. The top hat is actually a portal that leads to a sub dimension much like a coat of many pockets. The sub dimension can hold up to 250 lbs as long as it can fit through the opening of the hat. The Hat always weighs 5 lbs regardless of how much is in it. Unlike other sub dimensions, the one inside the top hat naturally contains air and creatures can breathe safely even when placed inside the sub dimension. Ripping apart, destroying or placing the top hat inside another sub dimension will cause a portal to the astral plane to appear, consuming anything within 5 feet of it and vaporising the item."
+      },
+      {
+        "id": "loot-061",
+        "name_zh": "團長之鞭",
+        "name_en": "Ringmaster’s Whip",
+        "category_zh": "軍用武器（鞭），稀有",
+        "category_en": "Martial Weapon (Whip), Rare",
+        "desc_zh": "這條深色拋光的鞭子，仔細觀察會發現握柄處略有磨損和磨損。這條 8 英尺長的鞭子是聖墓團長的標準配備，這條顯然已經使用了幾十年。手柄底部刻有首字母 OVG。這條鞭子被視為具有靈巧和長武屬性的軍用武器。然而，此武器成功命中目標時不會造成任何傷害。相反，如果目標是生物，它必須進行 DC14 的感知豁免，否則被魅惑直到你的下個回合開始。",
+        "desc_en": "This dark polished whip upon closer inspection is slightly frayed and well-worn on the grip. The 8 foot whip is a standard of hallowed ringmasters and this one has clearly seen many decades of use. The initials OVG have been etched in the base of the handle. This whip is considered to be a martial weapon with the finesse and reach attribute. This weapon however, inflicts no damage to a target on a successful hit. Instead, if the target is a creature it must make a DC14 Wisdom saving throw or become charmed until the beginning of your next turn."
+      },
+      {
+        "id": "loot-062",
+        "name_zh": "靈魂之鐮",
+        "name_en": "Soul Scythe",
+        "category_zh": "簡易武器（鐮刀），獨特",
+        "category_en": "Simple Weapon (Scythe), Unique",
+        "desc_zh": "這件傳奇物品曾經由令人恐懼的騎手攜帶，現在它在你可憐的手中。作為一把普通的鐮刀，它造成 2D6 揮砍傷害，被視為重型武器並具有 5 英尺觸及範圍。一旦一個生物與此鐮刀調適，他們將擁有暫時將靈魂與其身體分離的能力，使用鐮刀的魔法。分離效果在大約一小時後消失。只要確保靈魂回到正確的身體就行。",
+        "desc_en": "This legendary item was once carried by the feared horseman, now it’s in your measly hands. As a regular scythe it deals 2D6 slashing damage and is considered heavy and has a 5ft of reach. Once a creature has attuned to this scythe they will have the ability to temporarily separate a soul from its body using the scythes magic. The separation wears off after about an hour. Just make sure that the soul makes it back to the right body."
+      },
+      {
+        "id": "loot-063",
+        "name_zh": "蜘蛛蛋",
+        "name_en": "Spiders Egg",
+        "category_zh": "夥伴寵物，極稀有",
+        "category_en": "Companion Pet, Very Rare",
+        "desc_zh": "這是一個黏糊糊的、帶網的蜘蛛蛋，大小約為一個普通拳頭。如果小心照料，這顆蛋會在 2D4 天內孵化出一隻手掌大小的蜘蛛，並可以根據官方規則成為寵物或夥伴。它具有普通蜘蛛的屬性。",
+        "desc_en": "This is a sticky webbed spider’s egg about the size of an average fist. If looked after carefully this egg hatches into a hand sized spider in 2D4 days and can become a pet or companion as set out in the official rules. It has the statistics of a regular spider."
+      },
+      {
+        "id": "loot-064",
+        "name_zh": "蛛絲繩",
+        "name_en": "Spider Thread Rope",
+        "category_zh": "普通物品，稀有",
+        "category_en": "Normal Item, Rare",
+        "desc_zh": "這條繩子由蜘蛛自然精細編織而成，具有顯著的黏性，允許它黏附在幾乎任何表面上，並且仍然承受大量的重量。當一個鬆散的末端被扔出時，它會黏附在它接觸到的表面上，並且可以承受相當重的物體，例如攀爬的角色等。不過之後需要相當大的力氣才能把它拉下來。應該小心使用，不想被它纏住。",
+        "desc_en": "This rope is finely woven naturally by spiders and has a remarkable sticky property that allows it to stick to almost any surface and still sustain a large amount of weight. When a loose end is thrown in will stick to the surface it comes into contact with and can hold quite heavy objects such as characters climbing etc. It does take quite a strong tug though to pull it free afterwards. It should be used with caution don’t want to get wrapped up in it."
+      },
+      {
+        "id": "loot-065",
+        "name_zh": "南瓜小魔",
+        "name_en": "Squashling",
+        "category_zh": "夥伴寵物，極稀有",
+        "category_en": "Companion Pet, Very Rare",
+        "desc_zh": "南瓜小魔是一個有著露齒笑容的小品脫大小南瓜。儘管外觀如此，這個南瓜是活著的。半打多刺的根從其基部長出，使其能夠像微型腿一樣移動。南瓜小魔是拉札拉克另一個失敗的實驗創造物。它相當友好，喜歡吃甜食。它有 5 HP 和 8 AC。這個生物可以成為夥伴寵物。",
+        "desc_en": "The Squashling is a small pint sized pumpkin with a toothy grin. Despite its appearance this pumpkin is alive and living. Half a dozen thorny roots sprout from its base allowing it to move around like miniature legs. The Squashling is another of Lazarak’s creators failed experiments. It is quite friendly and enjoys eating sweets. It has 5HP and 8AC. This creature can become a companion pet."
+      },
+      {
+        "id": "loot-066",
+        "name_zh": "重生傳說",
+        "name_en": "Tale of Rebirth",
+        "category_zh": "普通物品，常見",
+        "category_en": "Normal Item, Common",
+        "desc_zh": "來自收藏家的禮物。「重生傳說」是一本封面看似某種暗紅色鱗狀皮膚的書。它由一小塊老化骨頭雕刻的插銷緊閉。解開插銷會使書本自動魔法般地打開到隨機一頁。頁面上的文字開始融合，在泛黃的污漬頁面上形成移動的圖畫。頁面上看起來有一個稻草人。也許這是關於威廉的故事？\n「我不記得自己第一次睜開眼的時候。\n我不記得第一次感受到午夜月光的冰冷。\n我也不記得第一次露出這種帶刺的笑容。\n我不記得第一次那樣放聲狂笑。\n其實，有許多事情我都不記得。\n事實上，我甚至不記得自己第一次開始『不記得』是什麼時候。\n 但我記得一件事——那是我第一次，不再孤單。\n 我曾透過星界的鏡池凝視無數個紀元，遠超過我願意承認的時間。\n只有我、我的思緒、我的黑暗，以及那通往虛無的門。\n那樣的寂靜很和平。\n但當然，也極端孤獨。\n每個人都會孤單，對吧？」\n——此處的頁面似乎缺失，故事斷裂後跳躍繼續——\n「它就那樣出現了。突如其來。\n我不假裝自己理解無盡星界的運作原理，\n但我只是個觀察者，而我從未見過一個位面被『賦予生命』的時刻。\n或者該說，『不死』？『死亡』？『亡靈』？\n這樣的分類對生者是否有歧視意味？算了，離題了。\n 總之，它就那樣出現了——\n尖塔、崩毀的街道、歪斜的小巷、亡者的呻吟、狼群的嚎叫、濕土的氣味——整個一切，就那樣存在了。\n 我的角色改變了。\n我不再只是觀察者。\n我成了某種……『更多的存在』。\n 我被捲入其中了。」",
+        "desc_en": "A gift from the collector. The Tale of Rebirth is a book that is covered in what appears to be some kind of dull red scaly skin. It is fastened shut by a small latch carved out of aging bone. Undoing the latch will cause the book to open magically by itself to a random page. The words on the page begin to meld and form moving drawings on the stained yellow pages. It looks like a scarecrow on the page. Perhaps this is a story about William?\n “I don’t remember the first time I opened my eyes. I don’t remember the first time I felt the coolness of the midnight moon. I can’t remember the first time I smiled this spiky grin. I can’t remembered the first time I cackled so joyously. I can’t remember a lot of things actually. In fact I can’t even remember the first time I couldn’t remember at all. But what I can remember is that for the first time ever, I wasn’t alone. I have watched through the mirrored pool of the astral plane for more eons then I would personally care to admit. Just myself, my thoughts, my darkness, my gateway to nowhere. It was peaceful. But of course it was lonely. Everyone gets lonely now don’t they?”\nIt appears some pages here and there a missing and the story stutters as it skips ahead.\n“It was just there. Out of nowhere. Now I don’t pretend to understand how the endless astral plane functions. But I was just a watcher, and I had never watched a plane being given life before. Or unlife? Death maybe? Or undeath? Is that discrimination against the living impaired? I am getting off topic. It was just there. The spires, the crumbling streets, the crooked alleyways, the moans of the dead, the howls of the wolves, the smell of damp soil, the whole thing was just there. My role changed, I wasn’t just a watcher anymore. I was something, more. I was involved.”"
+      },
+      {
+        "id": "loot-067",
+        "name_zh": "最後一笑",
+        "name_en": "The Last Laugh",
+        "category_zh": "奇物（法術法器），獨特",
+        "category_en": "Wondrous Item (Spell Focus), Unique",
+        "desc_zh": "直接取自賴瑞，「最後一笑」包含一枚嚴重刮傷和凹陷的銀幣。一些凹痕似乎是牙印。要使用這個法器，一個生物必須將硬幣放在舌頭下，一旦放置，該生物幾乎感覺不到它，並且它不會妨礙說話。使用時，該物品暫時提供 +1 魅力加值，並且在施展任何包含言語成分的法術時被視為 +3 法術法器。請不要吞下硬幣。如果使用過該物品的生物失去擁有權或被偷走硬幣，他們將遭受永久的魅力懲罰，該屬性減少 3。此負面效果無法抵消，但如果硬幣被找回則可以逆轉。",
+        "desc_en": "Taken straight from Larry, the last laugh consists of a single severely scratched and dented silver coin. Some of the dents appear to be tooth marks. To use this focus a creature must place the coin underneath their tongue, once placed the creature will barely be able to feel it and it will not impede speech. While in use the item provides a temporary +1 bonus to charisma and is considered a +3 spell focus when casting any spell that contains Verbal components. Please do not swallow the coin. If a creature that has used the item, loses possession or has the coin stolen from them they will suffer a permanent penalty to their Charisma, reducing the attribute by 3. This negative effect cannot be negated but can be reversed if the coin is recovered."
+      },
+      {
+        "id": "loot-068",
+        "name_zh": "撕裂的恐怖雜誌",
+        "name_en": "Torn Horror Mag",
+        "category_zh": "普通物品，常見",
+        "category_en": "Normal Item, Common",
+        "desc_zh": "《恐怖雜誌》是萬聖墓鎮自己專業出版的名人雜誌。它刊登了來自整個萬聖域最著名恐怖存在的新圖片、特別採訪和故事。這本雜誌在那些仰望這些著名生物，希望自己也能成為那樣——一個真正的恐怖存在，不僅在名義上，更在氣場和地位上——的年輕怪胎中相當受歡迎。這些撕裂的雜誌是來自這本流行雜誌不同期號的隨機頁面。它們涉及玩家在萬聖墓鎮冒險期間可能遇到的一些恐怖存在。\n\n撕裂雜誌 #1 - 阿嘉莎「...沒有什麼能將我與我的獵物分開。一旦我將他們鎖定在我的視線中，他們就是我的，而不是其他任何人的。自然，我對男人的標準比普通的萬聖墓鎮小惡魔要高。我的第一任丈夫是唯一一個接近完美的男人。但當我發現他以錯誤的方式看另一個女人時，我知道他不再屬於我了。所以我必須讓他永遠屬於我...」\n撕裂雜誌 #2 - 里希登斯坦「...這真的對我的研究沒有幫助。但我想偶爾有點正面宣傳對科學家來說也不壞。嗯。嗯。好吧，你看到的這種生物在通用語中通常被稱為矮人。他們身材矮小、脾氣暴躁，並且長著可以想像到的最雄偉的鬍鬚。我一直在對他們的鬍鬚毛髮進行一些實驗，它們被證明相當堅固。」\n撕裂雜誌 #3 - 莉絲貝「...當然會寂寞。僅僅因為我是誘惑魔女並不意味著不會寂寞。我們在這裡都已經待了很長時間了，你只能誘惑同一群傻瓜那麼多次，然後他們就變得無聊了。如果不是那些偶爾來搗亂的凡人，我就沒有什麼可以陪伴我了...」\n撕裂雜誌 #4 - 奧瑞克「...奧爾 奧爾來這裡的時候什麼都沒有。利基 利基給了奧爾 奧爾第一份工作。奧爾 奧爾在阿里 阿里忙著幫威利 威利用心臟做重要事情的時候看守那些洞。哦，奧爾 奧爾不該談論心臟。利基 利基會解剖奧爾 奧爾的，嘿嘿...」\n撕裂雜誌 #5 - 拉西安娜「...這是多麼奇怪的問題。我的孩子們是我野心的驅動力。如果不是為了餵飽我如此喜愛的他們成千上萬張飢餓的嘴，我就不需要這個偏僻地獄洞裡的政治傀儡。沒有我的野心，那些傻瓜永遠無法保住他們的權力。我是主謀，但我首先是一位母親。」\n撕裂雜誌 #6 - 拉札拉克「...我的主人是個天才，至少在我有時間消化他之後是這麼覺得的。畢竟他確實得到了他想要的，而且那年鎮上沒有人能阻止他贏得第一名。當然，我吃了他並不感到難過，他壓碎了我更多的兄弟姐妹。雖然我必須承認我的家人確實能做出一鍋相當不錯的湯。你應該試試。」\n撕裂雜誌 #7 - 奧列格「...現在你是要肋排還是豬排配那些大腿肉？什麼？哦，對不起。生意從來沒有這麼好過，這些日子附近有大量的新鮮肉類可供宰割。連客戶群都改善了。不，我的意思是他們停止問問題了。就像你應該做的那樣。」\n撕裂雜誌 #8 - 阿斯特洛斯（對屍體說話）「...這就是你把我帶回來的原因？一些陳年舊事。成熟點吧。人們那時不在乎，現在仍然不在乎。如果有的話，他們都欠我的。看看他們，看看他們如何在真實自我的光芒中毫無抑制地狂歡。他們所有人都得到了他們想要的，而你卻想挖掘關於我前妻的八卦？去找她談談，讓我睡一會兒吧。」\n撕裂雜誌 #9 - 洛恩「...現在聽好了，小傢伙。我在這裡的時間比大多數這些沉悶的渣滓都長，你知道什麼能讓一切順利進行嗎？管好你自己的該死的事。你以為這個完美的小鎮是靠人們的善意運轉的嗎？每個人都好好配合，這個小鄉村小鎮的完美外表。如果你相信那個，你會比我死得更透。但我的墳墓仍然會比你的好。」\n撕裂雜誌 #10 - 傲霜姊妹「...鎮上並不總是喜歡我們。有一次，一個傻瓜把阿夸留在暴風雪中。一個嫉妒的巨魔試圖燒死安珀。一個科學存在試圖電死紫晶。許多人不喜歡我們。但他們總是需要我們，來找我們，想要我們幫助。所以，是的，他們不喜歡我們，但他們更不喜歡她。」\n撕裂雜誌 #11 - 盧卡斯（被白銀束縛）「...你知道在我身邊真的不安全。整晚都是滿月，這讓這份工作變成了永久性的。有很多傻瓜走錯了路，需要一隻引導之手穿過森林...」\n撕裂雜誌 #12 - 奧瑞莎「...它以前是多汁而甜美的。但現在，即使只是最微小的一滴，也充滿了我無法抗拒喝乾的無數感覺。但唉，這裡的血液雖然奇異，但在這些一次又一次的許多夜晚中已經變得陳舊。我多麼希望能有什麼新的東西跨過我的門檻。」",
+        "desc_en": "The Horror Mag is the Hallowgrave’s own professionally published celebrity magazine. It features new pictures, special interviews and stories about the most famed Horrors from all across the Hallow. The magazine is quite popular among young misfits whom look up to these famous creatures as something they all wish to become. A real horror not just in name but in presence and statue. These torn mags are random pages from different issues of the popular magazine. They reference some horrors that the players may encounter during their adventure around Hallowgrave.\nTorn Mag #1 – Agatha “...nothing can separate me from my prey. Once I have them set in my sights they will be mine and no one else’s. Naturally I have a higher standard of men then the normal Hallowgrave imps. My first husband was truly the only man that ever came close to perfection. But when I caught him looking the wrong way at another woman, I knew that he was no longer mine. So I made I had to make him mine forever...”\nTorn Mag #2 – Lichtenstein “...This really isn’t assisting in my research. But I suppose a little positive publicity for a change isn’t bad for a scientist. Ahem. Well this creature you see before you is commonly referred to in the common tongue as a Dwarf. They are short, ill-tempered and grow the most majestic beards imaginable. I have been running some experiments on their beard hairs and they are proving to be quite strong.”\nTorn Mag #3 – Lisbeth “...Of course it gets lonely. Just because I’m the temptress doesn’t mean it doesn’t get lonely. We have all been here for a long time now and there is only so many times you can tempt the same gaggle of fools before they get boring anyway. If not for those occasional mortals making a mess every now and then I would have nothing to keep me company…”\nTorn Mag #4 – Orrick “...Orr Orr had nothing when he came here. Licky Licky gave Orr Orr his first job. Orr Orr watches the holes while Ali Ali is busy helping Willy Willy do important stuffs with the heart. Oh Orr Orr not meant to talk about the heart. Licky Licky would dissect Orr Orr heh heh…”\nTorn Mag #5 – Laciana “...What a strange question indeed. My children are what drive my ambitions. If not for the need to feed their thousands of hungry mouths that I oh so adore, I would have no need of the political puppets in this backwater hell hole. Without my ambitions those fools could never hold onto their power. I am the mastermind, but I am a mother foremost.”\nTorn Mag #6 – Lazarak “…My master was something of a genius, at least that’s what a gathered after I had time to digest him. After all he did get what he wanted and nobody in the entire town would stop him from winning first place that year. Of course I don’t feel bad for eating him, he squashed so many more of my siblings. Although I must admit my family does make a pretty mean soup. You should try it.”\nTorn Mag #7 – Oleg “...Now was that ribs or chops you wanted with those thighs? What? Oh right my apologies. Business has never been better, plenty of fresh meat for the chopping the block around here these days. The clientele has even improved. No I mean they stopped asking questions. Like you should.”\nTorn Mag #8 – Asteroth (Spoke to the corpse) “...This is really why you brought me back? Some age old drama. Grow up. The people didn’t care then and they still don’t care now. If anything they are all in debt to me. Look at them and how the revel in the light of their true selves without inhibition. All of them got their wish and you want to drudge up gossip about my ex-wife? Go talk to her and let me sleep for once.”\nTorn Mag #9 – Lorne “...Now look here youngling. I’ve been here longer than most of these drab scabs and you know what makes everything get along smoothly. Minding yer own damn business. You think these perfect little town runs on the good will of the people? Everyone playing along nicely, the perfect little visage of a small rural town. If you did believe that you’d be deader than I am. But my tomb would still be better than yours.”\nTorn Mag #10 – Alabaster Sisters “...The town wasn’t always fond of us. A fool left Aqua in a blizzard once. An envious troll tried to burn Amber once. And a being of science tried to electrocute Amethyst once. Many weren’t fond of us. But they always needed us, came to us, and wanted us to help. So yes they didn’t like us, but they didn’t like her more.\nTorn Mag #11 – Lucas (Bound by Silver) “...It’s really not safe to be around me you know. Full moon all night every night kind of makes the job permanent. Plenty of fools taking the wrong path in need of a guiding hand through the forest…”\nTorn Mag #12 – Orisa “...It was succulent and sweet before. But now even just the barest drop fills me with a multitude of sensations that I can’t help but drink my full. But alas the blood here while exotic has grown stale over these many eves over and over again. What I wouldn’t give for something new to cross my threshold.”"
+      },
+      {
+        "id": "loot-069",
+        "name_zh": "威廉之眼",
+        "name_en": "William’s Eye",
+        "category_zh": "奇物，獨特",
+        "category_en": "Wondrous Item, Unique",
+        "desc_zh": "雖然它被稱為威廉之眼，但這件奇物實際上並不是一隻眼睛，而且威廉也沒有任何實際的眼睛。此物品包含一顆小型透明玻璃彈珠，散發著柔和的橙光。表面散發出淡淡的、味道難聞的魔法。將玻璃彈珠舉到你的眼睛前，允許你直接看穿它，儘管顏色被染上了橙色。透過這顆玻璃彈珠觀看時，該生物擁有真實視覺能力。此真實視覺的範圍為 30 英尺。",
+        "desc_en": "Although it is called William’s Eye, this wondrous item is in fact not actually an eye and nor does William have any actual eyes. This item consist of a small transparent glass marble that glows with a soft orange light. A faint foul tasting magic exudes itself from the surface. Holding the glass marble up to your eye allows you to see directly through it albeit the colours are tainted with orange. While looking through this glass marble the creature has the ability of True Sight. This true sight has a range of 30 feet."
+      },
+      {
+        "id": "loot-070",
+        "name_zh": "威廉的割草鐮",
+        "name_en": "William’s Grass Cutter",
+        "category_zh": "簡易武器（鐮刀），獨特",
+        "category_en": "Simple Weapon (Scythe), Unique",
+        "desc_zh": "割草鐮是威廉在削減敵人生命時選擇的實體武器。這把長長的割草鐮有一個粗糙的木桿作為握柄，看起來與威廉的稻草人木樁驚人地相似。一個長而薄的彎曲刀刃支撐在其頂部，並像新月一樣向外彎曲。作為一把普通的鐮刀，它造成 2D6 揮砍傷害，被視為重型武器並具有 5 英尺觸及範圍。與此物品調適的持用者可以使用其內部魔法召喚一群烏鴉，這些烏鴉會服從持用者，最多持續 1 小時。",
+        "desc_en": "The grass cutter scythe is William’s physical weapon of choice when it comes to cutting down the lives of his enemies. This long grass scythe has a gnarled wooden pole for a handle that looks remarkably similar to William’s scarecrow stake. A long thin curved blade is supported at its head and curves outwards like a crescent moon. As a regular scythe it deals 2D6 slashing damage and is considered heavy and has a 5ft of reach. A wielder who is attuned to this item may use its internal magic to summon a swarm of crows that will obey the wielder for a maximum time of 1 hour."
+      },
+      {
+        "id": "loot-071",
+        "name_zh": "威廉的袖珍傳送門",
+        "name_en": "William’s Pocket Gate",
+        "category_zh": "奇物，獨特",
+        "category_en": "Wondrous Item, Unique",
+        "desc_zh": "袖珍傳送門是一個小型、雕刻複雜的混亂小齒輪，纏繞在一個小發條撥盤上。每個齒輪的顏色略有不同，混合了青銅、銅和銀金屬。這個裝置以穩定的脈衝散發出低水平的古老黑暗魔法。轉動撥盤啟動機構，齒輪開始轉動。隨著齒輪轉動，它散發出的魔法急遽增加。當達到頂峰時，一個手持該物品的單一生物可以傳送到其位置 30 英尺內任何無障礙的地點。這次傳送發生後，裝置再次停止運動。袖珍傳送門只能使用一次，然後需要重新充能。要重新充能，必須在 7 天內每天為懷錶上弦一次。完成此過程後，該裝置可以再次使用。充能不能疊加。",
+        "desc_en": "The pocket gate is a small intricately carved mess of small cogs wound around a small wind up dial. Each cog is a slightly different colour in a mix of bronze, copper and silver metals. The contraption emits a low level of archaic dark magic in steady pulses. Winding up the dial starts the mechanism and cogs moving. As the cogs move around the magic it emits increases rapidly. As it reaches its peak a single creature that is holding the item can teleport to any unobstructed location within 30 feet of its location. After this teleportation occurs the device ceases its movement once more. The pocket gate can only be used once before needing to recharge its power. To recharge the pocket watch must be rewound once every day for 7 days. After this has been completed the contraption can be used once more. Charges do not stack."
+      },
+      {
+        "id": "loot-072",
+        "name_zh": "女巫帽（變體）",
+        "name_en": "Witches Hat (Variants)",
+        "category_zh": "奇物，獨特",
+        "category_en": "Wondrous Item, Unique",
+        "desc_zh": "不同類型的女巫帽通過帽子內部使用的織物顏色來識別。每頂帽子都由褪色的黑色織物製成，並有一個寬帽簷，兩側下垂。帽頂螺旋上升並彎曲成一個尖捲。\n安柏女巫帽 - 佩戴並與此帽子調適將為使用者提供火焰傷害免疫，以及使用火焰鞭笞戲法的能力，使用你的感知調整值作為攻擊加值。火焰鞭笞是一種遠程法術攻擊，對 25 英尺範圍內的單一目標造成 4D4 火焰傷害。\n紫晶女巫帽 - 佩戴並與此帽子調適將為使用者提供閃電傷害免疫，以及使用閃電火花戲法的能力，使用你的感知調整值作為攻擊加值。閃電火花是一種遠程法術攻擊，對 25 英尺範圍內的單一目標造成 4D4 閃電傷害。\n安漷女巫帽 - 佩戴並與此帽子調適將為使用者提供冰凍傷害免疫，以及使用冰矛戲法的能力，使用你的感知調整值作為攻擊加值。冰矛是一種遠程法術攻擊，對 25 英尺範圍內的單一目標造成 4D4 冰凍傷害。",
+        "desc_en": "The different types of witch’s hats are identified by the colour fabric used on the inside of the hat. Each hat is made of a faded black fabric and sports a wide brim that sags either side. The top of the hat spirals up and bends over into a pointed curl.\nAmber Witch Hat – Wearing and attuning to this hat will provide the user with immunity to fire damage and the Ability to use the Flame Lash Cantrip using your wisdom modifier as your attack bonus. Flame Lash is a ranged spell attack that deals 4D4 Fire Damage to a single target within 25ft range.\nAmethyst Witch Hat - Wearing and attuning to this hat will provide the user with immunity to lightning damage and the Ability to use the Lightning Spark Cantrip using your wisdom modifier as your attack bonus. Lightning Spark is a ranged spell attack that deals 4D4 Lightning Damage to a single target within 25ft range.\nAqua Witch Hat - Wearing and attuning to this hat will provide the user with immunity to cold damage and the Ability to use the Ice Spear Cantrip using your wisdom modifier as your attack bonus. Ice Spear is a ranged spell attack that deals 4D4 Cold Damage to a single target within 25ft range."
+      }
+    ]
+  }
+}
