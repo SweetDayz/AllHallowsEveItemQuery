@@ -1,3 +1,4 @@
+<script>
 // 全域查找表
 const itemMasterList = new Map();
 
