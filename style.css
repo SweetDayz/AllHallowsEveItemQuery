@@ -128,3 +128,42 @@ select {
     background-color: yellow;
     font-weight: bold;
 }
+/* [新增] 搜尋建議的樣式 */
+#suggestionsContainer {
+    display: none; /* 預設隱藏 */
+    position: absolute;
+    top: 100%; /* 顯示在搜尋框正下方 */
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-top: none;
+    max-height: 250px; /* 限制最大高度並啟用滾動 */
+    overflow-y: auto;
+    z-index: 1000; /* 確保在最上層 */
+    border-radius: 0 0 6px 6px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.suggestion-item {
+    padding: 10px 12px;
+    cursor: pointer;
+    font-size: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.suggestion-item:last-child {
+    border-bottom: none;
+}
+
+.suggestion-item:hover {
+    background-color: #f0f0f0;
+}
+
+/* 建議項目中的英文名稱樣式 */
+.suggestion-item .suggestion-en {
+    font-size: 0.85em;
+    color: #777;
+    margin-left: 8px;
+    font-family: monospace;
+}
