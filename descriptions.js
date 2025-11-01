@@ -1422,6 +1422,42 @@ const allDescriptions = [
     "desc_en": "This is a novelty item in which players have a chance of getting a varied assortment of random goods depending on the size of the bag. Small – Roll on the table once. Medium – Roll on the table twice. Large – Roll on the table three times. Extra Large – Roll on the table 5 times."
   },
   {
+    "id": "驚喜袋（小號） SHOW BAG (SMALL)",
+    "name_zh": "驚喜袋 - 各種尺寸",
+    "name_en": "SHOW BAG (SMALL)",
+    "category_zh": "普通物品（新奇物品），非普通Normal Item (Novelty), Uncommon",
+    "category_en": "",
+    "desc_zh": "這是一個新奇物品，玩家有機會根據袋子的大小獲得各種隨機物品。\n1.\t小號 - 在表格上擲骰1次。\n2.\t中號 - 在表格上擲骰2次。\n3.\t大號 - 在表格上擲骰3次。\n4.\t特大號 - 在表格上擲骰 5 次。\n擲骰 1D20\t物品\n1\t綜合骨頭？(Assorted bones?)\n2\t可疑的紅氣球(Suspiciously Red Balloon)\n3\t1D4 顆腎結石玉米糖(1D4 Kidney Corns)\n4\t驚嚎冰棒(Screamsicle)\n5\t蟾蜍氣球(Toad Balloon)\n6\t1D6 根電擊太妃糖(1D6 Zappy Taffy)\n7\t棉花糖蘋果酒(Cotton Candy Cider)\n8\t1D4 根眼球棒(1D4 Eyeball’s On A Stick)\n9\t尖叫汽水(Soda Scream)\n10\t殭屍玉米(Zombie Corn)\n11\t1D4 個棉花糖玉米(1D4 Cotton Candy Corn)\n12\t滴血餅乾(Bleeding Biscuit)\n13\t免費雜耍遊戲券(Free Sideshow Game Coupon)\n14\t烏鴉毛絨玩偶(Crow Plushie)\n15\t瘟疫花生(Pestilent Peanuts)\n16\t1D6 個骨製煙花(1D6 Boneworks)\n17\t老鼠毛絨玩偶(Rat Plushie)\n18\t骷髏頓毛絨玩偶(Skelton Plushie)\n19\t幽靈毛絨玩偶(Ghost Plushie)\n20\t希德搖頭娃娃(Sid’s Bobblehead)",
+    "desc_en": "This is a novelty item in which players have a chance of getting a varied assortment of random goods depending on the size of the bag. Small – Roll on the table once. Medium – Roll on the table twice. Large – Roll on the table three times. Extra Large – Roll on the table 5 times."
+  },
+  {
+    "id": "驚喜袋（中號） SHOW BAG (MEDIUM)",
+    "name_zh": "驚喜袋（中號）",
+    "name_en": "SHOW BAG (MEDIUM)",
+    "category_zh": "普通物品（新奇物品），非普通Normal Item (Novelty), Uncommon",
+    "category_en": "",
+    "desc_zh": "這是一個新奇物品，玩家有機會根據袋子的大小獲得各種隨機物品。\n1.\t小號 - 在表格上擲骰1次。\n2.\t中號 - 在表格上擲骰2次。\n3.\t大號 - 在表格上擲骰3次。\n4.\t特大號 - 在表格上擲骰 5 次。\n擲骰 1D20\t物品\n1\t綜合骨頭？(Assorted bones?)\n2\t可疑的紅氣球(Suspiciously Red Balloon)\n3\t1D4 顆腎結石玉米糖(1D4 Kidney Corns)\n4\t驚嚎冰棒(Screamsicle)\n5\t蟾蜍氣球(Toad Balloon)\n6\t1D6 根電擊太妃糖(1D6 Zappy Taffy)\n7\t棉花糖蘋果酒(Cotton Candy Cider)\n8\t1D4 根眼球棒(1D4 Eyeball’s On A Stick)\n9\t尖叫汽水(Soda Scream)\n10\t殭屍玉米(Zombie Corn)\n11\t1D4 個棉花糖玉米(1D4 Cotton Candy Corn)\n12\t滴血餅乾(Bleeding Biscuit)\n13\t免費雜耍遊戲券(Free Sideshow Game Coupon)\n14\t烏鴉毛絨玩偶(Crow Plushie)\n15\t瘟疫花生(Pestilent Peanuts)\n16\t1D6 個骨製煙花(1D6 Boneworks)\n17\t老鼠毛絨玩偶(Rat Plushie)\n18\t骷髏頓毛絨玩偶(Skelton Plushie)\n19\t幽靈毛絨玩偶(Ghost Plushie)\n20\t希德搖頭娃娃(Sid’s Bobblehead)",
+    "desc_en": "This is a novelty item in which players have a chance of getting a varied assortment of random goods depending on the size of the bag. Small – Roll on the table once. Medium – Roll on the table twice. Large – Roll on the table three times. Extra Large – Roll on the table 5 times."
+  },
+  {
+    "id": "驚喜袋（大號） SHOW BAG (LARGE)",
+    "name_zh": "驚喜袋（大號）",
+    "name_en": "SHOW BAG (LARGE)",
+    "category_zh": "普通物品（新奇物品），非普通Normal Item (Novelty), Uncommon",
+    "category_en": "",
+    "desc_zh": "這是一個新奇物品，玩家有機會根據袋子的大小獲得各種隨機物品。\n1.\t小號 - 在表格上擲骰1次。\n2.\t中號 - 在表格上擲骰2次。\n3.\t大號 - 在表格上擲骰3次。\n4.\t特大號 - 在表格上擲骰 5 次。\n擲骰 1D20\t物品\n1\t綜合骨頭？(Assorted bones?)\n2\t可疑的紅氣球(Suspiciously Red Balloon)\n3\t1D4 顆腎結石玉米糖(1D4 Kidney Corns)\n4\t驚嚎冰棒(Screamsicle)\n5\t蟾蜍氣球(Toad Balloon)\n6\t1D6 根電擊太妃糖(1D6 Zappy Taffy)\n7\t棉花糖蘋果酒(Cotton Candy Cider)\n8\t1D4 根眼球棒(1D4 Eyeball’s On A Stick)\n9\t尖叫汽水(Soda Scream)\n10\t殭屍玉米(Zombie Corn)\n11\t1D4 個棉花糖玉米(1D4 Cotton Candy Corn)\n12\t滴血餅乾(Bleeding Biscuit)\n13\t免費雜耍遊戲券(Free Sideshow Game Coupon)\n14\t烏鴉毛絨玩偶(Crow Plushie)\n15\t瘟疫花生(Pestilent Peanuts)\n16\t1D6 個骨製煙花(1D6 Boneworks)\n17\t老鼠毛絨玩偶(Rat Plushie)\n18\t骷髏頓毛絨玩偶(Skelton Plushie)\n19\t幽靈毛絨玩偶(Ghost Plushie)\n20\t希德搖頭娃娃(Sid’s Bobblehead)",
+    "desc_en": "This is a novelty item in which players have a chance of getting a varied assortment of random goods depending on the size of the bag. Small – Roll on the table once. Medium – Roll on the table twice. Large – Roll on the table three times. Extra Large – Roll on the table 5 times."
+  },
+  {
+    "id": "驚喜袋（特大號） SHOW BAG (EXTRA_LARGE)",
+    "name_zh": "驚喜袋（特大號）",
+    "name_en": "SHOW BAG (EXTRA_LARGE)",
+    "category_zh": "普通物品（新奇物品），非普通Normal Item (Novelty), Uncommon",
+    "category_en": "",
+    "desc_zh": "這是一個新奇物品，玩家有機會根據袋子的大小獲得各種隨機物品。\n1.\t小號 - 在表格上擲骰1次。\n2.\t中號 - 在表格上擲骰2次。\n3.\t大號 - 在表格上擲骰3次。\n4.\t特大號 - 在表格上擲骰 5 次。\n擲骰 1D20\t物品\n1\t綜合骨頭？(Assorted bones?)\n2\t可疑的紅氣球(Suspiciously Red Balloon)\n3\t1D4 顆腎結石玉米糖(1D4 Kidney Corns)\n4\t驚嚎冰棒(Screamsicle)\n5\t蟾蜍氣球(Toad Balloon)\n6\t1D6 根電擊太妃糖(1D6 Zappy Taffy)\n7\t棉花糖蘋果酒(Cotton Candy Cider)\n8\t1D4 根眼球棒(1D4 Eyeball’s On A Stick)\n9\t尖叫汽水(Soda Scream)\n10\t殭屍玉米(Zombie Corn)\n11\t1D4 個棉花糖玉米(1D4 Cotton Candy Corn)\n12\t滴血餅乾(Bleeding Biscuit)\n13\t免費雜耍遊戲券(Free Sideshow Game Coupon)\n14\t烏鴉毛絨玩偶(Crow Plushie)\n15\t瘟疫花生(Pestilent Peanuts)\n16\t1D6 個骨製煙花(1D6 Boneworks)\n17\t老鼠毛絨玩偶(Rat Plushie)\n18\t骷髏頓毛絨玩偶(Skelton Plushie)\n19\t幽靈毛絨玩偶(Ghost Plushie)\n20\t希德搖頭娃娃(Sid’s Bobblehead)",
+    "desc_en": "This is a novelty item in which players have a chance of getting a varied assortment of random goods depending on the size of the bag. Small – Roll on the table once. Medium – Roll on the table twice. Large – Roll on the table three times. Extra Large – Roll on the table 5 times."
+  },
+  {
     "id": "甜膩糖果 SICKLY SWEET CANDY",
     "name_zh": "甜膩糖果",
     "name_en": "SICKLY SWEET CANDY",
