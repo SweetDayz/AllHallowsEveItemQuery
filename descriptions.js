@@ -2167,6 +2167,276 @@ const allDescriptions = [
     "category_en": "Wondrous Item (Collectible), Common",
     "desc_zh": "在年輕的邪惡存在和一些特殊的恐怖存在中很受歡迎，這些恐怖毛絨玩具是整個領域中可以找到的最柔軟、最可愛的東西。有各種各樣的款式可供選擇，從殭屍到蝙蝠到女妖等等。它們通常可以購買或通過屍體嘉年華的雜耍遊戲贏得。儘管它們具有完全可擠壓的特點，但每個毛絨玩偶也是一次性的召喚物品。通過閱讀產品標籤上的魔法詞語，毛絨玩具會變成它所代表的怪物的真實版本，只不過它對召喚它的人完全友好。例如，一個殭屍毛絨玩偶會變成一個真正的殭屍！召喚的生物最多持續一個小時，並在你的先攻順序下行動，會遵循基本的命令。一小時後，該生物會化為灰燼。甚至連毛絨玩偶也不會留下。",
     "desc_en": "Popular among young evils and some special horrors, these horror plush toys are the softest and cutest thing that can be found in all of the realm. There is an assortment available from zombies to bats to banshees and more. They can usually be purchased or won through sideshow games at the Corpse Carnival. Despite their totally squishable features each plushie is also a single use summoning item. By reading the magic words on the product tag the plush toy will turn into a real version of the monster it represents, except it will be totally friendly to the person that summoned it. For example a zombie plushie will become a real zombie! The summoned creature lasts up to an hour and operates on your initiative and will follow basic commands. Once the hour is up the creature will turn to ash. Not even the plushie will remain."
+  },
+  {
+    "id": "災難餅乾 CATASTROPHIC COOKIES",
+    "name_zh": "災難餅乾",
+    "name_en": "CATASTROPHIC COOKIES",
+    "category_zh": "普通物品（消耗品），常見",
+    "category_en": "Normal Item (Consumable), Common",
+    "desc_zh": "",
+    "desc_en": ""
+  },
+  {
+    "id": "傷亡玉米 CASUALTY CORN",
+    "name_zh": "傷亡玉米",
+    "name_en": "CASUALTY CORN",
+    "category_zh": "普通物品（消耗品），常見",
+    "category_en": "Normal Item (Consumable), Common",
+    "desc_zh": "",
+    "desc_en": ""
+  },
+  {
+    "id": "食屍鬼椒鹽捲餅 GHOUL PRETZELS",
+    "name_zh": "食屍鬼椒鹽捲餅",
+    "name_en": "GHOUL PRETZELS",
+    "category_zh": "普通物品（消耗品），常見",
+    "category_en": "Normal Item (Consumable), Common",
+    "desc_zh": "",
+    "desc_en": ""
+  },
+  {
+    "id": "綠色油脂玉米 GREEN GRIZZLE CORN",
+    "name_zh": "綠色油脂玉米",
+    "name_en": "GREEN GRIZZLE CORN",
+    "category_zh": "普通物品（消耗品），常見",
+    "category_en": "Normal Item (Consumable), Common",
+    "desc_zh": "",
+    "desc_en": ""
+  },
+  {
+    "id": "風味糖果玉米 FLAVORED CANDY CORN",
+    "name_zh": "風味糖果玉米",
+    "name_en": "FLAVORED CANDY CORN",
+    "category_zh": "普通物品（消耗品），常見",
+    "category_en": "Normal Item (Consumable), Common",
+    "desc_zh": "",
+    "desc_en": ""
+  },
+  {
+    "id": "果凍南瓜 JELLY PUMPKINS",
+    "name_zh": "果凍南瓜",
+    "name_en": "JELLY PUMPKINS",
+    "category_zh": "普通物品（消耗品），常見",
+    "category_en": "Normal Item (Consumable), Common",
+    "desc_zh": "",
+    "desc_en": ""
+  },
+  {
+    "id": "仙塵 PIXIE DUST",
+    "name_zh": "仙塵",
+    "name_en": "PIXIE DUST",
+    "category_zh": "普通物品（消耗品），常見",
+    "category_en": "Normal Item (Consumable), Common",
+    "desc_zh": "",
+    "desc_en": ""
+  },
+  {
+    "id": "死神薯片 REAPER CHIPS",
+    "name_zh": "死神薯片",
+    "name_en": "REAPER CHIPS",
+    "category_zh": "普通物品（消耗品），常見",
+    "category_en": "Normal Item (Consumable), Common",
+    "desc_zh": "",
+    "desc_en": ""
+  },
+  {
+    "id": "蝙蝠翅膀 BATTY BAT WINGS",
+    "name_zh": "蝙蝠翅膀",
+    "name_en": "BATTY BAT WINGS",
+    "category_zh": "普通物品（消耗品），常見",
+    "category_en": "Normal Item (Consumable), Common",
+    "desc_zh": "",
+    "desc_en": ""
+  },
+  {
+    "id": "定罪麵包盅 CONDEMNED COB LOAF",
+    "name_zh": "定罪麵包盅",
+    "name_en": "CONDEMNED COB LOAF",
+    "category_zh": "普通物品（消耗品），常見",
+    "category_en": "Normal Item (Consumable), Common",
+    "desc_zh": "",
+    "desc_en": ""
+  },
+  {
+    "id": "怪物肉丸 MONSTER MEAT BALLS",
+    "name_zh": "怪物肉丸",
+    "name_en": "MONSTER MEAT BALLS",
+    "category_zh": "普通物品（消耗品），常見",
+    "category_en": "Normal Item (Consumable), Common",
+    "desc_zh": "",
+    "desc_en": ""
+  },
+  {
+    "id": "蟒蛇薯塊 PYTHON POTATO’S",
+    "name_zh": "蟒蛇薯塊",
+    "name_en": "PYTHON POTATO’S",
+    "category_zh": "普通物品（消耗品），常見",
+    "category_en": "Normal Item (Consumable), Common",
+    "desc_zh": "",
+    "desc_en": ""
+  },
+  {
+    "id": "煙燻牛頭怪 SMOKED MINOTAUR",
+    "name_zh": "煙燻牛頭怪",
+    "name_en": "SMOKED MINOTAUR",
+    "category_zh": "普通物品（消耗品），常見",
+    "category_en": "Normal Item (Consumable), Common",
+    "desc_zh": "",
+    "desc_en": ""
+  },
+  {
+    "id": "肋排 SPARE RIBS",
+    "name_zh": "肋排",
+    "name_en": "SPARE RIBS",
+    "category_zh": "普通物品（消耗品），常見",
+    "category_en": "Normal Item (Consumable), Common",
+    "desc_zh": "",
+    "desc_en": ""
+  },
+  {
+    "id": "辣脊椎 SPICY SPINES",
+    "name_zh": "辣脊椎",
+    "name_en": "SPICY SPINES",
+    "category_zh": "普通物品（消耗品），常見",
+    "category_en": "Normal Item (Consumable), Common",
+    "desc_zh": "",
+    "desc_en": ""
+  },
+  {
+    "id": "怪趣拼盤 SPOOKUTERIE BOARD",
+    "name_zh": "怪趣拼盤",
+    "name_en": "SPOOKUTERIE BOARD",
+    "category_zh": "普通物品（消耗品），常見",
+    "category_en": "Normal Item (Consumable), Common",
+    "desc_zh": "",
+    "desc_en": ""
+  },
+  {
+    "id": "有毒通心粉 TOXIC MAC",
+    "name_zh": "有毒通心粉",
+    "name_en": "TOXIC MAC",
+    "category_zh": "普通物品（消耗品），常見",
+    "category_en": "Normal Item (Consumable), Common",
+    "desc_zh": "",
+    "desc_en": ""
+  },
+  {
+    "id": "黑天鵝絨紙杯蛋糕 BLACK VELVET CUPCAKES",
+    "name_zh": "黑天鵝絨紙杯蛋糕",
+    "name_en": "BLACK VELVET CUPCAKES",
+    "category_zh": "普通物品（消耗品），常見",
+    "category_en": "Normal Item (Consumable), Common",
+    "desc_zh": "",
+    "desc_en": ""
+  },
+  {
+    "id": "血腥天鵝絨紙杯蛋糕 BLOODY VELVET CUPCAKES",
+    "name_zh": "血腥天鵝絨紙杯蛋糕",
+    "name_en": "BLOODY VELVET CUPCAKES",
+    "category_zh": "普通物品（消耗品），常見",
+    "category_en": "Normal Item (Consumable), Common",
+    "desc_zh": "",
+    "desc_en": ""
+  },
+  {
+    "id": "腐蝕性紙杯蛋糕 CAUSTIC CUPCAKES",
+    "name_zh": "腐蝕性紙杯蛋糕",
+    "name_en": "CAUSTIC CUPCAKES",
+    "category_zh": "普通物品（消耗品），常見",
+    "category_en": "Normal Item (Consumable), Common",
+    "desc_zh": "",
+    "desc_en": ""
+  },
+  {
+    "id": "被詛咒的紙杯蛋糕 CURSED CUPCAKES",
+    "name_zh": "被詛咒的紙杯蛋糕",
+    "name_en": "CURSED CUPCAKES",
+    "category_zh": "普通物品（消耗品），常見",
+    "category_en": "Normal Item (Consumable), Common",
+    "desc_zh": "",
+    "desc_en": ""
+  },
+  {
+    "id": "毒蘋果 POISONED APPLES",
+    "name_zh": "毒蘋果",
+    "name_en": "POISONED APPLES",
+    "category_zh": "普通物品（消耗品），常見",
+    "category_en": "Normal Item (Consumable), Common",
+    "desc_zh": "",
+    "desc_en": ""
+  },
+  {
+    "id": "尖叫芝士布朗尼 SCREAM-CHEESE BROWNIE",
+    "name_zh": "尖叫芝士布朗尼",
+    "name_en": "SCREAM-CHEESE BROWNIE",
+    "category_zh": "普通物品（消耗品），常見",
+    "category_en": "Normal Item (Consumable), Common",
+    "desc_zh": "",
+    "desc_en": ""
+  },
+  {
+    "id": "蛇咬切片 SNAKEBITE SLICE",
+    "name_zh": "蛇咬切片",
+    "name_en": "SNAKEBITE SLICE",
+    "category_zh": "普通物品（消耗品），常見",
+    "category_en": "Normal Item (Consumable), Common",
+    "desc_zh": "",
+    "desc_en": ""
+  },
+  {
+    "id": "100% 火蜥蜴汁 100% JUICE OF FIRE NEWT",
+    "name_zh": "100% 火蜥蜴汁",
+    "name_en": "100% JUICE OF FIRE NEWT",
+    "category_zh": "普通物品（消耗品），常見",
+    "category_en": "Normal Item (Consumable), Common",
+    "desc_zh": "",
+    "desc_en": ""
+  },
+  {
+    "id": "大釜潘趣酒 CAULDRON PUNCH",
+    "name_zh": "大釜潘趣酒",
+    "name_en": "CAULDRON PUNCH",
+    "category_zh": "普通物品（消耗品），常見",
+    "category_en": "Normal Item (Consumable), Common",
+    "desc_zh": "",
+    "desc_en": ""
+  },
+  {
+    "id": "黑烏鴉乾燥腳 DRIED FEES OF BLACK CROW",
+    "name_zh": "黑烏鴉乾燥腳",
+    "name_en": "DRIED FEES OF BLACK CROW",
+    "category_zh": "普通物品（消耗品），常見",
+    "category_en": "Normal Item (Consumable), Common",
+    "desc_zh": "",
+    "desc_en": ""
+  },
+  {
+    "id": "未過濾毒藥 UNFILTERED POISON",
+    "name_zh": "未過濾毒藥",
+    "name_en": "UNFILTERED POISON",
+    "category_zh": "普通物品（消耗品），常見",
+    "category_en": "Normal Item (Consumable), Common",
+    "desc_zh": "",
+    "desc_en": ""
+  },
+  {
+    "id": "女巫藥水 WITCHES POTION",
+    "name_zh": "女巫藥水",
+    "name_en": "WITCHES POTION",
+    "category_zh": "普通物品（消耗品），常見",
+    "category_en": "Normal Item (Consumable), Common",
+    "desc_zh": "",
+    "desc_en": ""
+  },
+  {
+    "id": "死神薯片 REAPER CHIPS",
+    "name_zh": "死神薯片",
+    "name_en": "REAPER CHIPS",
+    "category_zh": "普通物品（消耗品），常見",
+    "category_en": "Normal Item (Consumable), Common",
+    "desc_zh": "",
+    "desc_en": ""
   }
 ]
 ];
